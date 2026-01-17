@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 213a90e130f3a6447a392fe08381d43d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 361753171746050804
+    second: ZenithMC_0
+  - first:
+      213: -6254364055940484180
+    second: ZenithMC_1
+  - first:
+      213: 1815815273839105573
+    second: ZenithMC_2
+  - first:
+      213: 5177863637412277806
+    second: ZenithMC_3
+  - first:
+      213: 3172001352996279331
+    second: ZenithMC_4
+  - first:
+      213: -7425206993582994546
+    second: ZenithMC_5
+  - first:
+      213: 1908007922308025159
+    second: ZenithMC_6
+  - first:
+      213: 1099806858182012768
+    second: ZenithMC_7
+  - first:
+      213: -2545720036081159421
+    second: ZenithMC_8
+  - first:
+      213: 4440208464928329785
+    second: ZenithMC_9
+  - first:
+      213: 7668869800097260174
+    second: ZenithMC_10
+  - first:
+      213: 203102911640722015
+    second: ZenithMC_11
+  - first:
+      213: 3828662637404142564
+    second: ZenithMC_12
+  - first:
+      213: -8173429528806711979
+    second: ZenithMC_13
+  - first:
+      213: 3444706653078597820
+    second: ZenithMC_14
+  - first:
+      213: -2937784434542029390
+    second: ZenithMC_15
+  - first:
+      213: 5173307961079757058
+    second: ZenithMC_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ZenithMC_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 956
+        width: 88
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f25b42d794350500800000000000000
+      internalID: 361753171746050804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 942
+        width: 83
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca332b537090439a0800000000000000
+      internalID: -6254364055940484180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_2
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 932
+        width: 105
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52698e6fe52133910800000000000000
+      internalID: 1815815273839105573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 963
+        width: 93
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2eee537b877bd740800000000000000
+      internalID: 5177863637412277806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_4
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 965
+        width: 84
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324d660bc66350c20800000000000000
+      internalID: 3172001352996279331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_5
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 967
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b4dbb649d54f890800000000000000
+      internalID: -7425206993582994546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_6
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 981
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b0dc5a81b9a7a10800000000000000
+      internalID: 1908007922308025159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_7
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 955
+        width: 182
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f2a7fa28c434f00800000000000000
+      internalID: 1099806858182012768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 721
+        width: 150
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303b9cf6d19cbacd0800000000000000
+      internalID: -2545720036081159421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_9
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 363
+        width: 270
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9305cb8d21ace9d30800000000000000
+      internalID: 4440208464928329785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_10
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 366
+        width: 269
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82a487a37c4d6a60800000000000000
+      internalID: 7668869800097260174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 464
+        width: 102
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a5135a50191d200800000000000000
+      internalID: 203102911640722015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_12
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 459
+        width: 109
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebb8433264222530800000000000000
+      internalID: 3828662637404142564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 177
+        width: 97
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d99c2f525229e80800000000000000
+      internalID: -8173429528806711979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_14
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 161
+        width: 77
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0bc2c337e0ecf20800000000000000
+      internalID: 3444706653078597820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 28
+        width: 133
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b553703f94ea37d0800000000000000
+      internalID: -2937784434542029390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZenithMC_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 37
+        width: 148
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209fbd56e284bc740800000000000000
+      internalID: 5173307961079757058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ZenithMC_0: 361753171746050804
+      ZenithMC_1: -6254364055940484180
+      ZenithMC_10: 7668869800097260174
+      ZenithMC_11: 203102911640722015
+      ZenithMC_12: 3828662637404142564
+      ZenithMC_13: -8173429528806711979
+      ZenithMC_14: 3444706653078597820
+      ZenithMC_15: -2937784434542029390
+      ZenithMC_16: 5173307961079757058
+      ZenithMC_2: 1815815273839105573
+      ZenithMC_3: 5177863637412277806
+      ZenithMC_4: 3172001352996279331
+      ZenithMC_5: -7425206993582994546
+      ZenithMC_6: 1908007922308025159
+      ZenithMC_7: 1099806858182012768
+      ZenithMC_8: -2545720036081159421
+      ZenithMC_9: 4440208464928329785
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
