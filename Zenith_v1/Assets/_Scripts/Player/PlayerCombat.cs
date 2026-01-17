@@ -25,10 +25,16 @@ public class PlayerCombat : MonoBehaviour
     {
         controller = GetComponent<PlayerController2D>();
         weaponVisuals = GetComponent<WeaponVisualController>();
-
-        // Sync visuals + fire point from MainController state
-        weaponVisuals.SetWeapon(CurrentWeapon);
-        UpdateFirePoint();
+    }
+    
+    void Start()
+    {
+        // MainController is now guaranteed to exist
+        if (CurrentWeapon != null)
+        {
+            weaponVisuals.SetWeapon(CurrentWeapon);
+            UpdateFirePoint();
+        }
     }
 
     void Update()
@@ -102,6 +108,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Melee()
     {
+        GetComponent<PlayerAnimatorController>()?.TriggerMelee();
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             meleePoint.position,
             meleeRange,
@@ -118,6 +126,8 @@ public class PlayerCombat : MonoBehaviour
 
     void ThrowGrenade()
     {
+        GetComponent<PlayerAnimatorController>()?.TriggerGrenade();
+
         GameObject grenade = Instantiate(
             grenadePrefab,
             grenadeSpawn.position,
