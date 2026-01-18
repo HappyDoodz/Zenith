@@ -6,6 +6,8 @@ public class WeaponVisualController : MonoBehaviour
 
     WeaponView currentView;
 
+    public WeaponView CurrentWeaponView => currentView;
+
     public Transform CurrentFirePoint =>
         currentView != null ? currentView.FirePoint : null;
 
