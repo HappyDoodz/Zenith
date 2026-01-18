@@ -6,11 +6,8 @@ public class Weapon
     public string weaponId;
     public string weaponName;
 
-    [Header("Visuals")]
-    public Sprite standingSprite;
-    public Sprite crouchingSprite;
-    public Vector2 spriteOffsetStanding;
-    public Vector2 spriteOffsetCrouching;
+    [Header("Visual Prefab")]
+    public GameObject weaponPrefab;
 
     [Header("Combat")]
     public GameObject projectilePrefab;

@@ -2,54 +2,41 @@ using UnityEngine;
 
 public class WeaponVisualController : MonoBehaviour
 {
-    [Header("References")]
     [SerializeField] Transform weaponHolder;
-    [SerializeField] SpriteRenderer weaponRenderer;
 
-    PlayerController2D controller;
-    Weapon currentWeapon;
+    WeaponView currentView;
 
-    Vector3 baseLocalPosition;
-
-    void Awake()
-    {
-        controller = GetComponent<PlayerController2D>();
-        baseLocalPosition = weaponHolder.localPosition;
-    }
+    public Transform CurrentFirePoint =>
+        currentView != null ? currentView.FirePoint : null;
 
     public void SetWeapon(Weapon weapon)
     {
-        currentWeapon = weapon;
-        UpdateVisual();
-    }
+        // Destroy old weapon view
+        if (currentView != null)
+            Destroy(currentView.gameObject);
 
-    void LateUpdate()
-    {
-        if (currentWeapon == null)
+        if (weapon == null || weapon.weaponPrefab == null)
+        {
+            currentView = null;
             return;
-
-        UpdateVisual();
-    }
-
-    void UpdateVisual()
-    {
-        // -------- SPRITE + OFFSET --------
-        if (controller.IsCrouching)
-        {
-            weaponRenderer.sprite =
-                currentWeapon.crouchingSprite != null
-                ? currentWeapon.crouchingSprite
-                : currentWeapon.standingSprite;
-
-            weaponHolder.localPosition =
-                baseLocalPosition + (Vector3)currentWeapon.spriteOffsetCrouching;
         }
-        else
-        {
-            weaponRenderer.sprite = currentWeapon.standingSprite;
 
-            weaponHolder.localPosition =
-                baseLocalPosition + (Vector3)currentWeapon.spriteOffsetStanding;
+        // Spawn new weapon prefab
+        GameObject obj = Instantiate(
+            weapon.weaponPrefab,
+            weaponHolder
+        );
+
+        obj.transform.localPosition = Vector3.zero;
+        obj.transform.localRotation = Quaternion.identity;
+
+        currentView = obj.GetComponent<WeaponView>();
+
+        if (currentView == null)
+        {
+            Debug.LogError(
+                $"Weapon prefab {weapon.weaponPrefab.name} is missing WeaponView"
+            );
         }
     }
 }

@@ -4,7 +4,8 @@ using System.Collections;
 public class PlayerCombat : MonoBehaviour
 {
     [Header("Fire Point")]
-    [SerializeField] Transform firePoint;
+    Transform FirePoint =>
+        weaponVisuals.CurrentFirePoint;
 
     WeaponVisualController weaponVisuals;
     PlayerController2D controller;
@@ -41,7 +42,6 @@ public class PlayerCombat : MonoBehaviour
         if (CurrentWeapon != null)
         {
             weaponVisuals.SetWeapon(CurrentWeapon);
-            UpdateFirePoint();
         }
     }
 
@@ -63,11 +63,6 @@ public class PlayerCombat : MonoBehaviour
             ThrowGrenade();
     }
 
-    void LateUpdate()
-    {
-        UpdateFirePoint();
-    }
-
     // ---------------- SHOOTING ----------------
 
     void TryShoot()
@@ -78,14 +73,18 @@ public class PlayerCombat : MonoBehaviour
         if (!MainController.Instance.CanFire())
             return;
 
+        if (FirePoint == null)
+            return;
+
         if (CurrentWeapon.Fire(
-            firePoint,
+            FirePoint,
             controller.facingRight
         ))
         {
             MainController.Instance.ConsumeBullet();
         }
     }
+
 
     void Reload()
     {
@@ -98,21 +97,6 @@ public class PlayerCombat : MonoBehaviour
     {
         MainController.Instance.SwapWeapon();
         weaponVisuals.SetWeapon(CurrentWeapon);
-        UpdateFirePoint();
-    }
-
-    // ---------------- FIRE POINT ----------------
-
-    void UpdateFirePoint()
-    {
-        if (CurrentWeapon == null)
-            return;
-
-        Vector2 offset = controller.IsCrouching
-            ? CurrentWeapon.firePointCrouchingOffset
-            : CurrentWeapon.firePointStandingOffset;
-
-        firePoint.localPosition = offset;
     }
 
     // ---------------- MELEE ----------------

@@ -1544,10 +1544,7 @@ MonoBehaviour:
   weapon:
     weaponId: Sniper
     weaponName: Sniper
-    standingSprite: {fileID: -1775761698, guid: 191e5079964c30440924f387884e41ad, type: 3}
-    crouchingSprite: {fileID: -1775761698, guid: 191e5079964c30440924f387884e41ad, type: 3}
-    spriteOffsetStanding: {x: 0, y: 0}
-    spriteOffsetCrouching: {x: 0, y: 0}
+    weaponPrefab: {fileID: 1697036685979796447, guid: 5e7073a9147eb0b48b5fbd1e9c10954c, type: 3}
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 1
     projectileSpeed: 15
@@ -2847,10 +2844,7 @@ MonoBehaviour:
   primaryWeapon:
     weaponId: Pistol
     weaponName: Pistol
-    standingSprite: {fileID: 548040524, guid: 191e5079964c30440924f387884e41ad, type: 3}
-    crouchingSprite: {fileID: 548040524, guid: 191e5079964c30440924f387884e41ad, type: 3}
-    spriteOffsetStanding: {x: 0, y: 0}
-    spriteOffsetCrouching: {x: 0, y: 0}
+    weaponPrefab: {fileID: 1697036685979796447, guid: 8301cb4ecd98b0d459a3a14e58f87e85, type: 3}
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 0.2
     projectileSpeed: 15
@@ -2863,10 +2857,7 @@ MonoBehaviour:
   secondaryWeapon:
     weaponId: MachineGun
     weaponName: MachineGun
-    standingSprite: {fileID: 948550652, guid: 191e5079964c30440924f387884e41ad, type: 3}
-    crouchingSprite: {fileID: 948550652, guid: 191e5079964c30440924f387884e41ad, type: 3}
-    spriteOffsetStanding: {x: 0, y: 0}
-    spriteOffsetCrouching: {x: 0, y: 0}
+    weaponPrefab: {fileID: 1697036685979796447, guid: 654e78e37e599aa4c88a50a0fe5ee05e, type: 3}
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 0.05
     projectileSpeed: 15
