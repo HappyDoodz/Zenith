@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3171265484247222510}
   - component: {fileID: 996520017444991937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RLegIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1658890483936935295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RLegUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8794193846430037844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadIK_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1192291423909614427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021211830373514842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LLegUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7552202924639759873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3959466640724500082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LArmLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5507234556866869182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8744007712678922900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382649451470330293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RLegLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6419088860217586775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RLegIK_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 2534053051001448501}
   - component: {fileID: 2766073765601791393}
   - component: {fileID: 3438336767597144724}
+  - component: {fileID: 293359022786867680}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -647,6 +648,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponIKBinder
   leftHandIKTarget: {fileID: 3105927186726318398}
   weaponVisuals: {fileID: 5478615152936422119}
+--- !u!114 &293359022786867680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106529849124541047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada2e49dcc2b87b4a95b52a2d44d09e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AfterImageEffect
+  spriteSkinRoot: {fileID: 5689928785224181157}
+  spawnInterval: 0.05
+  lifetime: 0.3
+  afterImageColor: {r: 0.87843144, g: 0, b: 0.5137255, a: 0.2509804}
+  alwaysEmitting: 1
 --- !u!1 &3127751759888151968
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3674404084395501801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3902555661442141941}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RArmLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6410987973747841779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LLegLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2477441531443036319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3687023369265481084}
   - component: {fileID: 1262114914133559971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RArmIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8630019826685352195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RArmUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5648891187362999395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RArmIK_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8392755630103503839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +998,7 @@ GameObject:
   - component: {fileID: 2303043944705434514}
   - component: {fileID: 6616823846921182942}
   - component: {fileID: 2629305076284583315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3568372441803750648}
   - component: {fileID: 8613299784738302313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7973733180381847741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 979247480670709174}
   - component: {fileID: 8851750081246773054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LLegIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1304,7 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8746185552127893931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LArmIK_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,7 +1353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1206866122517625675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,7 +1384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6872217652622909908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1397,7 +1415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2666094895134307663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LArmUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1430,7 +1448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3105927186726318398}
   - component: {fileID: 3686703417321964292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LArmIK(DoNotAnimate)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3410218551364912633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1526,7 +1544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741013498397000696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LLegIK_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1557,7 +1575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6246027930330164887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
