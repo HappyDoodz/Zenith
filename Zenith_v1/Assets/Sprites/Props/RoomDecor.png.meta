@@ -1,0 +1,3877 @@
+fileFormatVersion: 2
+guid: 58bdff7f2b940f74a85cc638d31c2575
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2170155172465030710
+    second: RoomDecor_0
+  - first:
+      213: 2443891217426933693
+    second: RoomDecor_1
+  - first:
+      213: -8780625097900311510
+    second: RoomDecor_2
+  - first:
+      213: -7327701759647464967
+    second: RoomDecor_3
+  - first:
+      213: -4976877694255100212
+    second: RoomDecor_4
+  - first:
+      213: 1013964852709690871
+    second: RoomDecor_5
+  - first:
+      213: 1636001035831605063
+    second: RoomDecor_6
+  - first:
+      213: 3520205883002248484
+    second: RoomDecor_7
+  - first:
+      213: 5399090958061228025
+    second: RoomDecor_8
+  - first:
+      213: 8568180287726459887
+    second: RoomDecor_9
+  - first:
+      213: 7942973273631196029
+    second: RoomDecor_10
+  - first:
+      213: -4744097348052242706
+    second: RoomDecor_11
+  - first:
+      213: -7093874452767081544
+    second: RoomDecor_12
+  - first:
+      213: 1688604410182824948
+    second: RoomDecor_13
+  - first:
+      213: 4370733704330983723
+    second: RoomDecor_14
+  - first:
+      213: 6058495899292433507
+    second: RoomDecor_15
+  - first:
+      213: 7122898774694539517
+    second: RoomDecor_16
+  - first:
+      213: -4976638892221725541
+    second: RoomDecor_17
+  - first:
+      213: 5083630104358562703
+    second: RoomDecor_18
+  - first:
+      213: 3781704720673594731
+    second: RoomDecor_19
+  - first:
+      213: 2520577148633209295
+    second: RoomDecor_20
+  - first:
+      213: -1221251603234847787
+    second: RoomDecor_21
+  - first:
+      213: 8253996979005344994
+    second: RoomDecor_22
+  - first:
+      213: 4524686147478979967
+    second: RoomDecor_23
+  - first:
+      213: 1179857318616534175
+    second: RoomDecor_24
+  - first:
+      213: 4377330792939548871
+    second: RoomDecor_25
+  - first:
+      213: 4617741484818465242
+    second: RoomDecor_26
+  - first:
+      213: 7158048596574190416
+    second: RoomDecor_27
+  - first:
+      213: 7184139115849603681
+    second: RoomDecor_28
+  - first:
+      213: -6832338245668453873
+    second: RoomDecor_29
+  - first:
+      213: -6004541342065696175
+    second: RoomDecor_30
+  - first:
+      213: -1959021393377496516
+    second: RoomDecor_31
+  - first:
+      213: -2624735602262242656
+    second: RoomDecor_32
+  - first:
+      213: -3868094760740581827
+    second: RoomDecor_33
+  - first:
+      213: 8500252481640406956
+    second: RoomDecor_34
+  - first:
+      213: -6234635583179672519
+    second: RoomDecor_35
+  - first:
+      213: 3761506292954912366
+    second: RoomDecor_36
+  - first:
+      213: 6427573502045474348
+    second: RoomDecor_37
+  - first:
+      213: -4782031544078534491
+    second: RoomDecor_38
+  - first:
+      213: -2451419850231485580
+    second: RoomDecor_39
+  - first:
+      213: 566581988862521503
+    second: RoomDecor_40
+  - first:
+      213: -8508472878614251609
+    second: RoomDecor_41
+  - first:
+      213: 8899657460423803264
+    second: RoomDecor_42
+  - first:
+      213: 6418603551771832711
+    second: RoomDecor_43
+  - first:
+      213: 8997556206339778157
+    second: RoomDecor_44
+  - first:
+      213: -8834094872369515805
+    second: RoomDecor_45
+  - first:
+      213: 3377934267827688720
+    second: RoomDecor_46
+  - first:
+      213: -1495890451837127130
+    second: RoomDecor_47
+  - first:
+      213: 4292734377903880224
+    second: RoomDecor_48
+  - first:
+      213: 937174201830875036
+    second: RoomDecor_49
+  - first:
+      213: 1153929500962532731
+    second: RoomDecor_50
+  - first:
+      213: 7690292606528503703
+    second: RoomDecor_51
+  - first:
+      213: 5492867773979515952
+    second: RoomDecor_52
+  - first:
+      213: -4742580095878731483
+    second: RoomDecor_53
+  - first:
+      213: 5083652072455884738
+    second: RoomDecor_54
+  - first:
+      213: -3871982076930958443
+    second: RoomDecor_55
+  - first:
+      213: -1934934024271673598
+    second: RoomDecor_56
+  - first:
+      213: 8433545121005550221
+    second: RoomDecor_57
+  - first:
+      213: -1402820879499223722
+    second: RoomDecor_58
+  - first:
+      213: 309486617034766268
+    second: RoomDecor_59
+  - first:
+      213: 4817100928123687560
+    second: RoomDecor_60
+  - first:
+      213: -4821046079196396046
+    second: RoomDecor_61
+  - first:
+      213: 8449972855808054050
+    second: RoomDecor_62
+  - first:
+      213: 1098675818909817469
+    second: RoomDecor_63
+  - first:
+      213: -5464840617395298714
+    second: RoomDecor_64
+  - first:
+      213: -3281369000439600011
+    second: RoomDecor_65
+  - first:
+      213: 3265549692565063696
+    second: RoomDecor_66
+  - first:
+      213: 712464926003186737
+    second: RoomDecor_67
+  - first:
+      213: 3610986242658095504
+    second: RoomDecor_68
+  - first:
+      213: 2860348652989321261
+    second: RoomDecor_69
+  - first:
+      213: 6287845128160235344
+    second: RoomDecor_70
+  - first:
+      213: -4965765038942606002
+    second: RoomDecor_71
+  - first:
+      213: 5846650119360547289
+    second: RoomDecor_72
+  - first:
+      213: 6975193819770882265
+    second: RoomDecor_73
+  - first:
+      213: -449538155771822728
+    second: RoomDecor_74
+  - first:
+      213: 2227032255366435169
+    second: RoomDecor_75
+  - first:
+      213: 4473463490647235015
+    second: RoomDecor_76
+  - first:
+      213: -2109277414553128532
+    second: RoomDecor_77
+  - first:
+      213: -606287924860129318
+    second: RoomDecor_78
+  - first:
+      213: -1642009380392195075
+    second: RoomDecor_79
+  - first:
+      213: 3488861076648466326
+    second: RoomDecor_80
+  - first:
+      213: 360673732216427086
+    second: RoomDecor_81
+  - first:
+      213: -8881783452556024637
+    second: RoomDecor_82
+  - first:
+      213: 4854498401977347537
+    second: RoomDecor_83
+  - first:
+      213: 8339644520411575600
+    second: RoomDecor_84
+  - first:
+      213: 6973976187713447917
+    second: RoomDecor_85
+  - first:
+      213: 3745171741806179374
+    second: RoomDecor_86
+  - first:
+      213: 5859486436304264981
+    second: RoomDecor_87
+  - first:
+      213: -1934734899243630373
+    second: RoomDecor_88
+  - first:
+      213: 644446054472843265
+    second: RoomDecor_89
+  - first:
+      213: -2981877958279251086
+    second: RoomDecor_90
+  - first:
+      213: -184502447799057379
+    second: RoomDecor_91
+  - first:
+      213: 2294365048470224346
+    second: RoomDecor_92
+  - first:
+      213: 6308470979968906584
+    second: RoomDecor_93
+  - first:
+      213: 4633643680344534938
+    second: RoomDecor_94
+  - first:
+      213: -4236730919482496890
+    second: RoomDecor_95
+  - first:
+      213: -6176533387487866463
+    second: RoomDecor_96
+  - first:
+      213: 5182315347440637831
+    second: RoomDecor_97
+  - first:
+      213: -896850257997632745
+    second: RoomDecor_98
+  - first:
+      213: -802355431824466503
+    second: RoomDecor_99
+  - first:
+      213: 8821459310936144471
+    second: RoomDecor_100
+  - first:
+      213: 5664025867628694409
+    second: RoomDecor_101
+  - first:
+      213: -6842252159155611440
+    second: RoomDecor_102
+  - first:
+      213: 2844352282026814859
+    second: RoomDecor_103
+  - first:
+      213: 8269634355306055957
+    second: RoomDecor_104
+  - first:
+      213: 6072154589119314725
+    second: RoomDecor_105
+  - first:
+      213: 7796950789925215694
+    second: RoomDecor_106
+  - first:
+      213: 1804689700890324808
+    second: RoomDecor_107
+  - first:
+      213: -1487044572186895350
+    second: RoomDecor_108
+  - first:
+      213: -2058367472991329264
+    second: RoomDecor_109
+  - first:
+      213: -7012012997364269847
+    second: RoomDecor_110
+  - first:
+      213: -7417523198234179981
+    second: RoomDecor_111
+  - first:
+      213: -7487575970293195860
+    second: RoomDecor_112
+  - first:
+      213: -3348379480428001030
+    second: RoomDecor_113
+  - first:
+      213: 194212038721707943
+    second: RoomDecor_114
+  - first:
+      213: 1239641290538318605
+    second: RoomDecor_115
+  - first:
+      213: 6210392018380982663
+    second: RoomDecor_116
+  - first:
+      213: 1890238615461986349
+    second: RoomDecor_117
+  - first:
+      213: -8773853237429436888
+    second: RoomDecor_118
+  - first:
+      213: -7058591116366908620
+    second: RoomDecor_119
+  - first:
+      213: 4417440694982900592
+    second: RoomDecor_120
+  - first:
+      213: -5784548715056927423
+    second: RoomDecor_121
+  - first:
+      213: -2407758864254352048
+    second: RoomDecor_122
+  - first:
+      213: 6255162303803050877
+    second: RoomDecor_123
+  - first:
+      213: -1130359034345115412
+    second: RoomDecor_124
+  - first:
+      213: 7193421075943458279
+    second: RoomDecor_125
+  - first:
+      213: 6560367806010025223
+    second: RoomDecor_126
+  - first:
+      213: 3966761928583822545
+    second: RoomDecor_127
+  - first:
+      213: 6558479160851182342
+    second: RoomDecor_128
+  - first:
+      213: -215366075645422282
+    second: RoomDecor_129
+  - first:
+      213: 6462240944801690849
+    second: RoomDecor_130
+  - first:
+      213: 1938258016245083658
+    second: RoomDecor_131
+  - first:
+      213: -2915950496185912488
+    second: RoomDecor_132
+  - first:
+      213: 6878974259790304840
+    second: RoomDecor_133
+  - first:
+      213: -7874590232113496353
+    second: RoomDecor_134
+  - first:
+      213: -8975921314636606477
+    second: RoomDecor_135
+  - first:
+      213: -8185772186484017997
+    second: RoomDecor_136
+  - first:
+      213: 2056064463485608861
+    second: RoomDecor_137
+  - first:
+      213: 4822227677799689708
+    second: RoomDecor_138
+  - first:
+      213: 1918584688827152581
+    second: RoomDecor_139
+  - first:
+      213: -3100923121468407514
+    second: RoomDecor_140
+  - first:
+      213: -3525144465103413929
+    second: RoomDecor_141
+  - first:
+      213: -8422462945986596746
+    second: RoomDecor_142
+  - first:
+      213: 5510974194138056199
+    second: RoomDecor_143
+  - first:
+      213: -8252656204533150860
+    second: RoomDecor_144
+  - first:
+      213: 4290229512503049813
+    second: RoomDecor_145
+  - first:
+      213: 8969316266094799247
+    second: RoomDecor_146
+  - first:
+      213: 6394490023754340053
+    second: RoomDecor_147
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RoomDecor_0
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 1335
+        width: 162
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6363142a1a0fd1e10800000000000000
+      internalID: 2170155172465030710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_1
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1245
+        width: 119
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7ed6c2d127ae120800000000000000
+      internalID: 2443891217426933693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_2
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 1374
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2cb5c5cef3f42680800000000000000
+      internalID: -8780625097900311510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_3
+      rect:
+        serializedVersion: 2
+        x: 3281
+        y: 1111
+        width: 605
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1453cc216ce4a90800000000000000
+      internalID: -7327701759647464967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_4
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1234
+        width: 233
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce0c5f0b149eeab0800000000000000
+      internalID: -4976877694255100212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_5
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1239
+        width: 162
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd0e7c49a3521e00800000000000000
+      internalID: 1013964852709690871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_6
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 1240
+        width: 153
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747f9e0364e34b610800000000000000
+      internalID: 1636001035831605063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_7
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 1249
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42dd69889984ad030800000000000000
+      internalID: 3520205883002248484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_8
+      rect:
+        serializedVersion: 2
+        x: 5038
+        y: 1072
+        width: 145
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff4349ee9c6dea40800000000000000
+      internalID: 5399090958061228025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_9
+      rect:
+        serializedVersion: 2
+        x: 5227
+        y: 1141
+        width: 301
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb9075539a48e670800000000000000
+      internalID: 8568180287726459887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_10
+      rect:
+        serializedVersion: 2
+        x: 5582
+        y: 1045
+        width: 151
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d738533db1c1b3e60800000000000000
+      internalID: 7942973273631196029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_11
+      rect:
+        serializedVersion: 2
+        x: 5758
+        y: 1152
+        width: 113
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee2975e894992eb0800000000000000
+      internalID: -4744097348052242706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1037
+        width: 210
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb799925ce7d8d90800000000000000
+      internalID: -7093874452767081544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_13
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1097
+        width: 109
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3fa13b3c02f6710800000000000000
+      internalID: 1688604410182824948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_14
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1159
+        width: 141
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29b97e9527f7ac30800000000000000
+      internalID: 4370733704330983723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_15
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1153
+        width: 150
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c7c7ecbe9141450800000000000000
+      internalID: 6058495899292433507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_16
+      rect:
+        serializedVersion: 2
+        x: 2905
+        y: 1101
+        width: 179
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0bbb462be99d260800000000000000
+      internalID: 7122898774694539517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_17
+      rect:
+        serializedVersion: 2
+        x: 3127
+        y: 1112
+        width: 81
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b940bbd7b4d6feab0800000000000000
+      internalID: -4976638892221725541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_18
+      rect:
+        serializedVersion: 2
+        x: 4429
+        y: 1068
+        width: 176
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b26cb45aeac8640800000000000000
+      internalID: 5083630104358562703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_19
+      rect:
+        serializedVersion: 2
+        x: 4667
+        y: 1053
+        width: 151
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6dda2938605b7430800000000000000
+      internalID: 3781704720673594731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_20
+      rect:
+        serializedVersion: 2
+        x: 4848
+        y: 1067
+        width: 143
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9df35ef83eaf220800000000000000
+      internalID: 2520577148633209295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1028
+        width: 223
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d38fc7232e3d0fe0800000000000000
+      internalID: -1221251603234847787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_22
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 976
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecc2c655861c8270800000000000000
+      internalID: 8253996979005344994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_23
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1035
+        width: 228
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f758d9c041aeace30800000000000000
+      internalID: 4524686147478979967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_24
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1007
+        width: 138
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c88c9eaf1bf5010800000000000000
+      internalID: 1179857318616534175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_25
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1074
+        width: 123
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c07a810a276fbc30800000000000000
+      internalID: 4377330792939548871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_26
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 1032
+        width: 190
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad180332a63851040800000000000000
+      internalID: 4617741484818465242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_27
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 957
+        width: 137
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bb9cb064f765360800000000000000
+      internalID: 7158048596574190416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_28
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 822
+        width: 350
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a5431767033b360800000000000000
+      internalID: 7184139115849603681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_29
+      rect:
+        serializedVersion: 2
+        x: 5226
+        y: 982
+        width: 69
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02cd999098ae21a0800000000000000
+      internalID: -6832338245668453873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_30
+      rect:
+        serializedVersion: 2
+        x: 5313
+        y: 982
+        width: 217
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152e60b76759baca0800000000000000
+      internalID: -6004541342065696175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_31
+      rect:
+        serializedVersion: 2
+        x: 5749
+        y: 1043
+        width: 125
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32f75c0c6820d4e0800000000000000
+      internalID: -1959021393377496516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_32
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 868
+        width: 148
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa86dd40e0139bd0800000000000000
+      internalID: -2624735602262242656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_33
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 883
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e02842f44c15ac0800000000000000
+      internalID: -3868094760740581827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_34
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 916
+        width: 106
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf1f458896f6f570800000000000000
+      internalID: 8500252481640406956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_35
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 922
+        width: 166
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934b09838ff1a79a0800000000000000
+      internalID: -6234635583179672519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_36
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 950
+        width: 136
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6659fb4b0e833430800000000000000
+      internalID: 3761506292954912366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_37
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 881
+        width: 494
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e422d9b04533950800000000000000
+      internalID: 6427573502045474348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_38
+      rect:
+        serializedVersion: 2
+        x: 3475
+        y: 850
+        width: 239
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a87c7e95afc2adb0800000000000000
+      internalID: -4782031544078534491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_39
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 759
+        width: 124
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b6c9762aecafdd0800000000000000
+      internalID: -2451419850231485580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_40
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 814
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90f8462157ecd700800000000000000
+      internalID: 566581988862521503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_41
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 932
+        width: 75
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7f6292ff4dbe980800000000000000
+      internalID: -8508472878614251609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_42
+      rect:
+        serializedVersion: 2
+        x: 4412
+        y: 962
+        width: 180
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081473fce4fe18b70800000000000000
+      internalID: 8899657460423803264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_43
+      rect:
+        serializedVersion: 2
+        x: 4663
+        y: 943
+        width: 72
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781bb615ce5731950800000000000000
+      internalID: 6418603551771832711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_44
+      rect:
+        serializedVersion: 2
+        x: 4841
+        y: 931
+        width: 93
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d666e75d2bdbddc70800000000000000
+      internalID: 8997556206339778157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_45
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 912
+        width: 119
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2b054c48df66580800000000000000
+      internalID: -8834094872369515805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_46
+      rect:
+        serializedVersion: 2
+        x: 5660
+        y: 765
+        width: 140
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0151d7cc155d0ee20800000000000000
+      internalID: 3377934267827688720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_47
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 889
+        width: 205
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62679534f878d3be0800000000000000
+      internalID: -1495890451837127130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_48
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 685
+        width: 605
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028711e3c2bd29b30800000000000000
+      internalID: 4292734377903880224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_50
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 760
+        width: 228
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d27b074c4930010800000000000000
+      internalID: 1153929500962532731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_51
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 746
+        width: 189
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fb1f6716869ba60800000000000000
+      internalID: 7690292606528503703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_52
+      rect:
+        serializedVersion: 2
+        x: 4467
+        y: 798
+        width: 172
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c5d3253269a3c40800000000000000
+      internalID: 5492867773979515952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_53
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 756
+        width: 406
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5296f42b788fe2eb0800000000000000
+      internalID: -4742580095878731483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_54
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 699
+        width: 260
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf496420a2cc8640800000000000000
+      internalID: 5083652072455884738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_55
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 692
+        width: 116
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59bd9dfc0d4f34ac0800000000000000
+      internalID: -3871982076930958443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_56
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 807
+        width: 163
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2074873b1cbb525e0800000000000000
+      internalID: -1934934024271673598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_57
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 703
+        width: 338
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ab3ceca98f90570800000000000000
+      internalID: 8433545121005550221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_58
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 633
+        width: 190
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d92f1b7dd288ce0800000000000000
+      internalID: -1402820879499223722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_59
+      rect:
+        serializedVersion: 2
+        x: 3356
+        y: 725
+        width: 215
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7381f30748b4400800000000000000
+      internalID: 309486617034766268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_60
+      rect:
+        serializedVersion: 2
+        x: 4665
+        y: 777
+        width: 144
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8825404a5c7c9d240800000000000000
+      internalID: 4817100928123687560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_61
+      rect:
+        serializedVersion: 2
+        x: 4827
+        y: 764
+        width: 290
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f585bb4224381db0800000000000000
+      internalID: -4821046079196396046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_62
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 704
+        width: 149
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223d120ea85544570800000000000000
+      internalID: 8449972855808054050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_63
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 712
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a5e6516d74f3f00800000000000000
+      internalID: 1098675818909817469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_64
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 465
+        width: 235
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ed606996cf824b0800000000000000
+      internalID: -5464840617395298714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_65
+      rect:
+        serializedVersion: 2
+        x: 3973
+        y: 683
+        width: 229
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ca1df874c3672d0800000000000000
+      internalID: -3281369000439600011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_66
+      rect:
+        serializedVersion: 2
+        x: 4324
+        y: 662
+        width: 256
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0180abdc420915d20800000000000000
+      internalID: 3265549692565063696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_67
+      rect:
+        serializedVersion: 2
+        x: 4643
+        y: 610
+        width: 163
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c485d431f23e900800000000000000
+      internalID: 712464926003186737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_68
+      rect:
+        serializedVersion: 2
+        x: 4882
+        y: 558
+        width: 260
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091557a1bdccc1230800000000000000
+      internalID: 3610986242658095504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_69
+      rect:
+        serializedVersion: 2
+        x: 5191
+        y: 582
+        width: 141
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d201233f1fff1b720800000000000000
+      internalID: 2860348652989321261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_70
+      rect:
+        serializedVersion: 2
+        x: 5347
+        y: 581
+        width: 59
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f49a264d9e24750800000000000000
+      internalID: 6287845128160235344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_71
+      rect:
+        serializedVersion: 2
+        x: 5428
+        y: 576
+        width: 415
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4da5cfb10f061bb0800000000000000
+      internalID: -4965765038942606002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_72
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 437
+        width: 668
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d90b728e49732150800000000000000
+      internalID: 5846650119360547289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_73
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 438
+        width: 307
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d881faa2dddcc060800000000000000
+      internalID: 6975193819770882265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_74
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 515
+        width: 272
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d7c38dd6be2c9f0800000000000000
+      internalID: -449538155771822728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_75
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 592
+        width: 159
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1611474790208ee10800000000000000
+      internalID: 2227032255366435169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_76
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 573
+        width: 96
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c915b3e75fe41e30800000000000000
+      internalID: 4473463490647235015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_77
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 554
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca17ecced575ab2e0800000000000000
+      internalID: -2109277414553128532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_78
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 532
+        width: 142
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf6a1738580697f0800000000000000
+      internalID: -606287924860129318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_79
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 560
+        width: 465
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb2dd31b296639e0800000000000000
+      internalID: -1642009380392195075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_80
+      rect:
+        serializedVersion: 2
+        x: 3970
+        y: 600
+        width: 229
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69791581aacea6030800000000000000
+      internalID: 3488861076648466326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_81
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 533
+        width: 372
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42139839de510500800000000000000
+      internalID: 360673732216427086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_82
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 449
+        width: 77
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4a472f1019db480800000000000000
+      internalID: -8881783452556024637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_83
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 462
+        width: 91
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ddaf8c8394ae5340800000000000000
+      internalID: 4854498401977347537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_84
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 430
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0353a28818e5cb370800000000000000
+      internalID: 8339644520411575600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_85
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 322
+        width: 426
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de761bc946a88c060800000000000000
+      internalID: 6973976187713447917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_86
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 512
+        width: 176
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24303d3bd589f330800000000000000
+      internalID: 3745171741806179374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_87
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 442
+        width: 102
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f92227ed3115150800000000000000
+      internalID: 5859486436304264981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_88
+      rect:
+        serializedVersion: 2
+        x: 4073
+        y: 373
+        width: 71
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0480c1cd07625e0800000000000000
+      internalID: -1934734899243630373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_89
+      rect:
+        serializedVersion: 2
+        x: 4622
+        y: 384
+        width: 200
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10081c9a54881f800800000000000000
+      internalID: 644446054472843265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_90
+      rect:
+        serializedVersion: 2
+        x: 4855
+        y: 190
+        width: 432
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bb23dabcd3e96d0800000000000000
+      internalID: -2981877958279251086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_91
+      rect:
+        serializedVersion: 2
+        x: 5349
+        y: 449
+        width: 59
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d144fb25004807df0800000000000000
+      internalID: -184502447799057379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_92
+      rect:
+        serializedVersion: 2
+        x: 5448
+        y: 419
+        width: 81
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addb3230bd837df10800000000000000
+      internalID: 2294365048470224346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_93
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 413
+        width: 79
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85538ecbee03c8750800000000000000
+      internalID: 6308470979968906584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_94
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 407
+        width: 123
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f6bae80620e4040800000000000000
+      internalID: 4633643680344534938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_95
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 366
+        width: 116
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688e4570dab1435c0800000000000000
+      internalID: -4236730919482496890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_96
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 267
+        width: 170
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a11277db9b884aa0800000000000000
+      internalID: -6176533387487866463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_97
+      rect:
+        serializedVersion: 2
+        x: 3217
+        y: 375
+        width: 197
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7871146f9584be740800000000000000
+      internalID: 5182315347440637831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_98
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 430
+        width: 287
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b655b217fbd83f0800000000000000
+      internalID: -896850257997632745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_99
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 399
+        width: 183
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd5f7e5cf57dd4f0800000000000000
+      internalID: -802355431824466503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_100
+      rect:
+        serializedVersion: 2
+        x: 4419
+        y: 397
+        width: 144
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a39e4518e1c6a70800000000000000
+      internalID: 8821459310936144471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_101
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 245
+        width: 228
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bc1ae6489aa9e40800000000000000
+      internalID: 5664025867628694409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_102
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 320
+        width: 40
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d851edb9ef6b01a0800000000000000
+      internalID: -6842252159155611440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_103
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 291
+        width: 83
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8da74a945b297720800000000000000
+      internalID: 2844352282026814859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_104
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 368
+        width: 249
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519426ab1a4a3c270800000000000000
+      internalID: 8269634355306055957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_105
+      rect:
+        serializedVersion: 2
+        x: 3788
+        y: 286
+        width: 142
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bf6b95d60a44450800000000000000
+      internalID: 6072154589119314725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_106
+      rect:
+        serializedVersion: 2
+        x: 5315
+        y: 168
+        width: 588
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd91b4fe65543c60800000000000000
+      internalID: 7796950789925215694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_107
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 302
+        width: 141
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84faf57a8bb8b0910800000000000000
+      internalID: 1804689700890324808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_108
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 308
+        width: 102
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c90ad17d4fc5be0800000000000000
+      internalID: -1487044572186895350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_109
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 200
+        width: 81
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014222360b53f63e0800000000000000
+      internalID: -2058367472991329264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_110
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 310
+        width: 167
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec3ea3845350be90800000000000000
+      internalID: -7012012997364269847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_111
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 301
+        width: 99
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376480073f9af0990800000000000000
+      internalID: -7417523198234179981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_112
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 293
+        width: 143
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab5ced6359c61890800000000000000
+      internalID: -7487575970293195860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_113
+      rect:
+        serializedVersion: 2
+        x: 2630
+        y: 236
+        width: 262
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8c1ef5a9a2881d0800000000000000
+      internalID: -3348379480428001030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_114
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 223
+        width: 182
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af9c1bf1daf1b200800000000000000
+      internalID: 194212038721707943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_115
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 273
+        width: 276
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b71739f27143110800000000000000
+      internalID: 1239641290538318605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_116
+      rect:
+        serializedVersion: 2
+        x: 4037
+        y: 222
+        width: 137
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789058bf2aebf2650800000000000000
+      internalID: 6210392018380982663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_117
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 218
+        width: 238
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20865f710a7b3a10800000000000000
+      internalID: 1890238615461986349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_118
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 215
+        width: 129
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e7b9767f20d3680800000000000000
+      internalID: -8773853237429436888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_119
+      rect:
+        serializedVersion: 2
+        x: 4642
+        y: 198
+        width: 162
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433f83617c8da0e90800000000000000
+      internalID: -7058591116366908620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_120
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 58
+        width: 138
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b7fc058e6ed4d30800000000000000
+      internalID: 4417440694982900592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_121
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 72
+        width: 133
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14de61d679729bfa0800000000000000
+      internalID: -5784548715056927423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_122
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 220
+        width: 159
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055425fd11ce59ed0800000000000000
+      internalID: -2407758864254352048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_123
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 168
+        width: 257
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b489a59fccec650800000000000000
+      internalID: 6255162303803050877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_124
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 190
+        width: 187
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0b43972782050f0800000000000000
+      internalID: -1130359034345115412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_125
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 175
+        width: 123
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e50b6f2b5a24d360800000000000000
+      internalID: 7193421075943458279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_126
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 34
+        width: 282
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705e221e2cb1b0b50800000000000000
+      internalID: 6560367806010025223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_127
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 208
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc38cd05f4cc0730800000000000000
+      internalID: 3966761928583822545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_128
+      rect:
+        serializedVersion: 2
+        x: 3557
+        y: 35
+        width: 197
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60336596c06640b50800000000000000
+      internalID: 6558479160851182342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_129
+      rect:
+        serializedVersion: 2
+        x: 3770
+        y: 27
+        width: 152
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6351c7cf1bdd20df0800000000000000
+      internalID: -215366075645422282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_130
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 85
+        width: 201
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4b3ef96ed7ea950800000000000000
+      internalID: 6462240944801690849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_131
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 64
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e675d756316ea10800000000000000
+      internalID: 1938258016245083658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_132
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 62
+        width: 121
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853f63c19767887d0800000000000000
+      internalID: -2915950496185912488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_133
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 64
+        width: 131
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8465bd594a6077f50800000000000000
+      internalID: 6878974259790304840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_134
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 50
+        width: 103
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde3d1fb7e5d7b290800000000000000
+      internalID: -7874590232113496353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_135
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 46
+        width: 74
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f35a3dee1f1f6380800000000000000
+      internalID: -8975921314636606477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_136
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 43
+        width: 77
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4f854019b466e80800000000000000
+      internalID: -8185772186484017997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_137
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 124
+        width: 94
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d932d5d6cbb988c10800000000000000
+      internalID: 2056064463485608861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_138
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 58
+        width: 149
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedae41168efbe240800000000000000
+      internalID: 4822227677799689708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_139
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 51
+        width: 270
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8bb010c9e20aa10800000000000000
+      internalID: 1918584688827152581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_140
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 57
+        width: 353
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6218415b9de47f4d0800000000000000
+      internalID: -3100923121468407514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_143
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 55
+        width: 119
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70681f7c4d9ea7c40800000000000000
+      internalID: 5510974194138056199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_144
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 53
+        width: 136
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bc06b08eca87d80800000000000000
+      internalID: -8252656204533150860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_145
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 52
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e34a1d205f98b30800000000000000
+      internalID: 4290229512503049813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoomDecor_146
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 39
+        width: 211
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89a6be5f99697c70800000000000000
+      internalID: 8969316266094799247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2cbbd1a0b07bcc24a8e8c6f902d8dfdd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RoomDecor_0: 2170155172465030710
+      RoomDecor_1: 2443891217426933693
+      RoomDecor_10: 7942973273631196029
+      RoomDecor_100: 8821459310936144471
+      RoomDecor_101: 5664025867628694409
+      RoomDecor_102: -6842252159155611440
+      RoomDecor_103: 2844352282026814859
+      RoomDecor_104: 8269634355306055957
+      RoomDecor_105: 6072154589119314725
+      RoomDecor_106: 7796950789925215694
+      RoomDecor_107: 1804689700890324808
+      RoomDecor_108: -1487044572186895350
+      RoomDecor_109: -2058367472991329264
+      RoomDecor_11: -4744097348052242706
+      RoomDecor_110: -7012012997364269847
+      RoomDecor_111: -7417523198234179981
+      RoomDecor_112: -7487575970293195860
+      RoomDecor_113: -3348379480428001030
+      RoomDecor_114: 194212038721707943
+      RoomDecor_115: 1239641290538318605
+      RoomDecor_116: 6210392018380982663
+      RoomDecor_117: 1890238615461986349
+      RoomDecor_118: -8773853237429436888
+      RoomDecor_119: -7058591116366908620
+      RoomDecor_12: -7093874452767081544
+      RoomDecor_120: 4417440694982900592
+      RoomDecor_121: -5784548715056927423
+      RoomDecor_122: -2407758864254352048
+      RoomDecor_123: 6255162303803050877
+      RoomDecor_124: -1130359034345115412
+      RoomDecor_125: 7193421075943458279
+      RoomDecor_126: 6560367806010025223
+      RoomDecor_127: 3966761928583822545
+      RoomDecor_128: 6558479160851182342
+      RoomDecor_129: -215366075645422282
+      RoomDecor_13: 1688604410182824948
+      RoomDecor_130: 6462240944801690849
+      RoomDecor_131: 1938258016245083658
+      RoomDecor_132: -2915950496185912488
+      RoomDecor_133: 6878974259790304840
+      RoomDecor_134: -7874590232113496353
+      RoomDecor_135: -8975921314636606477
+      RoomDecor_136: -8185772186484017997
+      RoomDecor_137: 2056064463485608861
+      RoomDecor_138: 4822227677799689708
+      RoomDecor_139: 1918584688827152581
+      RoomDecor_14: 4370733704330983723
+      RoomDecor_140: -3100923121468407514
+      RoomDecor_141: -3525144465103413929
+      RoomDecor_142: -8422462945986596746
+      RoomDecor_143: 5510974194138056199
+      RoomDecor_144: -8252656204533150860
+      RoomDecor_145: 4290229512503049813
+      RoomDecor_146: 8969316266094799247
+      RoomDecor_147: 6394490023754340053
+      RoomDecor_15: 6058495899292433507
+      RoomDecor_16: 7122898774694539517
+      RoomDecor_17: -4976638892221725541
+      RoomDecor_18: 5083630104358562703
+      RoomDecor_19: 3781704720673594731
+      RoomDecor_2: -8780625097900311510
+      RoomDecor_20: 2520577148633209295
+      RoomDecor_21: -1221251603234847787
+      RoomDecor_22: 8253996979005344994
+      RoomDecor_23: 4524686147478979967
+      RoomDecor_24: 1179857318616534175
+      RoomDecor_25: 4377330792939548871
+      RoomDecor_26: 4617741484818465242
+      RoomDecor_27: 7158048596574190416
+      RoomDecor_28: 7184139115849603681
+      RoomDecor_29: -6832338245668453873
+      RoomDecor_3: -7327701759647464967
+      RoomDecor_30: -6004541342065696175
+      RoomDecor_31: -1959021393377496516
+      RoomDecor_32: -2624735602262242656
+      RoomDecor_33: -3868094760740581827
+      RoomDecor_34: 8500252481640406956
+      RoomDecor_35: -6234635583179672519
+      RoomDecor_36: 3761506292954912366
+      RoomDecor_37: 6427573502045474348
+      RoomDecor_38: -4782031544078534491
+      RoomDecor_39: -2451419850231485580
+      RoomDecor_4: -4976877694255100212
+      RoomDecor_40: 566581988862521503
+      RoomDecor_41: -8508472878614251609
+      RoomDecor_42: 8899657460423803264
+      RoomDecor_43: 6418603551771832711
+      RoomDecor_44: 8997556206339778157
+      RoomDecor_45: -8834094872369515805
+      RoomDecor_46: 3377934267827688720
+      RoomDecor_47: -1495890451837127130
+      RoomDecor_48: 4292734377903880224
+      RoomDecor_49: 937174201830875036
+      RoomDecor_5: 1013964852709690871
+      RoomDecor_50: 1153929500962532731
+      RoomDecor_51: 7690292606528503703
+      RoomDecor_52: 5492867773979515952
+      RoomDecor_53: -4742580095878731483
+      RoomDecor_54: 5083652072455884738
+      RoomDecor_55: -3871982076930958443
+      RoomDecor_56: -1934934024271673598
+      RoomDecor_57: 8433545121005550221
+      RoomDecor_58: -1402820879499223722
+      RoomDecor_59: 309486617034766268
+      RoomDecor_6: 1636001035831605063
+      RoomDecor_60: 4817100928123687560
+      RoomDecor_61: -4821046079196396046
+      RoomDecor_62: 8449972855808054050
+      RoomDecor_63: 1098675818909817469
+      RoomDecor_64: -5464840617395298714
+      RoomDecor_65: -3281369000439600011
+      RoomDecor_66: 3265549692565063696
+      RoomDecor_67: 712464926003186737
+      RoomDecor_68: 3610986242658095504
+      RoomDecor_69: 2860348652989321261
+      RoomDecor_7: 3520205883002248484
+      RoomDecor_70: 6287845128160235344
+      RoomDecor_71: -4965765038942606002
+      RoomDecor_72: 5846650119360547289
+      RoomDecor_73: 6975193819770882265
+      RoomDecor_74: -449538155771822728
+      RoomDecor_75: 2227032255366435169
+      RoomDecor_76: 4473463490647235015
+      RoomDecor_77: -2109277414553128532
+      RoomDecor_78: -606287924860129318
+      RoomDecor_79: -1642009380392195075
+      RoomDecor_8: 5399090958061228025
+      RoomDecor_80: 3488861076648466326
+      RoomDecor_81: 360673732216427086
+      RoomDecor_82: -8881783452556024637
+      RoomDecor_83: 4854498401977347537
+      RoomDecor_84: 8339644520411575600
+      RoomDecor_85: 6973976187713447917
+      RoomDecor_86: 3745171741806179374
+      RoomDecor_87: 5859486436304264981
+      RoomDecor_88: -1934734899243630373
+      RoomDecor_89: 644446054472843265
+      RoomDecor_9: 8568180287726459887
+      RoomDecor_90: -2981877958279251086
+      RoomDecor_91: -184502447799057379
+      RoomDecor_92: 2294365048470224346
+      RoomDecor_93: 6308470979968906584
+      RoomDecor_94: 4633643680344534938
+      RoomDecor_95: -4236730919482496890
+      RoomDecor_96: -6176533387487866463
+      RoomDecor_97: 5182315347440637831
+      RoomDecor_98: -896850257997632745
+      RoomDecor_99: -802355431824466503
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
