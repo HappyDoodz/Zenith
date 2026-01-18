@@ -31,6 +31,7 @@ public class PlayerController2D : MonoBehaviour
     public PlayerState State { get; private set; }
 
     Rigidbody2D rb;
+    PlayerCombat combat;
     float moveInput;
     public bool facingRight = true;
     bool canDodge = true;
@@ -38,6 +39,11 @@ public class PlayerController2D : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        combat = GetComponent<PlayerCombat>();
     }
 
     void Update()
@@ -53,7 +59,8 @@ public class PlayerController2D : MonoBehaviour
             Jump();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDodge)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDodge &&
+            (combat == null || !combat.IsBusy))
         {
             StartCoroutine(Dodge());
         }

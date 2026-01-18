@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerCombat : MonoBehaviour
     [Header("Melee")]
     public float meleeRange = 1f;
     public int meleeDamage = 25;
+    public float meleeDelay = 0.5f;
+    public float meleeDuration = 1f;
     public LayerMask enemyLayer;
     public Transform meleePoint;
 
@@ -18,6 +21,11 @@ public class PlayerCombat : MonoBehaviour
     public GameObject grenadePrefab;
     public Transform grenadeSpawn;
     public float grenadeThrowForce = 8f;
+    public float grenadeThrowDelay = 0.5f;
+    public float grenadeThrowDuration = 1f;
+
+    bool isMeleeAttacking;
+    bool isThrowingGrenade;
 
     Weapon CurrentWeapon => MainController.Instance.GetCurrentWeapon();
 
@@ -64,6 +72,9 @@ public class PlayerCombat : MonoBehaviour
 
     void TryShoot()
     {
+        if (IsBusy)
+            return;
+
         if (!MainController.Instance.CanFire())
             return;
 
@@ -108,7 +119,21 @@ public class PlayerCombat : MonoBehaviour
 
     void Melee()
     {
+        if (IsBusy)
+            return;
+
+        StartCoroutine(MeleeRoutine());
+    }
+
+
+    IEnumerator MeleeRoutine()
+    {
+        isMeleeAttacking = true;
+
         GetComponent<PlayerAnimatorController>()?.TriggerMelee();
+
+        // Optional delay to sync hit frame
+        yield return new WaitForSeconds(meleeDelay);
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             meleePoint.position,
@@ -120,13 +145,32 @@ public class PlayerCombat : MonoBehaviour
         {
             hit.GetComponent<EnemyHealth>()?.TakeDamage(meleeDamage);
         }
+
+        // Total melee lock duration (tune this)
+        yield return new WaitForSeconds(meleeDuration);
+
+        isMeleeAttacking = false;
     }
+
 
     // ---------------- GRENADES ----------------
 
     void ThrowGrenade()
     {
+        if (IsBusy)
+            return;
+
+        StartCoroutine(GrenadeRoutine());
+    }
+
+    IEnumerator GrenadeRoutine()
+    {
+        isThrowingGrenade = true;
+
         GetComponent<PlayerAnimatorController>()?.TriggerGrenade();
+
+        // Delay to match throw animation
+        yield return new WaitForSeconds(grenadeThrowDelay);
 
         GameObject grenade = Instantiate(
             grenadePrefab,
@@ -140,7 +184,18 @@ public class PlayerCombat : MonoBehaviour
         float verticalBoost = controller.IsCrouching ? 1.5f : 3f;
         rb.linearVelocity =
             direction * grenadeThrowForce + Vector2.up * verticalBoost;
+
+        // Lock until animation finishes
+        yield return new WaitForSeconds(grenadeThrowDuration);
+
+        isThrowingGrenade = false;
     }
+
+
+    public bool IsBusy =>
+    controller.State == PlayerController2D.PlayerState.Dodging ||
+    isMeleeAttacking ||
+    isThrowingGrenade;
 
     // ---------------- DEBUG ----------------
 

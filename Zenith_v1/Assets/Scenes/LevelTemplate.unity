@@ -2973,10 +2973,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.38632688
       objectReference: {fileID: 0}
-    - target: {fileID: 949362226043038275, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1192291423909614427, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.97332615
