@@ -79,7 +79,7 @@ MonoBehaviour:
   damage: 10
   damageType: 0
   speed: 50
-  lifetime: 3
+  lifetime: 1
   pierceCount: 0
   explosive: 0
   explosionRadius: 2
@@ -130,7 +130,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.2
+  m_Radius: 0.1
 --- !u!1 &3468690757681094654
 GameObject:
   m_ObjectHideFlags: 0
