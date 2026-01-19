@@ -1190,24 +1190,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
   weapon:
-    weaponId: Sniper
-    weaponName: Sniper
+    weaponId: AssaultRifle
+    weaponName: Assault Rifle
     weaponPrefab: {fileID: 1697036685979796447, guid: 5e7073a9147eb0b48b5fbd1e9c10954c, type: 3}
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
-    fireRate: 1
+    fireRate: 0.1
     projectileSpeed: 50
-    clipSize: 5
+    clipSize: 30
     currentClip: 0
     infiniteAmmo: 0
     reloadTime: 3
-    muzzleFlashSprites: []
+    muzzleFlashSprites:
+    - {fileID: 6918117652038712344, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -599844222353252488, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 8415940726705588405, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 268932047804147497, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 72767835080455652, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 6711422003213473759, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     muzzleFlashLifetime: 0.05
     muzzleFlashScale: 1
     muzzleFlashOffset: {x: 0, y: 0}
     recoilOffset: {x: -0.05, y: 0.02}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
-  startingReserveAmmo: 24
+  startingReserveAmmo: 120
 --- !u!61 &824147269
 BoxCollider2D:
   m_ObjectHideFlags: 0
