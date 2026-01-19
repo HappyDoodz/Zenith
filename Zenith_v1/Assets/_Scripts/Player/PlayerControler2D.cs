@@ -32,6 +32,7 @@ public class PlayerController2D : MonoBehaviour
 
     Rigidbody2D rb;
     PlayerCombat combat;
+    AfterImageEffect afterImage;
     float moveInput;
     public bool facingRight = true;
     bool canDodge = true;
@@ -44,6 +45,7 @@ public class PlayerController2D : MonoBehaviour
     void Start()
     {
         combat = GetComponent<PlayerCombat>();
+        afterImage = GetComponent<AfterImageEffect>();
     }
 
     void Update()
@@ -53,6 +55,8 @@ public class PlayerController2D : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
 
         IsCrouching = Input.GetKey(KeyCode.S);
+
+        afterImage.SetAlwaysEmitting(!IsGrounded);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded && !IsCrouching)
         {
@@ -92,6 +96,7 @@ public class PlayerController2D : MonoBehaviour
     IEnumerator Dodge()
     {
         State = PlayerState.Dodging;
+        afterImage.EmitForDuration(dodgeDuration);
         IsInvincible = true;
         canDodge = false;
 

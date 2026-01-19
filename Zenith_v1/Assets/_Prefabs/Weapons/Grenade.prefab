@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 697270018995603675}
   - component: {fileID: 2429102719097841042}
-  - component: {fileID: 8544782059277132187}
   - component: {fileID: -8355680632210354090}
+  - component: {fileID: 9058250990688915229}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -48,51 +48,20 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_LinearDamping: 3
+  m_AngularDamping: 1
+  m_GravityScale: 4
+  m_Material: {fileID: 6200000, guid: 6491813baf6cdc547b40c8b3c9bb5816, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8544782059277132187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602339330159018145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23f77d8386677145b62e0d1c22b007b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  damage: 10
-  damageType: 0
-  speed: 15
-  lifetime: 3
-  pierceCount: 0
-  explosive: 0
-  explosionRadius: 2
-  explosionLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  knockbackForce: 5
-  hitLayers:
-    serializedVersion: 2
-    m_Bits: 136
-  destroyOnHit: 1
-  canHitPlayer: 0
-  canHitEnemies: 1
-  hitEffect: {fileID: 0}
-  explosionEffect: {fileID: 0}
 --- !u!58 &-8355680632210354090
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -123,12 +92,33 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &9058250990688915229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602339330159018145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3cca0369198cdf46929b66fb3f271ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grenade
+  fuseTime: 1.5
+  explosionRadius: 2.5
+  damage: 50
+  damageLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  explosionForce: 8
+  explosionVFX: {fileID: 0}
+  destroyOnExplode: 1
 --- !u!1 &3468690757681094654
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +146,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 697270018995603675}
@@ -207,7 +197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1060141233
-  m_SortingLayer: 6
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}

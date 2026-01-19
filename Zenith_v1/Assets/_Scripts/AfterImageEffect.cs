@@ -110,6 +110,15 @@ public class AfterImageEffect : MonoBehaviour
         if (anim != null)
             anim.enabled = false;
 
+        // Disable weapon visuals on the ghost
+        foreach (Transform t in ghost.GetComponentsInChildren<Transform>(true))
+        {
+            if (t.CompareTag("Weapon"))
+            {
+                t.gameObject.SetActive(false);
+            }
+        }
+
         Destroy(ghost, lifetime);
     }
 }
