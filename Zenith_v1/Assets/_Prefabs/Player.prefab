@@ -886,17 +886,17 @@ MonoBehaviour:
   rightArmRecoil: {fileID: 7383362596227032395}
   meleeRange: 1
   meleeDamage: 25
-  meleeDelay: 0.5
-  meleeDuration: 1
+  meleeDelay: 0.1
+  meleeDuration: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  meleePoint: {fileID: 7174935566779394999}
+  meleePoint: {fileID: 8281601979511510555}
   grenadePrefab: {fileID: 1602339330159018145, guid: c6ce09b6703088c4cab08972ac8073a0, type: 3}
-  grenadeSpawn: {fileID: 7174935566779394999}
-  grenadeThrowForce: 15
-  grenadeThrowDelay: 0.5
-  grenadeThrowDuration: 1
+  grenadeSpawn: {fileID: 8281601979511510555}
+  grenadeThrowForce: 30
+  grenadeThrowDelay: 0.1
+  grenadeThrowDuration: 0.5
 --- !u!114 &8266917890573929816
 MonoBehaviour:
   m_ObjectHideFlags: 0
