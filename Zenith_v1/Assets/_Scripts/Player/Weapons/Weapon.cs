@@ -33,7 +33,7 @@ public class Weapon
     public Vector2 muzzleFlashOffset;
 
     [Header("Recoil")]
-    public Vector2 recoilOffset = new Vector2(-0.05f, 0.02f);
+    public Vector2 recoilOffset = new Vector2(0f, 0.05f);
     public float recoilKickTime = 0.05f;
     public float recoilReturnTime = 0.08f;
 
@@ -41,12 +41,14 @@ public class Weapon
     public AudioClip[] fireSounds;
     public AudioClip reloadSound;
     public AudioClip readySound;
-    
+    public AudioClip fireStopSound;
+
     public float pitchMin = 0.95f;
     public float pitchMax = 1.05f;
     public float fireVolume = 1f;
     public float reloadVolume = 1f;
     public float readyVolume = 1f;
+    public float fireStopVolume = 1f;
 
     float lastFireTime;
 

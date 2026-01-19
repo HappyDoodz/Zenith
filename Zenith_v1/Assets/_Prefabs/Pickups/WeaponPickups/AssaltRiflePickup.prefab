@@ -221,7 +221,7 @@ MonoBehaviour:
     muzzleFlashLifetime: 0.05
     muzzleFlashScale: 1
     muzzleFlashOffset: {x: 0, y: 0}
-    recoilOffset: {x: -0.05, y: 0.02}
+    recoilOffset: {x: 0, y: 0.08}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
     fireSounds:

@@ -1155,6 +1155,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &631573361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407547692751419635, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097896014897178159, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
+      propertyPath: m_Name
+      value: MinigunPickup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
 --- !u!1 &717193655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1736,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546273164}
   m_CullTransparentMesh: 1
+--- !u!1001 &1570445802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_Name
+      value: ArmourPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406592313149567240, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
 --- !u!1 &2009059627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainController
   maxHealth: 100
   currentHealth: 100
+  maxArmour: 50
+  currentArmour: 0
   canWeaponSelect: 1
   primaryWeapon:
     weaponId: Pistol
@@ -1735,18 +1851,20 @@ MonoBehaviour:
     muzzleFlashLifetime: 0.05
     muzzleFlashScale: 1
     muzzleFlashOffset: {x: 0, y: 0}
-    recoilOffset: {x: -0.05, y: 0.02}
+    recoilOffset: {x: 0, y: 0.05}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
     fireSounds:
     - {fileID: 8300000, guid: 2d5681f43373ed64d88a40d65d28bcd2, type: 3}
     reloadSound: {fileID: 8300000, guid: 30d735c1f4aba1e4db9f47f9dce7d1ff, type: 3}
     readySound: {fileID: 8300000, guid: 30d735c1f4aba1e4db9f47f9dce7d1ff, type: 3}
+    fireStopSound: {fileID: 0}
     pitchMin: 0.95
     pitchMax: 1.05
     fireVolume: 1
     reloadVolume: 1
     readyVolume: 1
+    fireStopVolume: 1
   secondaryWeapon:
     weaponId: MachineGun
     weaponName: MachineGun
@@ -1771,18 +1889,20 @@ MonoBehaviour:
     muzzleFlashLifetime: 0.05
     muzzleFlashScale: 1
     muzzleFlashOffset: {x: 0, y: 0}
-    recoilOffset: {x: -0.05, y: 0.02}
+    recoilOffset: {x: 0, y: 0.02}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
     fireSounds:
     - {fileID: 8300000, guid: f2ade98fdb62b054fb13dfb3bc6d6183, type: 3}
     reloadSound: {fileID: 8300000, guid: b0471062d184a64429a6b92be0731827, type: 3}
     readySound: {fileID: 8300000, guid: b0471062d184a64429a6b92be0731827, type: 3}
+    fireStopSound: {fileID: 0}
     pitchMin: 0.95
     pitchMax: 1.05
     fireVolume: 1
     reloadVolume: 1
     readyVolume: 1
+    fireStopVolume: 1
   usingPrimary: 1
   primaryWeaponAmmo:
     weaponId: 
@@ -3106,3 +3226,5 @@ SceneRoots:
   - {fileID: 198363739}
   - {fileID: 1370346093}
   - {fileID: 4007914265134101915}
+  - {fileID: 1570445802}
+  - {fileID: 631573361}

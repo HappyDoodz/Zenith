@@ -21,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
 
     // Optional events for UI / audio
     public event Action<float, float> OnHealthChanged;
+
+    public event Action<float, float> OnArmourChanged;
     public event Action OnDeath;
 
     void Awake()
@@ -31,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         if (MainController.Instance != null)
         {
             maxHealth = MainController.Instance.maxHealth;
-            MainController.Instance.currentHealth = maxHealth;
+            //MainController.Instance.currentHealth = maxHealth;
         }
     }
 
@@ -59,9 +61,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (MainController.Instance != null)
         {
-            MainController.Instance.currentHealth -= damage;
-            MainController.Instance.currentHealth =
-                Mathf.Max(0, MainController.Instance.currentHealth);
+            MainController.Instance.ApplyDamage(damage);
         }
 
         SpawnHitEffect();

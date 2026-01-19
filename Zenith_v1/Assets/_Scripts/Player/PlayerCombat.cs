@@ -34,6 +34,8 @@ public class PlayerCombat : MonoBehaviour
     bool isMeleeAttacking;
     bool isThrowingGrenade;
     bool isReloading;
+    bool isFiring;
+    bool wasFiring;
 
     Weapon CurrentWeapon => MainController.Instance.GetCurrentWeapon();
 
@@ -54,6 +56,9 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
+        wasFiring = isFiring;
+        isFiring = false;
+
         if (Input.GetKeyDown(KeyCode.Q))
             SwapWeapon();
 
@@ -68,6 +73,11 @@ public class PlayerCombat : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
             ThrowGrenade();
+
+        if (wasFiring && !isFiring)
+        {
+            PlayFireStopSound();
+        }
     }
 
     // ---------------- SHOOTING ----------------
@@ -90,6 +100,8 @@ public class PlayerCombat : MonoBehaviour
 
         if (FirePoint == null)
             return;
+
+        isFiring = true;
 
         if (CurrentWeapon.Fire(
             FirePoint,
@@ -193,6 +205,19 @@ public class PlayerCombat : MonoBehaviour
         weaponAudio.pitch = 1f;
         weaponAudio.volume = CurrentWeapon.readyVolume;
         weaponAudio.PlayOneShot(CurrentWeapon.readySound);
+    }
+
+    void PlayFireStopSound()
+    {
+        if (CurrentWeapon == null)
+            return;
+    
+        if (CurrentWeapon.fireStopSound == null)
+            return;
+    
+        weaponAudio.pitch = 1f;
+        weaponAudio.volume = CurrentWeapon.fireStopVolume;
+        weaponAudio.PlayOneShot(CurrentWeapon.fireStopSound);
     }
 
     void Reload()

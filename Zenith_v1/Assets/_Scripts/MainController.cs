@@ -11,6 +11,10 @@ public class MainController : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth = 100f;
 
+    [Header("Body Armour")]
+    public float maxArmour = 50f;
+    public float currentArmour = 0f;
+
     [Header("Conditions")]
     public bool canWeaponSelect = true;
 
@@ -48,12 +52,52 @@ public class MainController : MonoBehaviour
     void Update()
     {
         ClampHealth();
+        ClampArmour();
     }
 
     void ClampHealth()
     {
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
+    }
+
+    void ClampArmour()
+    {
+        if (currentArmour < 0)
+            currentArmour = 0;
+
+        if (currentArmour > maxArmour)
+            currentArmour = maxArmour;
+    }
+
+    public void ApplyDamage(float damage)
+    {
+        if (damage <= 0)
+            return;
+
+        // Armour absorbs damage first
+        if (currentArmour > 0)
+        {
+            float absorbed = Mathf.Min(currentArmour, damage);
+            currentArmour -= absorbed;
+            damage -= absorbed;
+        }
+
+        // Remaining damage hits health
+        if (damage > 0)
+        {
+            currentHealth -= damage;
+            currentHealth = Mathf.Max(0, currentHealth);
+        }
+    }
+
+    public void AddArmour(float amount)
+    {
+        if (amount <= 0)
+            return;
+    
+        currentArmour += amount;
+        ClampArmour();
     }
 
     // ================= INITIALIZATION =================
@@ -176,10 +220,10 @@ public class MainController : MonoBehaviour
     {
         if (secondaryWeapon == null)
             return;
-    
+
         if (secondaryWeaponAmmo == null)
             return;
-    
+
         // Add to reserve ammo
         secondaryWeaponAmmo.reserveAmmo += amount;
     }

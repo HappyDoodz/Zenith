@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5407547692751419635}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1093755072139288790, guid: e1c2fde149fac044e938c6f2a6bd64a2, type: 3}
+  m_Sprite: {fileID: 4362521101822345850, guid: 1c52cfb736edcf84ab5e195eb0d3e7a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: -8581285004402112822}
   - component: {fileID: 4182868517342926525}
   m_Layer: 9
-  m_Name: ShotgunPickup
+  m_Name: MinigunPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,36 +201,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
   weapon:
-    weaponId: Shotgun
-    weaponName: Shotgun
-    weaponPrefab: {fileID: 1697036685979796447, guid: 607c7b15eb765c94c80846ba251bc34e, type: 3}
-    projectilePrefab: {fileID: 1602339330159018145, guid: 44b99094ea013ef4490bd24cce910713, type: 3}
-    fireRate: 0.8
+    weaponId: Minigun
+    weaponName: Minigun
+    weaponPrefab: {fileID: 1697036685979796447, guid: 90006787401e75f44b2ad3624f1ed924, type: 3}
+    projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
+    fireRate: 0.05
     projectileSpeed: 50
-    clipSize: 12
+    clipSize: 200
     currentClip: 0
     infiniteAmmo: 0
-    reloadTime: 1.1
+    reloadTime: 1.8
     muzzleFlashSprites:
-    - {fileID: 5063393867768571626, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: -6210039837673080033, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: -8847200347274191562, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    muzzleFlashLifetime: 0.05
+    - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -3461397254486618878, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -7534115186340659281, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -453492232900831130, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -8815713845831181007, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    muzzleFlashLifetime: 0.1
     muzzleFlashScale: 1
     muzzleFlashOffset: {x: 0, y: 0}
-    recoilOffset: {x: 0, y: 0.1}
+    recoilOffset: {x: 0, y: 0.06}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
     fireSounds:
-    - {fileID: 8300000, guid: 0a53b09b57014de41897f10586f85b04, type: 3}
-    reloadSound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
-    readySound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
+    - {fileID: 8300000, guid: d9481fda135bad347b8176177c22e087, type: 3}
+    reloadSound: {fileID: 8300000, guid: 8f6a1b75761c81e498f728ddcd013e6f, type: 3}
+    readySound: {fileID: 8300000, guid: db378224321052246a96939a3bb1d012, type: 3}
+    fireStopSound: {fileID: 8300000, guid: 5e8e8ef0e17479b4b9a3a13c80886617, type: 3}
     pitchMin: 0.95
     pitchMax: 1.05
     fireVolume: 1
     reloadVolume: 1
     readyVolume: 1
-  startingReserveAmmo: 60
+    fireStopVolume: 1
+  startingReserveAmmo: 1000
 --- !u!50 &-8581285004402112822
 Rigidbody2D:
   serializedVersion: 5
