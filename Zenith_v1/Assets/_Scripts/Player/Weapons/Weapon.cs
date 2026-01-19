@@ -37,6 +37,17 @@ public class Weapon
     public float recoilKickTime = 0.05f;
     public float recoilReturnTime = 0.08f;
 
+    [Header("Audio")]
+    public AudioClip[] fireSounds;
+    public AudioClip reloadSound;
+    public AudioClip readySound;
+    
+    public float pitchMin = 0.95f;
+    public float pitchMax = 1.05f;
+    public float fireVolume = 1f;
+    public float reloadVolume = 1f;
+    public float readyVolume = 1f;
+
     float lastFireTime;
 
     /// <summary>

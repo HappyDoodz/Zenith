@@ -221,6 +221,15 @@ MonoBehaviour:
     recoilOffset: {x: -0.05, y: 0.02}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
+    fireSounds:
+    - {fileID: 8300000, guid: 0a53b09b57014de41897f10586f85b04, type: 3}
+    reloadSound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
+    readySound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
   startingReserveAmmo: 60
 --- !u!50 &-8581285004402112822
 Rigidbody2D:

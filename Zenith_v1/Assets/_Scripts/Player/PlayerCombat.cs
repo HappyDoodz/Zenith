@@ -28,6 +28,9 @@ public class PlayerCombat : MonoBehaviour
     public float grenadeThrowDelay = 0.5f;
     public float grenadeThrowDuration = 1f;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource weaponAudio;
+
     bool isMeleeAttacking;
     bool isThrowingGrenade;
     bool isReloading;
@@ -102,6 +105,8 @@ public class PlayerCombat : MonoBehaviour
                 CurrentWeapon.recoilReturnTime,
                 controller.facingRight
             );
+
+            PlayFireSound();
         }
     }
 
@@ -145,6 +150,51 @@ public class PlayerCombat : MonoBehaviour
         Destroy(flash, CurrentWeapon.muzzleFlashLifetime);
     }
 
+    void PlayFireSound()
+    {
+        if (CurrentWeapon == null)
+            return;
+
+        var clips = CurrentWeapon.fireSounds;
+        if (clips == null || clips.Length == 0)
+            return;
+
+        AudioClip clip =
+            clips[Random.Range(0, clips.Length)];
+
+        weaponAudio.pitch =
+            Random.Range(CurrentWeapon.pitchMin, CurrentWeapon.pitchMax);
+
+        weaponAudio.volume = CurrentWeapon.fireVolume;
+        weaponAudio.PlayOneShot(clip);
+    }
+
+    void PlayReloadSound()
+    {
+        if (CurrentWeapon == null)
+            return;
+
+        if (CurrentWeapon.reloadSound == null)
+            return;
+
+        weaponAudio.pitch = 1f; // keep reload stable
+        weaponAudio.volume = CurrentWeapon.reloadVolume;
+        weaponAudio.PlayOneShot(CurrentWeapon.reloadSound);
+    }
+
+    void PlayReadySound()
+    {
+        if (CurrentWeapon == null)
+            return;
+
+        if (CurrentWeapon.readySound == null)
+            return;
+
+        weaponAudio.pitch = 1f;
+        weaponAudio.volume = CurrentWeapon.readyVolume;
+        weaponAudio.PlayOneShot(CurrentWeapon.readySound);
+    }
+
     void Reload()
     {
         if (isReloading)
@@ -156,6 +206,8 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator AutoReloadRoutine()
     {
         isReloading = true;
+
+        PlayReloadSound();
 
         MainController.Instance.Reload();
 
@@ -171,6 +223,7 @@ public class PlayerCombat : MonoBehaviour
     {
         MainController.Instance.SwapWeapon();
         weaponVisuals.SetWeapon(CurrentWeapon);
+        PlayReadySound();
     }
 
     public void RefreshWeaponVisuals()

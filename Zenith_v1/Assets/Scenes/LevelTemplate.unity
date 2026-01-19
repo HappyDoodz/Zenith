@@ -1738,6 +1738,15 @@ MonoBehaviour:
     recoilOffset: {x: -0.05, y: 0.02}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
+    fireSounds:
+    - {fileID: 8300000, guid: 2d5681f43373ed64d88a40d65d28bcd2, type: 3}
+    reloadSound: {fileID: 8300000, guid: 30d735c1f4aba1e4db9f47f9dce7d1ff, type: 3}
+    readySound: {fileID: 8300000, guid: 30d735c1f4aba1e4db9f47f9dce7d1ff, type: 3}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
   secondaryWeapon:
     weaponId: MachineGun
     weaponName: MachineGun
@@ -1765,6 +1774,15 @@ MonoBehaviour:
     recoilOffset: {x: -0.05, y: 0.02}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
+    fireSounds:
+    - {fileID: 8300000, guid: f2ade98fdb62b054fb13dfb3bc6d6183, type: 3}
+    reloadSound: {fileID: 8300000, guid: b0471062d184a64429a6b92be0731827, type: 3}
+    readySound: {fileID: 8300000, guid: b0471062d184a64429a6b92be0731827, type: 3}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
   usingPrimary: 1
   primaryWeaponAmmo:
     weaponId: 
