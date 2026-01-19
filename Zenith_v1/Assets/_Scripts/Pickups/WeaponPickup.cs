@@ -10,10 +10,15 @@ public class WeaponPickup : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
+        PlayerCombat playerCombat =
+            FindFirstObjectByType<PlayerCombat>();
+
         MainController.Instance.ReplaceSecondaryWeapon(
             weapon,
             startingReserveAmmo
         );
+
+        playerCombat?.RefreshWeaponVisuals();
 
         Destroy(gameObject);
     }

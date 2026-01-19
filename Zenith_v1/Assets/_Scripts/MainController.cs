@@ -94,7 +94,7 @@ public class MainController : MonoBehaviour
             weaponId = secondaryWeapon.weaponId,
             clipSize = secondaryWeapon.clipSize,
             currentClip = secondaryWeapon.clipSize,
-            reserveAmmo = 0,              // starts empty unless pickup says otherwise
+            reserveAmmo = 120,              // starts empty unless pickup says otherwise
             infiniteAmmo = false
         };
     }
@@ -172,15 +172,34 @@ public class MainController : MonoBehaviour
         ammo.isReloading = false;
     }
 
-
+    public void AddSecondaryAmmo(int amount)
+    {
+        if (secondaryWeapon == null)
+            return;
+    
+        if (secondaryWeaponAmmo == null)
+            return;
+    
+        // Add to reserve ammo
+        secondaryWeaponAmmo.reserveAmmo += amount;
+    }
 
     // ================= PICKUP API =================
 
     public void ReplaceSecondaryWeapon(
         Weapon newWeapon,
-        int startingReserveAmmo
+        int ammoAmount
     )
     {
+        // If we already have this weapon equipped, just ADD ammo
+        if (secondaryWeapon != null &&
+            secondaryWeapon.weaponId == newWeapon.weaponId)
+        {
+            secondaryWeaponAmmo.reserveAmmo += ammoAmount;
+            return;
+        }
+
+        // Otherwise: replace the weapon entirely
         secondaryWeapon = newWeapon;
 
         secondaryWeaponAmmo = new WeaponAmmoState
@@ -188,7 +207,7 @@ public class MainController : MonoBehaviour
             weaponId = newWeapon.weaponId,
             clipSize = newWeapon.clipSize,
             currentClip = newWeapon.clipSize,
-            reserveAmmo = startingReserveAmmo,
+            reserveAmmo = ammoAmount,
             infiniteAmmo = false
         };
     }

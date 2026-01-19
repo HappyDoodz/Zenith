@@ -30,6 +30,7 @@ public class PlayerCombat : MonoBehaviour
 
     bool isMeleeAttacking;
     bool isThrowingGrenade;
+    bool isReloading;
 
     Weapon CurrentWeapon => MainController.Instance.GetCurrentWeapon();
 
@@ -70,11 +71,19 @@ public class PlayerCombat : MonoBehaviour
 
     void TryShoot()
     {
-        if (IsBusy)
+        if (IsBusy || isReloading)
             return;
 
+        // 🔑 If clip is empty, try auto-reload
         if (!MainController.Instance.CanFire())
+        {
+            // Only reload if we actually have reserve ammo
+            //if (MainController.Instance.CanReload())
+            //{
+                StartCoroutine(AutoReloadRoutine());
+            //}
             return;
+        }
 
         if (FirePoint == null)
             return;
@@ -88,10 +97,10 @@ public class PlayerCombat : MonoBehaviour
             SpawnMuzzleFlash();
 
             rightArmRecoil?.ApplyRecoil(
-            CurrentWeapon.recoilOffset,
-            CurrentWeapon.recoilKickTime,
-            CurrentWeapon.recoilReturnTime,
-            controller.facingRight
+                CurrentWeapon.recoilOffset,
+                CurrentWeapon.recoilKickTime,
+                CurrentWeapon.recoilReturnTime,
+                controller.facingRight
             );
         }
     }
@@ -138,7 +147,22 @@ public class PlayerCombat : MonoBehaviour
 
     void Reload()
     {
+        if (isReloading)
+            return;
+
+        StartCoroutine(AutoReloadRoutine());
+    }
+
+    IEnumerator AutoReloadRoutine()
+    {
+        isReloading = true;
+
         MainController.Instance.Reload();
+
+        // Wait for weapon-specific reload time
+        yield return new WaitForSeconds(CurrentWeapon.reloadTime);
+
+        isReloading = false;
     }
 
     // ---------------- WEAPON SWAP ----------------
@@ -146,6 +170,14 @@ public class PlayerCombat : MonoBehaviour
     void SwapWeapon()
     {
         MainController.Instance.SwapWeapon();
+        weaponVisuals.SetWeapon(CurrentWeapon);
+    }
+
+    public void RefreshWeaponVisuals()
+    {
+        if (CurrentWeapon == null)
+            return;
+
         weaponVisuals.SetWeapon(CurrentWeapon);
     }
 
