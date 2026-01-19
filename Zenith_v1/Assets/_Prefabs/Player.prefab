@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977901877672320891}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.2613359, w: 0.9652479}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26133618, w: 0.96524787}
   m_LocalPosition: {x: 0.4524646, y: 0.00271713, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -445,6 +445,7 @@ Transform:
   - {fileID: 8630019826685352195}
   - {fileID: 3410218551364912633}
   - {fileID: 5507234556866869182}
+  - {fileID: 7497664910624111546}
   m_Father: {fileID: 8392755630103503839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2323067873522727739
@@ -885,17 +886,17 @@ MonoBehaviour:
   rightArmRecoil: {fileID: 7383362596227032395}
   meleeRange: 1
   meleeDamage: 25
-  meleeDelay: 0.5
-  meleeDuration: 1
+  meleeDelay: 0.1
+  meleeDuration: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  meleePoint: {fileID: 7174935566779394999}
+  meleePoint: {fileID: 8281601979511510555}
   grenadePrefab: {fileID: 1602339330159018145, guid: c6ce09b6703088c4cab08972ac8073a0, type: 3}
-  grenadeSpawn: {fileID: 7174935566779394999}
-  grenadeThrowForce: 15
-  grenadeThrowDelay: 0.5
-  grenadeThrowDuration: 1
+  grenadeSpawn: {fileID: 8281601979511510555}
+  grenadeThrowForce: 30
+  grenadeThrowDelay: 0.1
+  grenadeThrowDuration: 0.5
 --- !u!114 &8266917890573929816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,7 +1078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3546051316149716668}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.65356094, w: 0.7568739}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6535611, w: 0.7568738}
   m_LocalPosition: {x: 0.39719203, y: -0.0031841397, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1333,7 +1334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4287011134749715138}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.89256895, w: 0.45091105}
+  m_LocalRotation: {x: 0, y: 0, z: -0.8925689, w: 0.45091107}
   m_LocalPosition: {x: 0.55556417, y: -0.14315508, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1733,7 +1734,6 @@ Transform:
   - {fileID: 3171265484247222510}
   - {fileID: 979247480670709174}
   - {fileID: 3568372441803750648}
-  - {fileID: 7497664910624111546}
   m_Father: {fileID: 8875668072427847786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2303043944705434514
@@ -2686,13 +2686,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8501351299877109916}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.54918003, w: 0.835704}
+  m_LocalPosition: {x: -0.1947842, y: -0.10430114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3687023369265481084}
-  m_Father: {fileID: 231483212641823958}
+  m_Father: {fileID: 8744007712678922900}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7383362596227032395
 MonoBehaviour:
