@@ -882,6 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76e0be08eb7dec4396041b4407b77d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
+  rightArmRecoil: {fileID: 7383362596227032395}
   meleeRange: 1
   meleeDamage: 25
   meleeDelay: 0.5
@@ -1274,7 +1275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5648891187362999395}
-  m_Father: {fileID: 231483212641823958}
+  m_Father: {fileID: 7497664910624111546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.539}
 --- !u!114 &1262114914133559971
 MonoBehaviour:
@@ -1729,10 +1730,10 @@ Transform:
   - {fileID: 3674404084395501801}
   - {fileID: 8392755630103503839}
   - {fileID: 3105927186726318398}
-  - {fileID: 3687023369265481084}
   - {fileID: 3171265484247222510}
   - {fileID: 979247480670709174}
   - {fileID: 3568372441803750648}
+  - {fileID: 7497664910624111546}
   m_Father: {fileID: 8875668072427847786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2303043944705434514
@@ -2660,6 +2661,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 979247480670709174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8501351299877109916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7497664910624111546}
+  - component: {fileID: 7383362596227032395}
+  m_Layer: 6
+  m_Name: RArmIKContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7497664910624111546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501351299877109916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3687023369265481084}
+  m_Father: {fileID: 231483212641823958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7383362596227032395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501351299877109916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b24172679110d4bb2fe430402c3112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmRecoilController
 --- !u!1 &8544991118045409010
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,12 +3,15 @@ using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [Header("Fire Point")]
     Transform FirePoint =>
         weaponVisuals.CurrentFirePoint;
 
     WeaponVisualController weaponVisuals;
     PlayerController2D controller;
+
+    [Header("IK Recoil")]
+    [SerializeField] ArmRecoilController rightArmRecoil;
+
 
     [Header("Melee")]
     public float meleeRange = 1f;
@@ -82,9 +85,56 @@ public class PlayerCombat : MonoBehaviour
         ))
         {
             MainController.Instance.ConsumeBullet();
+            SpawnMuzzleFlash();
+
+            rightArmRecoil?.ApplyRecoil(
+            CurrentWeapon.recoilOffset,
+            CurrentWeapon.recoilKickTime,
+            CurrentWeapon.recoilReturnTime,
+            controller.facingRight
+            );
         }
     }
 
+    void SpawnMuzzleFlash()
+    {
+        if (CurrentWeapon == null)
+            return;
+
+        var flashes = CurrentWeapon.muzzleFlashSprites;
+        if (flashes == null || flashes.Length == 0)
+            return;
+
+        if (FirePoint == null)
+            return;
+
+        Sprite sprite =
+            flashes[Random.Range(0, flashes.Length)];
+
+        GameObject flash = new GameObject("MuzzleFlash");
+
+        // Position
+        flash.transform.position =
+            FirePoint.position + (Vector3)CurrentWeapon.muzzleFlashOffset;
+
+        // IMPORTANT:
+        // FirePoint rotation is useless for 2D when flipping on Y,
+        // so we explicitly rotate on Z based on facing.
+        float zRotation = controller.facingRight ? 0f : 180f;
+        flash.transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
+
+        flash.transform.localScale =
+            Vector3.one * CurrentWeapon.muzzleFlashScale;
+
+        SpriteRenderer sr = flash.AddComponent<SpriteRenderer>();
+        sr.sprite = sprite;
+
+        // Sorting
+        sr.sortingLayerName = "Projectiles";
+        sr.sortingOrder = 0;
+
+        Destroy(flash, CurrentWeapon.muzzleFlashLifetime);
+    }
 
     void Reload()
     {

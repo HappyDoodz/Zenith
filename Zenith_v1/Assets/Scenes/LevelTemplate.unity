@@ -1196,12 +1196,17 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 1
     projectileSpeed: 50
-    firePointStandingOffset: {x: 3, y: 0}
-    firePointCrouchingOffset: {x: 3, y: 0}
     clipSize: 5
     currentClip: 0
     infiniteAmmo: 0
     reloadTime: 3
+    muzzleFlashSprites: []
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: -0.05, y: 0.02}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
   startingReserveAmmo: 24
 --- !u!61 &824147269
 BoxCollider2D:
@@ -1769,12 +1774,26 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 0.2
     projectileSpeed: 50
-    firePointStandingOffset: {x: 1.5, y: 0.8}
-    firePointCrouchingOffset: {x: 1.5, y: 0.8}
     clipSize: 12
     currentClip: 0
     infiniteAmmo: 1
     reloadTime: 1.2
+    muzzleFlashSprites:
+    - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 235934216147263623, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -3461397254486618878, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 5512239235338996651, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -7534115186340659281, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -453492232900831130, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -5177098666267767215, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -8815713845831181007, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: -0.05, y: 0.02}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
   secondaryWeapon:
     weaponId: MachineGun
     weaponName: MachineGun
@@ -1782,12 +1801,26 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 0.05
     projectileSpeed: 50
-    firePointStandingOffset: {x: 2, y: 0.25}
-    firePointCrouchingOffset: {x: 2, y: 0.25}
     clipSize: 30
     currentClip: 0
     infiniteAmmo: 0
     reloadTime: 1.2
+    muzzleFlashSprites:
+    - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 235934216147263623, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -3461397254486618878, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 5512239235338996651, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -7534115186340659281, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -453492232900831130, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -5177098666267767215, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -8815713845831181007, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: -0.05, y: 0.02}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
   usingPrimary: 1
   primaryWeaponAmmo:
     weaponId: 
@@ -2345,22 +2378,6 @@ PrefabInstance:
     - target: {fileID: 3106529849124541047, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410218551364912633, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9933766
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410218551364912633, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.11490392
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872217652622909908, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999739
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872217652622909908, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.007237084
       objectReference: {fileID: 0}
     - target: {fileID: 8875668072427847786, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalPosition.x
