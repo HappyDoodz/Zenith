@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class Projectile : MonoBehaviour
 {
     public enum DamageType
@@ -47,6 +48,12 @@ public class Projectile : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        rb.gravityScale = 0f;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        // Force trigger collider
+        GetComponent<Collider2D>().isTrigger = true;
     }
 
     void OnEnable()
@@ -63,9 +70,12 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!IsValidTarget(other))
+        // Layer filter (safe)
+        if (hitLayers.value != 0 &&
+            (hitLayers.value & (1 << other.gameObject.layer)) == 0)
             return;
 
+        // Prevent multi-hit on same collider
         if (hitTargets.Contains(other))
             return;
 
@@ -81,18 +91,22 @@ public class Projectile : MonoBehaviour
         HandlePiercing();
     }
 
-    // ---------------- DAMAGE ----------------
+    // ================= DAMAGE =================
 
     void ApplyDamage(Collider2D target)
     {
-        EnemyHealth enemy = target.GetComponent<EnemyHealth>();
+        EnemyHealth enemy =
+            target.GetComponentInParent<EnemyHealth>();
+
         if (enemy != null && canHitEnemies)
         {
             enemy.TakeDamage(damage);
             ApplyKnockback(target);
         }
 
-        PlayerHealth player = target.GetComponent<PlayerHealth>();
+        PlayerHealth player =
+            target.GetComponentInParent<PlayerHealth>();
+
         if (player != null && canHitPlayer)
         {
             player.TakeDamage(damage);
@@ -108,11 +122,16 @@ public class Projectile : MonoBehaviour
         Rigidbody2D targetRb = target.attachedRigidbody;
         if (targetRb == null) return;
 
-        Vector2 direction = (target.transform.position - transform.position).normalized;
-        targetRb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        Vector2 direction =
+            (target.transform.position - transform.position).normalized;
+
+        targetRb.AddForce(
+            direction * knockbackForce,
+            ForceMode2D.Impulse
+        );
     }
 
-    // ---------------- EXPLOSION ----------------
+    // ================= EXPLOSION =================
 
     void Explode()
     {
@@ -133,7 +152,7 @@ public class Projectile : MonoBehaviour
         Disable();
     }
 
-    // ---------------- HELPERS ----------------
+    // ================= HELPERS =================
 
     void HandlePiercing()
     {
@@ -144,20 +163,6 @@ public class Projectile : MonoBehaviour
         }
 
         pierceCount--;
-    }
-
-    bool IsValidTarget(Collider2D other)
-    {
-        if (((1 << other.gameObject.layer) & hitLayers) == 0)
-            return false;
-
-        if (!canHitEnemies && other.GetComponent<EnemyHealth>() != null)
-            return false;
-
-        if (!canHitPlayer && other.GetComponent<PlayerHealth>() != null)
-            return false;
-
-        return true;
     }
 
     void Expire()
@@ -173,7 +178,7 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    // ---------------- DEBUG ----------------
+    // ================= DEBUG =================
 
     void OnDrawGizmosSelected()
     {

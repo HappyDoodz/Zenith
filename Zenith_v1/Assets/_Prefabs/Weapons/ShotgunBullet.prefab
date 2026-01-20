@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2429102719097841042}
   - component: {fileID: 8544782059277132187}
   - component: {fileID: -8355680632210354090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotgunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23f77d8386677145b62e0d1c22b007b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  damage: 10
+  damage: 30
   damageType: 0
   speed: 50
   lifetime: 1
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 6978880877211305559}
   - component: {fileID: 3883725616540714610}
   - component: {fileID: 6886384396504782889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 2603428045694520422}
   - component: {fileID: 5215456150046815706}
   - component: {fileID: 8126283014097576794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 5096337100960315350}
   - component: {fileID: 2456402533279732375}
   - component: {fileID: 7903607182583399999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

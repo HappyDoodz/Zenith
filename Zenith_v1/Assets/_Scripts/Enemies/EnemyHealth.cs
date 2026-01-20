@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
         if (deathEffect != null)
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 
+        GetComponent<Animator>()?.SetTrigger("Die");
         Destroy(gameObject, destroyDelay);
     }
 }

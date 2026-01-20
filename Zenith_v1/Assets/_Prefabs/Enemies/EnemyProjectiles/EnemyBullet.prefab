@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8544782059277132187}
   - component: {fileID: -8355680632210354090}
   m_Layer: 8
-  m_Name: Bullet
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,11 +83,11 @@ MonoBehaviour:
   explosionRadius: 2
   explosionLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   knockbackForce: 5
   hitLayers:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 72
   destroyOnHit: 1
   canHitPlayer: 0
   canHitEnemies: 1

@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: e1c2fde149fac044e938c6f2a6bd64a2
+guid: 908bf9402ac3ae14eade29af3a896059
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1249287047338277739
-    second: Guns2_0
+      213: -3662187743577422663
+    second: MeleeWeapons1_0
   - first:
-      213: -676365446531468307
-    second: Guns2_1
+      213: -6147037914942051928
+    second: MeleeWeapons1_1
   - first:
-      213: -2059897031990997376
-    second: Guns2_2
+      213: 1701539823306831790
+    second: MeleeWeapons1_2
   - first:
-      213: -1605396762049364150
-    second: Guns2_3
+      213: -7506529708576575130
+    second: MeleeWeapons1_3
   - first:
-      213: 1093755072139288790
-    second: Guns2_4
+      213: -9142338050512451975
+    second: MeleeWeapons1_4
   - first:
-      213: -1189885286686831337
-    second: Guns2_5
+      213: -3085143494778085225
+    second: MeleeWeapons1_5
   - first:
-      213: 7497661103925542697
-    second: Guns2_6
+      213: -4955610410743480556
+    second: MeleeWeapons1_6
   - first:
-      213: 3688488644393893196
-    second: Guns2_7
-  - first:
-      213: -4299599994039916528
-    second: Guns2_8
+      213: 1397948034977375929
+    second: MeleeWeapons1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,30 +117,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guns2_0
+      name: MeleeWeapons1_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 686
-        width: 205
-        height: 152
+        x: 98
+        y: 729
+        width: 600
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 594c7e8ac04a9aee0800000000000000
-      internalID: -1249287047338277739
+      spriteID: 9b4474b76ab4d2dc0800000000000000
+      internalID: -3662187743577422663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_1
+      name: MeleeWeapons1_1
       rect:
         serializedVersion: 2
-        x: 401
-        y: 678
-        width: 449
-        height: 182
+        x: 782
+        y: 694
+        width: 311
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de3b42db5311d96f0800000000000000
-      internalID: -676365446531468307
+      spriteID: 8a96503b59551baa0800000000000000
+      internalID: -6147037914942051928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_2
+      name: MeleeWeapons1_2
       rect:
         serializedVersion: 2
-        x: 914
-        y: 669
-        width: 498
-        height: 161
+        x: 1167
+        y: 761
+        width: 278
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08e8b4e2096c963e0800000000000000
-      internalID: -2059897031990997376
+      spriteID: ea7726344751d9710800000000000000
+      internalID: 1701539823306831790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_3
+      name: MeleeWeapons1_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 423
-        width: 255
-        height: 154
+        x: 122
+        y: 489
+        width: 526
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4f3c72962c78b9e0800000000000000
-      internalID: -1605396762049364150
+      spriteID: 6617068500373d790800000000000000
+      internalID: -7506529708576575130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_4
+      name: MeleeWeapons1_4
       rect:
         serializedVersion: 2
-        x: 436
-        y: 414
-        width: 418
-        height: 182
+        x: 779
+        y: 479
+        width: 311
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d0e422717ccd2f00800000000000000
-      internalID: 1093755072139288790
+      spriteID: 9760ba23bf3ef1180800000000000000
+      internalID: -9142338050512451975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_5
+      name: MeleeWeapons1_5
       rect:
         serializedVersion: 2
-        x: 963
-        y: 409
-        width: 417
-        height: 161
+        x: 1192
+        y: 492
+        width: 253
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71d4193d2adac7fe0800000000000000
-      internalID: -1189885286686831337
+      spriteID: 79025a8565e5f25d0800000000000000
+      internalID: -3085143494778085225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_6
+      name: MeleeWeapons1_6
       rect:
         serializedVersion: 2
-        x: 95
-        y: 195
-        width: 299
-        height: 139
+        x: 114
+        y: 237
+        width: 467
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92fbeb9bc0b0d0860800000000000000
-      internalID: 7497661103925542697
+      spriteID: 41f386e56922a3bb0800000000000000
+      internalID: -4955610410743480556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_7
+      name: MeleeWeapons1_7
       rect:
         serializedVersion: 2
-        x: 568
-        y: 196
-        width: 213
-        height: 141
+        x: 967
+        y: 233
+        width: 476
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,30 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4df82f21e4203330800000000000000
-      internalID: 3688488644393893196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns2_8
-      rect:
-        serializedVersion: 2
-        x: 950
-        y: 193
-        width: 256
-        height: 150
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 018aafee590c454c0800000000000000
-      internalID: -4299599994039916528
+      spriteID: 9b62847c452866310800000000000000
+      internalID: 1397948034977375929
       vertices: []
       indices: 
       edges: []
@@ -348,15 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guns2_0: -1249287047338277739
-      Guns2_1: -676365446531468307
-      Guns2_2: -2059897031990997376
-      Guns2_3: -1605396762049364150
-      Guns2_4: 1093755072139288790
-      Guns2_5: -1189885286686831337
-      Guns2_6: 7497661103925542697
-      Guns2_7: 3688488644393893196
-      Guns2_8: -4299599994039916528
+      MeleeWeapons1_0: -3662187743577422663
+      MeleeWeapons1_1: -6147037914942051928
+      MeleeWeapons1_2: 1701539823306831790
+      MeleeWeapons1_3: -7506529708576575130
+      MeleeWeapons1_4: -9142338050512451975
+      MeleeWeapons1_5: -3085143494778085225
+      MeleeWeapons1_6: -4955610410743480556
+      MeleeWeapons1_7: 1397948034977375929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
