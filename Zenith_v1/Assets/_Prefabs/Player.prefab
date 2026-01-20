@@ -631,7 +631,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b36467f14be9b374b9108205abd57ca5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b448f7323039ca4085a7f4d17cb2e34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -977,7 +977,7 @@ MonoBehaviour:
   spriteSkinRoot: {fileID: 5689928785224181157}
   spawnInterval: 0.05
   lifetime: 0.3
-  afterImageColor: {r: 0.654902, g: 0.627451, b: 0.06666667, a: 0.2509804}
+  afterImageColor: {r: 0.04705883, g: 0.82745105, b: 0.9686275, a: 0.2509804}
   alwaysEmitting: 0
 --- !u!114 &3438336767597144724
 MonoBehaviour:
@@ -1884,7 +1884,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b36467f14be9b374b9108205abd57ca5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b448f7323039ca4085a7f4d17cb2e34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
