@@ -100,10 +100,17 @@ public class PlayerController2D : MonoBehaviour
         IsInvincible = true;
         canDodge = false;
 
+        // Cache gravity and disable it
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
         float direction = facingRight ? 1 : -1;
-        rb.linearVelocity = new Vector2(direction * dodgeSpeed, 0);
+        rb.linearVelocity = new Vector2(direction * dodgeSpeed, 0f);
 
         yield return new WaitForSeconds(dodgeDuration);
+
+        // Restore gravity
+        rb.gravityScale = originalGravity;
 
         IsInvincible = false;
         State = PlayerState.Normal;
