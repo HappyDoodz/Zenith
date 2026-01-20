@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: e1c2fde149fac044e938c6f2a6bd64a2
+guid: b6fff62cd08b47a46a7ecb5385cd3143
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1249287047338277739
-    second: Guns2_0
+      213: -2687349987850387686
+    second: FemaleTemplate_0
   - first:
-      213: -676365446531468307
-    second: Guns2_1
+      213: 9169189026695504361
+    second: FemaleTemplate_1
   - first:
-      213: -2059897031990997376
-    second: Guns2_2
+      213: 1365849787335170731
+    second: FemaleTemplate_2
   - first:
-      213: -1605396762049364150
-    second: Guns2_3
+      213: -3431189464086852666
+    second: FemaleTemplate_3
   - first:
-      213: 1093755072139288790
-    second: Guns2_4
+      213: 9211988358456226048
+    second: FemaleTemplate_4
   - first:
-      213: -1189885286686831337
-    second: Guns2_5
+      213: 126524751496234113
+    second: FemaleTemplate_5
   - first:
-      213: 7497661103925542697
-    second: Guns2_6
+      213: -2207200681343021886
+    second: FemaleTemplate_6
   - first:
-      213: 3688488644393893196
-    second: Guns2_7
+      213: -2464042318423131079
+    second: FemaleTemplate_7
   - first:
-      213: -4299599994039916528
-    second: Guns2_8
+      213: -1525167684343269684
+    second: FemaleTemplate_8
+  - first:
+      213: 4625781926683786058
+    second: FemaleTemplate_9
+  - first:
+      213: -1287258253670502360
+    second: FemaleTemplate_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,30 +126,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guns2_0
+      name: FemaleTemplate_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 686
-        width: 205
-        height: 152
+        x: 211
+        y: 943
+        width: 46
+        height: 156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 594c7e8ac04a9aee0800000000000000
-      internalID: -1249287047338277739
+      spriteID: a1ff60b9c6d94bad0800000000000000
+      internalID: -2687349987850387686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_1
+      name: FemaleTemplate_1
       rect:
         serializedVersion: 2
-        x: 401
-        y: 678
-        width: 449
-        height: 182
+        x: 335
+        y: 935
+        width: 86
+        height: 190
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de3b42db5311d96f0800000000000000
-      internalID: -676365446531468307
+      spriteID: 9e1689ed6d08f3f70800000000000000
+      internalID: 9169189026695504361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_2
+      name: FemaleTemplate_2
       rect:
         serializedVersion: 2
-        x: 914
-        y: 669
-        width: 498
-        height: 161
+        x: 503
+        y: 964
+        width: 78
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08e8b4e2096c963e0800000000000000
-      internalID: -2059897031990997376
+      spriteID: baad7ae152974f210800000000000000
+      internalID: 1365849787335170731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_3
+      name: FemaleTemplate_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 423
-        width: 255
-        height: 154
+        x: 646
+        y: 967
+        width: 71
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4f3c72962c78b9e0800000000000000
-      internalID: -1605396762049364150
+      spriteID: 6cb4a049c57f160d0800000000000000
+      internalID: -3431189464086852666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_4
+      name: FemaleTemplate_4
       rect:
         serializedVersion: 2
-        x: 436
-        y: 414
-        width: 418
-        height: 182
+        x: 1044
+        y: 959
+        width: 107
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d0e422717ccd2f00800000000000000
-      internalID: 1093755072139288790
+      spriteID: 00131d4da9e87df70800000000000000
+      internalID: 9211988358456226048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_5
+      name: FemaleTemplate_5
       rect:
         serializedVersion: 2
-        x: 963
-        y: 409
-        width: 417
-        height: 161
+        x: 73
+        y: 721
+        width: 150
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71d4193d2adac7fe0800000000000000
-      internalID: -1189885286686831337
+      spriteID: 1844a34579181c100800000000000000
+      internalID: 126524751496234113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_6
+      name: FemaleTemplate_6
       rect:
         serializedVersion: 2
-        x: 95
-        y: 195
-        width: 299
-        height: 139
+        x: 666
+        y: 541
+        width: 123
+        height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92fbeb9bc0b0d0860800000000000000
-      internalID: 7497661103925542697
+      spriteID: 2cc8c80bca27e51e0800000000000000
+      internalID: -2207200681343021886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_7
+      name: FemaleTemplate_7
       rect:
         serializedVersion: 2
-        x: 568
-        y: 196
-        width: 213
-        height: 141
+        x: 47
+        y: 469
+        width: 80
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4df82f21e4203330800000000000000
-      internalID: 3688488644393893196
+      spriteID: 93cfbd20196fdcdd0800000000000000
+      internalID: -2464042318423131079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns2_8
+      name: FemaleTemplate_8
       rect:
         serializedVersion: 2
-        x: 950
-        y: 193
-        width: 256
-        height: 150
+        x: 248
+        y: 457
+        width: 91
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,8 +321,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 018aafee590c454c0800000000000000
-      internalID: -4299599994039916528
+      spriteID: cc670df521485dae0800000000000000
+      internalID: -1525167684343269684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTemplate_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 178
+        width: 86
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4bb8646724123040800000000000000
+      internalID: 4625781926683786058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTemplate_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 161
+        width: 83
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820b7cf307db22ee0800000000000000
+      internalID: -1287258253670502360
       vertices: []
       indices: 
       edges: []
@@ -348,15 +385,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guns2_0: -1249287047338277739
-      Guns2_1: -676365446531468307
-      Guns2_2: -2059897031990997376
-      Guns2_3: -1605396762049364150
-      Guns2_4: 1093755072139288790
-      Guns2_5: -1189885286686831337
-      Guns2_6: 7497661103925542697
-      Guns2_7: 3688488644393893196
-      Guns2_8: -4299599994039916528
+      FemaleTemplate_0: -2687349987850387686
+      FemaleTemplate_1: 9169189026695504361
+      FemaleTemplate_10: -1287258253670502360
+      FemaleTemplate_2: 1365849787335170731
+      FemaleTemplate_3: -3431189464086852666
+      FemaleTemplate_4: 9211988358456226048
+      FemaleTemplate_5: 126524751496234113
+      FemaleTemplate_6: -2207200681343021886
+      FemaleTemplate_7: -2464042318423131079
+      FemaleTemplate_8: -1525167684343269684
+      FemaleTemplate_9: 4625781926683786058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
