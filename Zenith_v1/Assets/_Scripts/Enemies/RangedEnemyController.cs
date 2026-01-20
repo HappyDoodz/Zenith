@@ -60,6 +60,7 @@ public class RangedEnemyController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     Transform player;
+    EnemyHealth enemyHealth;
 
     bool facingRight = true;
 
@@ -69,6 +70,7 @@ public class RangedEnemyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        enemyHealth = GetComponent<EnemyHealth>();
 
         rb.gravityScale = 5f;
         rb.freezeRotation = true;
@@ -87,6 +89,9 @@ public class RangedEnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (enemyHealth.isDead)
+            return;
+            
         if (player == null)
             return;
 
@@ -192,6 +197,9 @@ public class RangedEnemyController : MonoBehaviour
 
     void TryShoot()
     {
+        if (enemyHealth.isDead)
+            return;
+
         if (!isAttacking || isReloading)
             return;
 

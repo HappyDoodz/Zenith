@@ -434,8 +434,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 50
+  m_LinearDamping: 5
   m_AngularDamping: 0.05
   m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: 89f525c31b3830a429fe7d54964b64cf, type: 2}
@@ -620,7 +620,8 @@ MonoBehaviour:
   maxHealth: 50
   hitEffect: {fileID: 0}
   deathEffect: {fileID: 0}
-  destroyDelay: 0
+  destroyDelay: 5
+  isDead: 0
 --- !u!114 &8097332259537184846
 MonoBehaviour:
   m_ObjectHideFlags: 0

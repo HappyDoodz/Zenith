@@ -31,6 +31,7 @@ public class MeleeEnemyController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     Transform player;
+    EnemyHealth enemyHealth;
 
     bool facingRight = true;
     bool canAttack = true;
@@ -42,6 +43,7 @@ public class MeleeEnemyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        enemyHealth = GetComponent<EnemyHealth>();
 
         rb.gravityScale = 5f;      // gravity ON
         rb.freezeRotation = true;  // prevent tipping
@@ -58,6 +60,9 @@ public class MeleeEnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (enemyHealth.isDead)
+            return;
+            
         if (player == null)
             return;
 
@@ -137,6 +142,9 @@ public class MeleeEnemyController : MonoBehaviour
 
     void TryAttack()
     {
+        if (enemyHealth.isDead)
+            return;
+            
         if (!canAttack)
             return;
 

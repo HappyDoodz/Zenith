@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour
     public float destroyDelay = 0f;
 
     int currentHealth;
-    bool isDead;
+    [HideInInspector] public bool isDead;
 
     void Awake()
     {
