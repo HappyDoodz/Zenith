@@ -33,9 +33,9 @@ public class PlayerAnimatorController : MonoBehaviour
 
     // ====== CALLED BY GAMEPLAY ======
 
-    public void TriggerMelee()
+    public void SetMeleeAttacking(bool value)
     {
-        anim.SetTrigger("Melee");
+        anim.SetBool("IsMeleeAttacking", value);
     }
 
     public void TriggerGrenade()

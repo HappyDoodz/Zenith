@@ -14,11 +14,6 @@ public class PlayerCombat : MonoBehaviour
 
 
     [Header("Melee")]
-    public float meleeRange = 1f;
-    public int meleeDamage = 25;
-    public float meleeDelay = 0.5f;
-    public float meleeDuration = 1f;
-    public LayerMask enemyLayer;
     public Transform meleePoint;
 
     [Header("Grenades")]
@@ -118,7 +113,7 @@ public class PlayerCombat : MonoBehaviour
                 controller.facingRight
             );
 
-            PlayFireSound();
+            PlayFireSound(CurrentWeapon);
         }
     }
 
@@ -162,22 +157,22 @@ public class PlayerCombat : MonoBehaviour
         Destroy(flash, CurrentWeapon.muzzleFlashLifetime);
     }
 
-    void PlayFireSound()
+    void PlayFireSound(Weapon weapon)
     {
-        if (CurrentWeapon == null)
+            if (weapon == null)
             return;
-
-        var clips = CurrentWeapon.fireSounds;
+    
+        var clips = weapon.fireSounds;
         if (clips == null || clips.Length == 0)
             return;
-
+    
         AudioClip clip =
             clips[Random.Range(0, clips.Length)];
-
+    
         weaponAudio.pitch =
-            Random.Range(CurrentWeapon.pitchMin, CurrentWeapon.pitchMax);
-
-        weaponAudio.volume = CurrentWeapon.fireVolume;
+            Random.Range(weapon.pitchMin, weapon.pitchMax);
+    
+        weaponAudio.volume = weapon.fireVolume;
         weaponAudio.PlayOneShot(clip);
     }
 
@@ -211,10 +206,10 @@ public class PlayerCombat : MonoBehaviour
     {
         if (CurrentWeapon == null)
             return;
-    
+
         if (CurrentWeapon.fireStopSound == null)
             return;
-    
+
         weaponAudio.pitch = 1f;
         weaponAudio.volume = CurrentWeapon.fireStopVolume;
         weaponAudio.PlayOneShot(CurrentWeapon.fireStopSound);
@@ -263,39 +258,68 @@ public class PlayerCombat : MonoBehaviour
 
     void Melee()
     {
-        if (IsBusy)
+        Weapon weapon = MainController.Instance.meleeWeapon;
+
+        if (weapon == null || !weapon.isMelee)
             return;
 
-        StartCoroutine(MeleeRoutine());
+        if (IsBusy || isMeleeAttacking)
+            return;
+
+        StartCoroutine(MeleeRoutine(weapon));
     }
 
-
-    IEnumerator MeleeRoutine()
+    IEnumerator MeleeRoutine(Weapon weapon)
     {
         isMeleeAttacking = true;
 
-        GetComponent<PlayerAnimatorController>()?.TriggerMelee();
+        GetComponent<PlayerAnimatorController>()
+            ?.SetMeleeAttacking(true);
 
-        // Optional delay to sync hit frame
-        yield return new WaitForSeconds(meleeDelay);
+        PlayFireSound(weapon);
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            meleePoint.position,
-            meleeRange,
-            enemyLayer
-        );
+        yield return new WaitForSeconds(weapon.meleeWindup);
 
-        foreach (var hit in hits)
+        float timer = weapon.meleeActiveTime;
+        while (timer > 0f)
         {
-            hit.GetComponent<EnemyHealth>()?.TakeDamage(meleeDamage);
+            DoMeleeHit(weapon);
+            timer -= Time.deltaTime;
+            yield return null;
         }
 
-        // Total melee lock duration (tune this)
-        yield return new WaitForSeconds(meleeDuration);
+        yield return new WaitForSeconds(weapon.meleeRecovery);
+
+        GetComponent<PlayerAnimatorController>()
+            ?.SetMeleeAttacking(false);
 
         isMeleeAttacking = false;
     }
 
+    void DoMeleeHit(Weapon weapon)
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(
+            meleePoint.position,
+            weapon.meleeRange,
+            weapon.meleeHitLayers
+        );
+
+        foreach (var hit in hits)
+        {
+            EnemyHealth enemy = hit.GetComponent<EnemyHealth>();
+            if (enemy == null) continue;
+
+            enemy.TakeDamage(weapon.meleeDamage);
+
+            Rigidbody2D rb = hit.attachedRigidbody;
+            if (rb != null)
+            {
+                Vector2 dir =
+                    (hit.transform.position - transform.position).normalized;
+                rb.AddForce(dir * weapon.meleeKnockback, ForceMode2D.Impulse);
+            }
+        }
+    }
 
     // ---------------- GRENADES ----------------
 
@@ -345,8 +369,21 @@ public class PlayerCombat : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        if (meleePoint == null) return;
+        if (meleePoint == null)
+            return;
+
+        Weapon weapon =
+            MainController.Instance != null
+                ? MainController.Instance.meleeWeapon
+                : null;
+
+        if (weapon == null || !weapon.isMelee)
+            return;
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(meleePoint.position, meleeRange);
+        Gizmos.DrawWireSphere(
+            meleePoint.position,
+            weapon.meleeRange
+        );
     }
 }

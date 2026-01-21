@@ -486,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 311067447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3397781, y: -3.1924086, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1354,7 +1354,7 @@ Transform:
   m_GameObject: {fileID: 899085298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.515, y: 0.00106, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1945,13 +1945,23 @@ MonoBehaviour:
     weaponId: Pistol
     weaponName: Pistol
     weaponPrefab: {fileID: 1697036685979796447, guid: 8301cb4ecd98b0d459a3a14e58f87e85, type: 3}
+    isRanged: 1
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 0.2
     projectileSpeed: 50
     clipSize: 12
-    currentClip: 0
     infiniteAmmo: 1
     reloadTime: 0.5
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
     muzzleFlashSprites:
     - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
@@ -1983,13 +1993,23 @@ MonoBehaviour:
     weaponId: MachineGun
     weaponName: MachineGun
     weaponPrefab: {fileID: 1697036685979796447, guid: 654e78e37e599aa4c88a50a0fe5ee05e, type: 3}
+    isRanged: 1
     projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
     fireRate: 0.05
     projectileSpeed: 50
     clipSize: 30
-    currentClip: 0
     infiniteAmmo: 0
     reloadTime: 0.6
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
     muzzleFlashSprites:
     - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
@@ -2010,6 +2030,44 @@ MonoBehaviour:
     - {fileID: 8300000, guid: f2ade98fdb62b054fb13dfb3bc6d6183, type: 3}
     reloadSound: {fileID: 8300000, guid: b0471062d184a64429a6b92be0731827, type: 3}
     readySound: {fileID: 8300000, guid: b0471062d184a64429a6b92be0731827, type: 3}
+    fireStopSound: {fileID: 0}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
+    fireStopVolume: 1
+  meleeWeapon:
+    weaponId: EnergySword
+    weaponName: Energy Sword
+    weaponPrefab: {fileID: 1697036685979796447, guid: 25bf55b2b38c01b478a40ea5d6d884ba, type: 3}
+    isRanged: 0
+    projectilePrefab: {fileID: 0}
+    fireRate: 0.2
+    projectileSpeed: 15
+    clipSize: 12
+    infiniteAmmo: 0
+    reloadTime: 1.2
+    isMelee: 1
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 128
+    muzzleFlashSprites: []
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: 0, y: 0.05}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
+    fireSounds: []
+    reloadSound: {fileID: 0}
+    readySound: {fileID: 0}
     fireStopSound: {fileID: 0}
     pitchMin: 0.95
     pitchMax: 1.05
@@ -2041,7 +2099,7 @@ Transform:
   m_GameObject: {fileID: 2009059627}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.63613, y: 0.06856, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

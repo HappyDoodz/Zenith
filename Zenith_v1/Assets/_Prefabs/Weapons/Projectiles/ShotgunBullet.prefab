@@ -93,7 +93,7 @@ MonoBehaviour:
   destroyOnHit: 1
   canHitPlayer: 0
   canHitEnemies: 1
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 8313120589046483423, guid: 927fdcc24f7866f4fa0e0723915cebe9, type: 3}
   explosionEffect: {fileID: 0}
 --- !u!58 &-8355680632210354090
 CircleCollider2D:

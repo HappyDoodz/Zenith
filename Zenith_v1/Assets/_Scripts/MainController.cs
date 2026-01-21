@@ -24,6 +24,9 @@ public class MainController : MonoBehaviour
     public Weapon primaryWeapon;     // always available (pistol)
     public Weapon secondaryWeapon;   // replaceable
 
+    [Header("Melee Weapon")]
+    public Weapon meleeWeapon;
+
     [Header("Active Slot")]
     public bool usingPrimary = true;
 
@@ -95,7 +98,7 @@ public class MainController : MonoBehaviour
     {
         if (amount <= 0)
             return;
-    
+
         currentArmour += amount;
         ClampArmour();
     }

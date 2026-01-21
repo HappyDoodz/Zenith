@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147876817625954107}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.357, y: 0.169, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.479, y: -0.031999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1045194144634010152}
+  m_Father: {fileID: 4095514470177909008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697036685979796447
 GameObject:
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4095514470177909008}
   - component: {fileID: 9021721852694923043}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: EnergySword
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +62,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1045194144634010152}
+  - {fileID: 576958663599353560}
+  - {fileID: 5675896408003696554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9021721852694923043
@@ -77,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponView
   firePoint: {fileID: 576958663599353560}
-  leftHandGrip: {fileID: 5030897460669760181}
+  leftHandGrip: {fileID: 5675896408003696554}
 --- !u!1 &4728342084043114229
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,15 +105,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4728342084043114229}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.068, y: 0.006, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 576958663599353560}
-  - {fileID: 5030897460669760181}
+  m_Children: []
   m_Father: {fileID: 4095514470177909008}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &6364358573205896562
 SpriteRenderer:
   serializedVersion: 2
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1249287047338277739, guid: f2cd44ed67c9728438593d5ed58056c1, type: 3}
+  m_Sprite: {fileID: -3662187743577422663, guid: 900c5c86ad2f1d64fbb341745856f948, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &8369075563839190334
+--- !u!1 &5111429678191734551
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5030897460669760181}
+  - component: {fileID: 5675896408003696554}
   m_Layer: 0
   m_Name: LeftHandGrip
   m_TagString: Untagged
@@ -187,18 +187,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5030897460669760181
+--- !u!4 &5675896408003696554
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8369075563839190334}
+  m_GameObject: {fileID: 5111429678191734551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3036, y: -0.0394, z: 0}
+  m_LocalPosition: {x: -0.768, y: -0.222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1045194144634010152}
+  m_Father: {fileID: 4095514470177909008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
