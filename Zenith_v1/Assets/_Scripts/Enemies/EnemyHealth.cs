@@ -28,9 +28,7 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(hitEffect, transform.position, Quaternion.identity);
 
         if (currentHealth <= 0)
-        {
             Die();
-        }
     }
 
     void Die()
@@ -41,7 +39,27 @@ public class EnemyHealth : MonoBehaviour
         if (deathEffect != null)
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 
+        // Move to DeadEnemy layer (ground-only collisions)
+        SetLayerRecursively(gameObject, LayerMask.NameToLayer("DeadEnemy"));
+
+        // Optional: stop AI / attacks
+        //GetComponent<MeleeEnemyController>()?.enabled = false;
+        //GetComponent<RangedEnemyController>()?.enabled = false;
+
         GetComponent<Animator>()?.SetTrigger("Die");
+
         Destroy(gameObject, destroyDelay);
+    }
+
+    // ================= UTIL =================
+
+    void SetLayerRecursively(GameObject obj, int layer)
+    {
+        obj.layer = layer;
+
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, layer);
+        }
     }
 }
