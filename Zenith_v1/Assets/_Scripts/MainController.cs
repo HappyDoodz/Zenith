@@ -34,6 +34,14 @@ public class MainController : MonoBehaviour
     public WeaponAmmoState primaryWeaponAmmo;
     public WeaponAmmoState secondaryWeaponAmmo;
 
+    // ================= GRENADES =================
+
+    [Header("Grenades")]
+    public GameObject grenadePrefab;
+    public string grenadeName = "Frag Grenade";
+    public int maxGrenades = 5;
+    public int currentGrenades = 3;
+
     bool initialized;
 
     // ================= UNITY =================
@@ -229,6 +237,39 @@ public class MainController : MonoBehaviour
 
         // Add to reserve ammo
         secondaryWeaponAmmo.reserveAmmo += amount;
+    }
+
+    public bool CanThrowGrenade()
+    {
+        return grenadePrefab != null && currentGrenades > 0;
+    }
+
+    public GameObject GetGrenadePrefab()
+    {
+        return grenadePrefab;
+    }
+
+    public void ConsumeGrenade()
+    {
+        currentGrenades = Mathf.Max(0, currentGrenades - 1);
+    }
+
+    public void AddGrenades(int amount)
+    {
+        if (amount <= 0)
+            return;
+
+        currentGrenades += amount;
+        currentGrenades = Mathf.Min(currentGrenades, maxGrenades);
+    }
+
+    public void SetGrenade(
+        GameObject newPrefab,
+        string newName
+    )
+    {
+        grenadePrefab = newPrefab;
+        grenadeName = newName;
     }
 
     // ================= PICKUP API =================

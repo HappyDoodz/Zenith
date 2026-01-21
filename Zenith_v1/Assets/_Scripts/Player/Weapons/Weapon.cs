@@ -69,6 +69,11 @@ public class Weapon
     public float readyVolume = 1f;
     public float fireStopVolume = 1f;
 
+    [Header("Melee Audio")]
+    public AudioClip[] meleeSwingSounds;
+    public AudioClip[] meleeHitSounds;
+    public float meleeHitVolume = 1f;
+
     float lastFireTime;
 
     // ================= RANGED FIRE =================

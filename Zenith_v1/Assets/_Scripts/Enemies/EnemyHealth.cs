@@ -10,6 +10,14 @@ public class EnemyHealth : MonoBehaviour
     public GameObject deathEffect;
     public float destroyDelay = 0f;
 
+    [Header("Drops")]
+    [Tooltip("Possible pickups to spawn on death (can be empty)")]
+    public GameObject[] possibleDrops;
+
+    [Tooltip("Chance (0–1) that ANY drop will occur")]
+    [Range(0f, 1f)]
+    public float dropChance = 0.25f;
+
     int currentHealth;
     [HideInInspector] public bool isDead;
 
@@ -42,13 +50,35 @@ public class EnemyHealth : MonoBehaviour
         // Move to DeadEnemy layer (ground-only collisions)
         SetLayerRecursively(gameObject, LayerMask.NameToLayer("DeadEnemy"));
 
-        // Optional: stop AI / attacks
-        //GetComponent<MeleeEnemyController>()?.enabled = false;
-        //GetComponent<RangedEnemyController>()?.enabled = false;
+        TrySpawnDrop();
 
         GetComponent<Animator>()?.SetTrigger("Die");
 
         Destroy(gameObject, destroyDelay);
+    }
+
+    // ================= DROP LOGIC =================
+
+    void TrySpawnDrop()
+    {
+        if (possibleDrops == null || possibleDrops.Length == 0)
+            return;
+
+        // Roll chance first (allows "nothing" most of the time)
+        if (Random.value > dropChance)
+            return;
+
+        GameObject drop =
+            possibleDrops[Random.Range(0, possibleDrops.Length)];
+
+        if (drop == null)
+            return;
+
+        Instantiate(
+            drop,
+            transform.position,
+            Quaternion.identity
+        );
     }
 
     // ================= UTIL =================

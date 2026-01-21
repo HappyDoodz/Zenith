@@ -17,7 +17,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform meleePoint;
 
     [Header("Grenades")]
-    public GameObject grenadePrefab;
+    //public GameObject grenadePrefab;
     public Transform grenadeSpawn;
     public float grenadeThrowForce = 8f;
     public float grenadeThrowDelay = 0.5f;
@@ -218,6 +218,42 @@ public class PlayerCombat : MonoBehaviour
         weaponAudio.PlayOneShot(CurrentWeapon.fireStopSound);
     }
 
+    void PlayMeleeSwingSound(Weapon weapon)
+    {
+            if (weapon == null)
+            return;
+    
+        var clips = weapon.meleeSwingSounds;
+        if (clips == null || clips.Length == 0)
+            return;
+    
+        AudioClip clip =
+            clips[Random.Range(0, clips.Length)];
+    
+        weaponAudio.pitch =
+            Random.Range(weapon.pitchMin, weapon.pitchMax);
+    
+        weaponAudio.volume = weapon.fireVolume;
+        weaponAudio.PlayOneShot(clip);
+    }
+
+    void PlayMeleeHitSound(Weapon weapon)
+    {
+        if (weapon.meleeHitSounds == null ||
+            weapon.meleeHitSounds.Length == 0 ||
+            weaponAudio == null)
+            return;
+
+        AudioClip clip =
+            weapon.meleeHitSounds[Random.Range(0, weapon.meleeHitSounds.Length)];
+
+        weaponAudio.pitch =
+            Random.Range(weapon.pitchMin, weapon.pitchMax);
+
+        weaponAudio.volume = weapon.meleeHitVolume;
+        weaponAudio.PlayOneShot(clip);
+    }
+
     void Reload()
     {
         if (isReloading)
@@ -245,21 +281,21 @@ public class PlayerCombat : MonoBehaviour
     void SwapWeapon()
     {
         MainController.Instance.SwapWeapon();
-    
+
         // Refresh visuals using the CURRENT equipped ranged weapon
         weaponVisuals.SetRangedWeapon(MainController.Instance.GetCurrentWeapon());
-    
+
         // (Optional) refresh melee too if it can change via pickups
         weaponVisuals.SetMeleeWeapon(MainController.Instance.meleeWeapon);
-    
+
         PlayReadySound();
     }
-    
+
     public void RefreshWeaponVisuals()
     {
         // Always refresh ranged weapon based on current slot
         weaponVisuals.SetRangedWeapon(MainController.Instance.GetCurrentWeapon());
-    
+
         // Refresh melee if applicable
         weaponVisuals.SetMeleeWeapon(MainController.Instance.meleeWeapon);
     }
@@ -286,7 +322,7 @@ public class PlayerCombat : MonoBehaviour
         GetComponent<PlayerAnimatorController>()
             ?.SetMeleeAttacking(true);
 
-        PlayFireSound(weapon);
+        PlayMeleeSwingSound(weapon);
 
         yield return new WaitForSeconds(weapon.meleeWindup);
 
@@ -314,12 +350,16 @@ public class PlayerCombat : MonoBehaviour
             weapon.meleeHitLayers
         );
 
+        bool hitSomething = false;
+
         foreach (var hit in hits)
         {
             EnemyHealth enemy = hit.GetComponent<EnemyHealth>();
-            if (enemy == null) continue;
+            if (enemy == null)
+                continue;
 
             enemy.TakeDamage(weapon.meleeDamage);
+            hitSomething = true;
 
             Rigidbody2D rb = hit.attachedRigidbody;
             if (rb != null)
@@ -329,6 +369,12 @@ public class PlayerCombat : MonoBehaviour
                 rb.AddForce(dir * weapon.meleeKnockback, ForceMode2D.Impulse);
             }
         }
+
+        // Play HIT sound only if at least one enemy was struck
+        if (hitSomething)
+        {
+            PlayMeleeHitSound(weapon);
+        }
     }
 
     // ---------------- GRENADES ----------------
@@ -336,6 +382,9 @@ public class PlayerCombat : MonoBehaviour
     void ThrowGrenade()
     {
         if (IsBusy)
+            return;
+
+        if (!MainController.Instance.CanThrowGrenade())
             return;
 
         StartCoroutine(GrenadeRoutine());
@@ -347,28 +396,36 @@ public class PlayerCombat : MonoBehaviour
 
         GetComponent<PlayerAnimatorController>()?.TriggerGrenade();
 
-        // Delay to match throw animation
         yield return new WaitForSeconds(grenadeThrowDelay);
 
+        GameObject prefab = MainController.Instance.GetGrenadePrefab();
+        if (prefab == null)
+        {
+            isThrowingGrenade = false;
+            yield break;
+        }
+
         GameObject grenade = Instantiate(
-            grenadePrefab,
+            prefab,
             grenadeSpawn.position,
             Quaternion.identity
         );
 
         Rigidbody2D rb = grenade.GetComponent<Rigidbody2D>();
-        Vector2 direction = controller.facingRight ? Vector2.right : Vector2.left;
+        if (rb != null)
+        {
+            Vector2 dir = controller.facingRight ? Vector2.right : Vector2.left;
+            float verticalBoost = controller.IsCrouching ? 1.5f : 3f;
 
-        float verticalBoost = controller.IsCrouching ? 1.5f : 3f;
-        rb.linearVelocity =
-            direction * grenadeThrowForce + Vector2.up * verticalBoost;
+            rb.linearVelocity =
+                dir * grenadeThrowForce + Vector2.up * verticalBoost;
+        }
 
-        // Lock until animation finishes
+        MainController.Instance.ConsumeGrenade();
+
         yield return new WaitForSeconds(grenadeThrowDuration);
-
         isThrowingGrenade = false;
     }
-
 
     public bool IsBusy =>
     controller.State == PlayerController2D.PlayerState.Dodging ||

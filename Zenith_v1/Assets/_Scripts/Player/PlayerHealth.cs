@@ -71,6 +71,11 @@ public class PlayerHealth : MonoBehaviour
             maxHealth
         );
 
+        OnArmourChanged?.Invoke(
+            MainController.Instance.currentArmour,
+            MainController.Instance.maxArmour
+        );
+
         if (MainController.Instance.currentHealth <= 0)
         {
             Die();
