@@ -204,7 +204,7 @@ MonoBehaviour:
     weaponId: Minigun
     weaponName: Minigun
     weaponPrefab: {fileID: 1697036685979796447, guid: 90006787401e75f44b2ad3624f1ed924, type: 3}
-    projectilePrefab: {fileID: 1602339330159018145, guid: 945f06126a13e3a49a1c1ca2eec396b7, type: 3}
+    projectilePrefab: {fileID: 1602339330159018145, guid: 521b7c06c2e59714c949e2a7cd55b3af, type: 3}
     fireRate: 0.05
     projectileSpeed: 50
     clipSize: 200

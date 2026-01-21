@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1770973953384934528
+--- !u!1 &6305019977953513724
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2170679815489571710}
-  - component: {fileID: 2113309536967920277}
-  - component: {fileID: 4748653890399852938}
+  - component: {fileID: 39125020155257631}
+  - component: {fileID: 615529355230778290}
+  - component: {fileID: 7855285481240008414}
   m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2170679815489571710
+--- !u!4 &39125020155257631
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770973953384934528}
+  m_GameObject: {fileID: 6305019977953513724}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,14 +33,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5407547692751419635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2113309536967920277
+--- !u!212 &615529355230778290
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770973953384934528}
+  m_GameObject: {fileID: 6305019977953513724}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2059897031990997376, guid: e1c2fde149fac044e938c6f2a6bd64a2, type: 3}
+  m_Sprite: {fileID: -938785847833660865, guid: 1c52cfb736edcf84ab5e195eb0d3e7a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,13 +92,13 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &4748653890399852938
+--- !u!114 &7855285481240008414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770973953384934528}
+  m_GameObject: {fileID: 6305019977953513724}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f64f6f930eb5e9469258125e4c15d47, type: 3}
@@ -117,10 +117,10 @@ GameObject:
   - component: {fileID: 5407547692751419635}
   - component: {fileID: 8625874755398603910}
   - component: {fileID: 556154844498165951}
-  - component: {fileID: 1387207228283653904}
-  - component: {fileID: 3858424501147305875}
+  - component: {fileID: -8581285004402112822}
+  - component: {fileID: 4182868517342926525}
   m_Layer: 9
-  m_Name: AssaltRiflePickup
+  m_Name: GrenadeLauncherPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2170679815489571710}
+  - {fileID: 39125020155257631}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8625874755398603910
@@ -180,7 +180,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.245, y: 0.4025}
+    oldSize: {x: 1.045, y: 0.455}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -201,31 +201,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
   weapon:
-    weaponId: AssaultRifle
-    weaponName: Assault Rifle
-    weaponPrefab: {fileID: 1697036685979796447, guid: 5e7073a9147eb0b48b5fbd1e9c10954c, type: 3}
-    projectilePrefab: {fileID: 1602339330159018145, guid: aad165d399c010848bab8fe0ab495189, type: 3}
-    fireRate: 0.1
+    weaponId: GrenadeLauncher
+    weaponName: Grenade Launcher
+    weaponPrefab: {fileID: 1697036685979796447, guid: 6612f73acce15d14e91d4af6b74a18b9, type: 3}
+    projectilePrefab: {fileID: 1602339330159018145, guid: 0a11aad6b8c0a3646a4f29f131063a39, type: 3}
+    fireRate: 1.1
     projectileSpeed: 50
-    clipSize: 30
+    clipSize: 5
     currentClip: 0
     infiniteAmmo: 0
-    reloadTime: 1
+    reloadTime: 1.5
     muzzleFlashSprites:
-    - {fileID: 6918117652038712344, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: -599844222353252488, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: 8415940726705588405, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: 268932047804147497, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: 72767835080455652, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-    - {fileID: 6711422003213473759, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: 5063393867768571626, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -6210039837673080033, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+    - {fileID: -8847200347274191562, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     muzzleFlashLifetime: 0.05
     muzzleFlashScale: 1
     muzzleFlashOffset: {x: 0, y: 0}
-    recoilOffset: {x: 0, y: 0.08}
+    recoilOffset: {x: 0, y: 0.1}
     recoilKickTime: 0.05
     recoilReturnTime: 0.08
     fireSounds:
-    - {fileID: 8300000, guid: 7036731a90ec460468795ab4aeedb212, type: 3}
+    - {fileID: 8300000, guid: f8ec898fdacd76247bf27a6a873bb963, type: 3}
     reloadSound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
     readySound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
     fireStopSound: {fileID: 0}
@@ -235,8 +232,35 @@ MonoBehaviour:
     reloadVolume: 1
     readyVolume: 1
     fireStopVolume: 1
-  startingReserveAmmo: 120
---- !u!61 &1387207228283653904
+  startingReserveAmmo: 25
+--- !u!50 &-8581285004402112822
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097896014897178159}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 5
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!61 &4182868517342926525
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,7 +298,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.245, y: 0.4025}
+    oldSize: {x: 1.045, y: 0.455}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -282,30 +306,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &3858424501147305875
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7097896014897178159}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 5
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0

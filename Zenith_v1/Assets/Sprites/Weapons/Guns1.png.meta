@@ -215,10 +215,10 @@ TextureImporter:
       name: Guns1_5
       rect:
         serializedVersion: 2
-        x: 1016
-        y: 478
-        width: 437
-        height: 147
+        x: 1110
+        y: 464
+        width: 359
+        height: 166
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
