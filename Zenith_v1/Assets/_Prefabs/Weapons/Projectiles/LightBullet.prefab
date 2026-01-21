@@ -77,7 +77,7 @@ MonoBehaviour:
   damage: 10
   damageType: 0
   speed: 50
-  lifetime: 1
+  lifetime: 0.35
   pierceCount: 0
   explosive: 0
   explosionRadius: 2
