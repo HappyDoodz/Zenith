@@ -17,6 +17,7 @@ public class MeleeEnemyController : MonoBehaviour
     public float attackRange = 0.9f;
     public float attackCooldown = 1.2f;
     public float attackDelay = 0.2f;
+    private int attackCounter;
 
     [Header("Separation")]
     public float separationRadius = 0.6f;
@@ -159,6 +160,8 @@ public class MeleeEnemyController : MonoBehaviour
     {
         canAttack = false;
 
+        attackCounter = Random.Range(0,3);
+        animator?.SetInteger("AttackCounter", attackCounter);
         animator?.SetTrigger("Attack");
 
         yield return new WaitForSeconds(attackDelay);
