@@ -7,14 +7,15 @@ public class WeaponIKBinder : MonoBehaviour
 
     void LateUpdate()
     {
-        if (weaponVisuals == null)
+        if (weaponVisuals == null || leftHandIKTarget == null)
             return;
 
-        WeaponView view = weaponVisuals.CurrentWeaponView;
+        WeaponView view = weaponVisuals.RangedWeaponView;
+
         if (view == null || view.LeftHandGrip == null)
             return;
 
         leftHandIKTarget.position = view.LeftHandGrip.position;
-        //leftHandIKTarget.rotation = view.LeftHandGrip.rotation;
+        leftHandIKTarget.rotation = view.LeftHandGrip.rotation;
     }
 }

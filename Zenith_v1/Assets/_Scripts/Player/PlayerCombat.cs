@@ -45,7 +45,10 @@ public class PlayerCombat : MonoBehaviour
         // MainController is now guaranteed to exist
         if (CurrentWeapon != null)
         {
-            weaponVisuals.SetWeapon(CurrentWeapon);
+            weaponVisuals.SetWeapons(
+                MainController.Instance.primaryWeapon,
+                MainController.Instance.meleeWeapon
+            );
         }
     }
 
@@ -242,16 +245,23 @@ public class PlayerCombat : MonoBehaviour
     void SwapWeapon()
     {
         MainController.Instance.SwapWeapon();
-        weaponVisuals.SetWeapon(CurrentWeapon);
+    
+        // Refresh visuals using the CURRENT equipped ranged weapon
+        weaponVisuals.SetRangedWeapon(MainController.Instance.GetCurrentWeapon());
+    
+        // (Optional) refresh melee too if it can change via pickups
+        weaponVisuals.SetMeleeWeapon(MainController.Instance.meleeWeapon);
+    
         PlayReadySound();
     }
-
+    
     public void RefreshWeaponVisuals()
     {
-        if (CurrentWeapon == null)
-            return;
-
-        weaponVisuals.SetWeapon(CurrentWeapon);
+        // Always refresh ranged weapon based on current slot
+        weaponVisuals.SetRangedWeapon(MainController.Instance.GetCurrentWeapon());
+    
+        // Refresh melee if applicable
+        weaponVisuals.SetMeleeWeapon(MainController.Instance.meleeWeapon);
     }
 
     // ---------------- MELEE ----------------

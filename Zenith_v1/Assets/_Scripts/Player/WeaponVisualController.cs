@@ -2,42 +2,82 @@ using UnityEngine;
 
 public class WeaponVisualController : MonoBehaviour
 {
-    [SerializeField] Transform weaponHolder;
+    [Header("Weapon Holders")]
+    [SerializeField] Transform rangedWeaponHolder;
+    [SerializeField] Transform meleeWeaponHolder;
 
-    WeaponView currentView;
+    WeaponView rangedView;
+    WeaponView meleeView;
 
-    public WeaponView CurrentWeaponView => currentView;
+    public WeaponView RangedWeaponView => rangedView;
 
+    // Used by PlayerCombat for firing
     public Transform CurrentFirePoint =>
-        currentView != null ? currentView.FirePoint : null;
+        rangedView != null ? rangedView.FirePoint : null;
 
-    public void SetWeapon(Weapon weapon)
+    // ================= PUBLIC API =================
+
+    /// <summary>
+    /// Call this when weapons are assigned or replaced
+    /// </summary>
+    public void SetWeapons(Weapon rangedWeapon, Weapon meleeWeapon)
     {
-        // Destroy old weapon view
-        if (currentView != null)
-            Destroy(currentView.gameObject);
+        SetRangedWeapon(rangedWeapon);
+        SetMeleeWeapon(meleeWeapon);
+    }
+
+    public void SetRangedWeapon(Weapon weapon)
+    {
+        if (rangedView != null)
+            Destroy(rangedView.gameObject);
+
+        rangedView = null;
 
         if (weapon == null || weapon.weaponPrefab == null)
-        {
-            currentView = null;
             return;
-        }
 
-        // Spawn new weapon prefab
         GameObject obj = Instantiate(
             weapon.weaponPrefab,
-            weaponHolder
+            rangedWeaponHolder
         );
 
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.identity;
 
-        currentView = obj.GetComponent<WeaponView>();
+        rangedView = obj.GetComponent<WeaponView>();
 
-        if (currentView == null)
+        if (rangedView == null)
         {
             Debug.LogError(
-                $"Weapon prefab {weapon.weaponPrefab.name} is missing WeaponView"
+                $"Ranged weapon prefab {weapon.weaponPrefab.name} is missing WeaponView"
+            );
+        }
+    }
+
+    public void SetMeleeWeapon(Weapon weapon)
+    {
+        if (meleeView != null)
+            Destroy(meleeView.gameObject);
+
+        meleeView = null;
+
+        if (weapon == null || weapon.weaponPrefab == null)
+            return;
+
+        GameObject obj = Instantiate(
+            weapon.weaponPrefab,
+            meleeWeaponHolder
+        );
+
+        obj.transform.localPosition = Vector3.zero;
+        obj.transform.localRotation = Quaternion.identity;
+
+        meleeView = obj.GetComponent<WeaponView>();
+
+        if (meleeView == null)
+        {
+            Debug.LogError(
+                $"Melee weapon prefab {weapon.weaponPrefab.name} is missing WeaponView"
             );
         }
     }
