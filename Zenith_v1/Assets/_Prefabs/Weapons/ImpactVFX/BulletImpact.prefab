@@ -4940,7 +4940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed43be45721dd346a08686158452f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimedLife
-  MaxLifetime: 2
+  MaxLifetime: 0.5
 --- !u!82 &-7092545860983147947
 AudioSource:
   m_ObjectHideFlags: 0
