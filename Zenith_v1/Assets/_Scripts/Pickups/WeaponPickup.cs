@@ -10,6 +10,8 @@ public class WeaponPickup : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
+        GetComponent<PickupSound>()?.PlayPickupSound();
+
         PlayerCombat playerCombat =
             FindFirstObjectByType<PlayerCombat>();
 

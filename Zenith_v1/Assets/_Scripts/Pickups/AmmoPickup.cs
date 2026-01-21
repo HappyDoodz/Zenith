@@ -7,6 +7,8 @@ public class AmmoPickup : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
+        GetComponent<PickupSound>()?.PlayPickupSound();
+
         // Get current secondary weapon
         Weapon secondary = MainController.Instance.secondaryWeapon;
 

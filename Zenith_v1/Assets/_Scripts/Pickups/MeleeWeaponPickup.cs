@@ -8,6 +8,8 @@ public class MeleeWeaponPickup : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
+        
+        GetComponent<PickupSound>()?.PlayPickupSound();
 
         PlayerCombat playerCombat =
             FindFirstObjectByType<PlayerCombat>();

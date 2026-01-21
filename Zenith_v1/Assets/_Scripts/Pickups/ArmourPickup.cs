@@ -9,6 +9,8 @@ public class ArmourPickup : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
+        GetComponent<PickupSound>()?.PlayPickupSound();
+
         MainController.Instance.AddArmour(armourAmount);
         Destroy(gameObject);
     }

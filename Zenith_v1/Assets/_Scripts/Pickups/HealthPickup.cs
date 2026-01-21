@@ -13,6 +13,8 @@ public class HealthPickup : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
+        GetComponent<PickupSound>()?.PlayPickupSound();
+
         MainController mc = MainController.Instance;
         if (mc == null)
             return;
