@@ -204,13 +204,23 @@ MonoBehaviour:
     weaponId: GrenadeLauncher
     weaponName: Grenade Launcher
     weaponPrefab: {fileID: 1697036685979796447, guid: 6612f73acce15d14e91d4af6b74a18b9, type: 3}
+    isRanged: 1
     projectilePrefab: {fileID: 1602339330159018145, guid: 0a11aad6b8c0a3646a4f29f131063a39, type: 3}
     fireRate: 1.1
     projectileSpeed: 50
     clipSize: 5
-    currentClip: 0
     infiniteAmmo: 0
     reloadTime: 1.5
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
     muzzleFlashSprites:
     - {fileID: 5063393867768571626, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     - {fileID: -6210039837673080033, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
@@ -232,6 +242,9 @@ MonoBehaviour:
     reloadVolume: 1
     readyVolume: 1
     fireStopVolume: 1
+    meleeSwingSounds: []
+    meleeHitSounds: []
+    meleeHitVolume: 1
   startingReserveAmmo: 25
 --- !u!50 &-8581285004402112822
 Rigidbody2D:
@@ -294,15 +307,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.045, y: 0.455}
+    oldSize: {x: 1.245, y: 0.4025}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0

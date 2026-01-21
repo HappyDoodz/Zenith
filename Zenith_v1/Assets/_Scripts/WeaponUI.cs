@@ -15,6 +15,13 @@ public class WeaponUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI secondaryClip;
     [SerializeField] TextMeshProUGUI secondaryAmmo;
 
+    [Header("Grenade UI")]
+    [SerializeField] TextMeshProUGUI grenadeName;
+    [SerializeField] TextMeshProUGUI grenadeAmmo;
+
+    [Header("Melee UI")]
+    [SerializeField] TextMeshProUGUI meleeName;
+
     [Header("Opacity")]
     [SerializeField] float activeAlpha = 1f;
     [SerializeField] float inactiveAlpha = 0.35f;
@@ -26,8 +33,12 @@ public class WeaponUI : MonoBehaviour
 
         UpdatePrimary();
         UpdateSecondary();
+        UpdateGrenades();
+        UpdateMelee();
         UpdateActiveState();
     }
+
+    // ================= PRIMARY =================
 
     void UpdatePrimary()
     {
@@ -44,6 +55,8 @@ public class WeaponUI : MonoBehaviour
             : ammo.reserveAmmo.ToString();
     }
 
+    // ================= SECONDARY =================
+
     void UpdateSecondary()
     {
         Weapon weapon = MainController.Instance.secondaryWeapon;
@@ -56,6 +69,35 @@ public class WeaponUI : MonoBehaviour
         secondaryClip.text = ammo.currentClip.ToString();
         secondaryAmmo.text = ammo.reserveAmmo.ToString();
     }
+
+    // ================= GRENADES =================
+
+    void UpdateGrenades()
+    {
+        MainController mc = MainController.Instance;
+
+        grenadeName.text =
+            string.IsNullOrEmpty(mc.grenadeName)
+                ? "Grenade"
+                : mc.grenadeName;
+
+        grenadeAmmo.text =
+            mc.currentGrenades.ToString();
+    }
+
+    // ================= MELEE =================
+
+    void UpdateMelee()
+    {
+        Weapon melee = MainController.Instance.meleeWeapon;
+
+        meleeName.text =
+            melee != null
+                ? melee.weaponName
+                : "Melee";
+    }
+
+    // ================= ACTIVE SLOT =================
 
     void UpdateActiveState()
     {

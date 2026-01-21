@@ -204,13 +204,23 @@ MonoBehaviour:
     weaponId: Minigun
     weaponName: Minigun
     weaponPrefab: {fileID: 1697036685979796447, guid: 90006787401e75f44b2ad3624f1ed924, type: 3}
+    isRanged: 1
     projectilePrefab: {fileID: 1602339330159018145, guid: 521b7c06c2e59714c949e2a7cd55b3af, type: 3}
     fireRate: 0.05
     projectileSpeed: 50
     clipSize: 200
-    currentClip: 0
     infiniteAmmo: 0
     reloadTime: 1.8
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
     muzzleFlashSprites:
     - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
@@ -235,6 +245,9 @@ MonoBehaviour:
     reloadVolume: 1
     readyVolume: 1
     fireStopVolume: 1
+    meleeSwingSounds: []
+    meleeHitSounds: []
+    meleeHitVolume: 1
   startingReserveAmmo: 1000
 --- !u!50 &-8581285004402112822
 Rigidbody2D:
@@ -297,15 +310,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.045, y: 0.455}
+    oldSize: {x: 1.245, y: 0.4025}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0

@@ -204,13 +204,23 @@ MonoBehaviour:
     weaponId: Shotgun
     weaponName: Shotgun
     weaponPrefab: {fileID: 1697036685979796447, guid: 607c7b15eb765c94c80846ba251bc34e, type: 3}
+    isRanged: 1
     projectilePrefab: {fileID: 1602339330159018145, guid: 44b99094ea013ef4490bd24cce910713, type: 3}
     fireRate: 0.8
     projectileSpeed: 50
     clipSize: 12
-    currentClip: 0
     infiniteAmmo: 0
     reloadTime: 1.1
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
     muzzleFlashSprites:
     - {fileID: 5063393867768571626, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
     - {fileID: -6210039837673080033, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
@@ -225,11 +235,16 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 0a53b09b57014de41897f10586f85b04, type: 3}
     reloadSound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
     readySound: {fileID: 8300000, guid: 0ccc496fee7c9984da763bd0a581c636, type: 3}
+    fireStopSound: {fileID: 0}
     pitchMin: 0.95
     pitchMax: 1.05
     fireVolume: 1
     reloadVolume: 1
     readyVolume: 1
+    fireStopVolume: 1
+    meleeSwingSounds: []
+    meleeHitSounds: []
+    meleeHitVolume: 1
   startingReserveAmmo: 60
 --- !u!50 &-8581285004402112822
 Rigidbody2D:
@@ -292,15 +307,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.045, y: 0.455}
+    oldSize: {x: 1.245, y: 0.4025}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
