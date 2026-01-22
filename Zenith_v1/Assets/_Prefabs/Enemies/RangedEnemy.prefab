@@ -632,7 +632,7 @@ MonoBehaviour:
   - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
   - {fileID: 3915975824296301007, guid: 81ead485f093f6543aeab8d4ca2aa2a6, type: 3}
   - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  dropChance: 0.25
+  dropChance: 0.1
   isDead: 0
   audioSource: {fileID: 0}
 --- !u!114 &7574244914866974518

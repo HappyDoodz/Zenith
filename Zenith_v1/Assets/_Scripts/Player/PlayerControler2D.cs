@@ -77,6 +77,8 @@ public class PlayerController2D : MonoBehaviour
         combat = GetComponent<PlayerCombat>();
         afterImage = GetComponent<AfterImageEffect>();
 
+        MusicManager.Instance.PlayGameplayMusic();
+
         if (health != null)
             health.OnDeath += HandleDeath;
     }

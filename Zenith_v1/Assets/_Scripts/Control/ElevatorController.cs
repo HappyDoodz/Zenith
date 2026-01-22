@@ -53,9 +53,19 @@ public class ElevatorController : MonoBehaviour
 
         MainController.Instance.AdvanceFloor();
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-        );
+        if (MainController.Instance.currentFloor >= 20)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(
+                MainController.Instance.gameOverSceneName
+            );
+        }
+
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+            );
+        }
     }
 
     // ================= AUDIO =================

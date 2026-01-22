@@ -47,7 +47,7 @@ public class MainController : MonoBehaviour
     [Header("Progression")]
     public int currentFloor = 1;  
     public int currentKills = 0;
-    public string mainMenuSceneName = ""; // optional
+    public string gameOverSceneName = ""; // optional
 
     // ================= DEFAULT LOADOUT =================
 

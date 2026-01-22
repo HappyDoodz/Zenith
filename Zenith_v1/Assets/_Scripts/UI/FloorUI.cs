@@ -52,7 +52,7 @@ public class FloorUI : MonoBehaviour
 
         elevatorReadyBox.SetActive(elevator.IsActive);
 
-        if (!playedSound)
+        if (!playedSound && elevator.IsActive)
         {
             PlayWinSound();
         }

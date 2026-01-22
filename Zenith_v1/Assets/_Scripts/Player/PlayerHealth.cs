@@ -129,7 +129,7 @@ public class PlayerHealth : MonoBehaviour
 
         MainController.Instance.ResetRun();
 
-        string menu = MainController.Instance.mainMenuSceneName;
+        string menu = MainController.Instance.gameOverSceneName;
 
         if (!string.IsNullOrEmpty(menu))
             SceneManager.LoadScene(menu);
