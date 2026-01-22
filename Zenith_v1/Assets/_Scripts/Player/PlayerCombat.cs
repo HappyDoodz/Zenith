@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
 
     [Header("Melee")]
     public Transform meleePoint;
+    HashSet<EnemyHealth> meleeHitThisAttack = new HashSet<EnemyHealth>();
 
     [Header("Grenades")]
     //public GameObject grenadePrefab;
@@ -42,14 +44,8 @@ public class PlayerCombat : MonoBehaviour
     
     void Start()
     {
-        // MainController is now guaranteed to exist
-        if (CurrentWeapon != null)
-        {
-            weaponVisuals.SetWeapons(
-                MainController.Instance.primaryWeapon,
-                MainController.Instance.meleeWeapon
-            );
-        }
+        // Always sync visuals to the ACTUAL equipped weapon
+        RefreshWeaponVisuals();
     }
 
     void Update()
@@ -60,16 +56,16 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
             SwapWeapon();
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetMouseButton(0) && !Input.GetKey(KeyCode.W))
             TryShoot();
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetMouseButtonDown(1))
             Melee();
 
         if (Input.GetKeyDown(KeyCode.E))
             Reload();
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKey(KeyCode.W) && Input.GetMouseButtonDown(0))
             ThrowGrenade();
 
         if (wasFiring && !isFiring)
@@ -318,6 +314,7 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator MeleeRoutine(Weapon weapon)
     {
         isMeleeAttacking = true;
+        meleeHitThisAttack.Clear(); // reset hit list
 
         GetComponent<PlayerAnimatorController>()
             ?.SetMeleeAttacking(true);
@@ -344,9 +341,24 @@ public class PlayerCombat : MonoBehaviour
 
     void DoMeleeHit(Weapon weapon)
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            meleePoint.position,
+        // Box size (width forward, height vertical)
+        Vector2 boxSize = new Vector2(
             weapon.meleeRange,
+            weapon.meleeRange * 1.2f
+        );
+
+        // Offset in front of player
+        Vector2 forward =
+            controller.facingRight ? Vector2.right : Vector2.left;
+
+        Vector2 center =
+            (Vector2)meleePoint.position +
+            forward * (weapon.meleeRange * 0.5f);
+
+        Collider2D[] hits = Physics2D.OverlapBoxAll(
+            center,
+            boxSize,
+            0f,
             weapon.meleeHitLayers
         );
 
@@ -358,6 +370,12 @@ public class PlayerCombat : MonoBehaviour
             if (enemy == null)
                 continue;
 
+            // Prevent multiple hits per attack
+            if (meleeHitThisAttack.Contains(enemy))
+                continue;
+
+            meleeHitThisAttack.Add(enemy);
+
             enemy.TakeDamage(weapon.meleeDamage);
             hitSomething = true;
 
@@ -366,15 +384,20 @@ public class PlayerCombat : MonoBehaviour
             {
                 Vector2 dir =
                     (hit.transform.position - transform.position).normalized;
-                rb.AddForce(dir * weapon.meleeKnockback, ForceMode2D.Impulse);
+
+                // Clear existing horizontal velocity
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
+                // Apply knockback instantly
+                rb.linearVelocity += new Vector2(
+                    dir.x * weapon.meleeKnockback,
+                    weapon.meleeKnockback * 0.25f // small lift feels better
+                );
             }
         }
 
-        // Play HIT sound only if at least one enemy was struck
         if (hitSomething)
-        {
             PlayMeleeHitSound(weapon);
-        }
     }
 
     // ---------------- GRENADES ----------------
@@ -447,10 +470,21 @@ public class PlayerCombat : MonoBehaviour
         if (weapon == null || !weapon.isMelee)
             return;
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(
-            meleePoint.position,
-            weapon.meleeRange
+        Vector2 forward =
+            controller != null && controller.facingRight
+                ? Vector2.right
+                : Vector2.left;
+
+        Vector2 center =
+            (Vector2)meleePoint.position +
+            forward * (weapon.meleeRange * 0.5f);
+
+        Vector2 size = new Vector2(
+            weapon.meleeRange,
+            weapon.meleeRange * 1.2f
         );
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(center, size);
     }
 }

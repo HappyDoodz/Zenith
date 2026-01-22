@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7072f2328f4291c4883487eb7e3cc02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupSound
-  pickupSound: {fileID: 8300000, guid: 5231e7cd1fa22fc49bfa88d3e1332f93, type: 3}
+  pickupSound: {fileID: 8300000, guid: eadd8d2b69e41e948adee2546f824d0a, type: 3}
   volume: 1
   pitchMin: 0.95
   pitchMax: 1.05

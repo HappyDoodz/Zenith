@@ -42,4 +42,9 @@ public class PlayerAnimatorController : MonoBehaviour
     {
         anim.SetTrigger("ThrowGrenade");
     }
+
+    public void TriggerDeath()
+    {
+        anim.SetTrigger("Die");
+    }
 }

@@ -46,7 +46,7 @@ public class RangedEnemyController : MonoBehaviour
     public int muzzleFlashSortingOrder = 0;
 
     [Header("Audio")]
-    public AudioSource audioSource;
+    public AudioSource weaponSource;
     public AudioClip fireSound;
     public AudioClip reloadSound;
     [Range(0f, 0.2f)]
@@ -296,56 +296,70 @@ public class RangedEnemyController : MonoBehaviour
 
     void PlayFireSound()
     {
-        if (audioSource == null || fireSound == null)
+        if (weaponSource == null || fireSound == null)
             return;
 
-        audioSource.pitch =
+        weaponSource.pitch =
             1f + Random.Range(-pitchVariance, pitchVariance);
 
-        audioSource.PlayOneShot(fireSound);
+        weaponSource.PlayOneShot(fireSound);
     }
 
     void PlayReloadSound()
     {
-        if (audioSource == null || reloadSound == null)
+        if (weaponSource == null || reloadSound == null)
             return;
 
-        audioSource.pitch = 1f;
-        audioSource.PlayOneShot(reloadSound);
+        weaponSource.pitch = 1f;
+        weaponSource.PlayOneShot(reloadSound);
     }
 
     // ================= SEPARATION =================
 
     void ApplySeparation()
     {
-        Collider2D[] neighbors =
-            Physics2D.OverlapCircleAll(
-                transform.position,
-                separationRadius,
-                enemyLayer
-            );
+        Collider2D[] neighbors = Physics2D.OverlapCircleAll(
+            transform.position,
+            separationRadius,
+            enemyLayer
+        );
 
         Vector2 separation = Vector2.zero;
+        int count = 0;
 
         foreach (var other in neighbors)
         {
             if (other.gameObject == gameObject)
                 continue;
 
-            Vector2 diff =
-                (Vector2)(transform.position - other.transform.position);
-
+            Vector2 diff = (Vector2)(transform.position - other.transform.position);
             float dist = diff.magnitude;
-            if (dist > 0f)
-                separation += diff.normalized / dist;
+
+            // If overlapping exactly, push randomly
+            if (dist < 0.001f)
+            {
+                diff = Random.insideUnitCircle.normalized;
+                dist = 0.001f;
+            }
+
+            // Stronger force when closer
+            float strength = 1f - (dist / separationRadius);
+
+            separation += diff.normalized * strength;
+            count++;
         }
 
-        if (separation != Vector2.zero)
+        if (count > 0)
         {
-            rb.linearVelocity +=
-                separation.normalized *
-                separationStrength *
-                Time.fixedDeltaTime;
+            separation /= count;
+
+            Vector2 push = separation.normalized * separationStrength;
+
+            // Apply force WITHOUT breaking vertical velocity
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x + push.x * Time.fixedDeltaTime,
+                rb.linearVelocity.y
+            );
         }
     }
 }

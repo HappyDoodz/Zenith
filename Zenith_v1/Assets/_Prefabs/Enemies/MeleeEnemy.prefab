@@ -89,7 +89,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103639391241940124}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.93004525, w: 0.36744514}
+  m_LocalRotation: {x: 0, y: 0, z: -0.94996464, w: 0.31235772}
   m_LocalPosition: {x: 0.15990669, y: -0.07142184, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195822675352136942}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.117305905, w: 0.9930958}
+  m_LocalRotation: {x: -0, y: -0, z: 0.21023314, w: 0.9776513}
   m_LocalPosition: {x: 0.72720814, y: -0.030574014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494055192382942304}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.99793583, w: 0.064219825}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9651336, w: 0.26175794}
   m_LocalPosition: {x: 0.08209892, y: 0.09838065, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977901877672320891}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.15731835, y: 0.08625753, z: 0.2425789, w: 0.95339715}
+  m_LocalRotation: {x: -0, y: -0, z: 0.19037578, w: 0.98171127}
   m_LocalPosition: {x: 0.4524646, y: 0.00271713, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -246,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407309659855810042}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.53867954, w: 0.84251076}
+  m_LocalRotation: {x: 0, y: 0, z: 0.83142, w: 0.55564445}
   m_LocalPosition: {x: 0.5604912, y: -0.013317071, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2323067873522727739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.529244, w: 0.8484697}
+  m_LocalRotation: {x: 0, y: 0, z: -0.30230758, w: 0.9532105}
   m_LocalPosition: {x: 0.66565835, y: -0.0026965737, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -395,9 +395,10 @@ GameObject:
   - component: {fileID: 7414726178121262189}
   - component: {fileID: 1130323553815048967}
   - component: {fileID: 2534053051001448501}
-  - component: {fileID: 5921441697072847771}
   - component: {fileID: 8120492025135821937}
+  - component: {fileID: 7872256041588426066}
   - component: {fileID: 8097332259537184846}
+  - component: {fileID: 5921441697072847771}
   m_Layer: 7
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -508,6 +509,170 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8120492025135821937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106529849124541047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dde7c4ba56ea62459a38248a8515440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  maxHealth: 50
+  hitEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
+  deathEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
+  destroyDelay: 2
+  hurtSounds: []
+  hurtSoundChance: 0.5
+  deathSounds: []
+  pitchMin: 0.95
+  pitchMax: 1.05
+  possibleDrops:
+  - {fileID: 3915975824296301007, guid: afa8d02ecfc494143bfe3bfb606311a9, type: 3}
+  - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
+  - {fileID: 3915975824296301007, guid: 81ead485f093f6543aeab8d4ca2aa2a6, type: 3}
+  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
+  dropChance: 0.25
+  isDead: 0
+  audioSource: {fileID: 7872256041588426066}
+--- !u!82 &7872256041588426066
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106529849124541047}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8097332259537184846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106529849124541047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb13c20104750424da0b9923f48521e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyController
+  moveSpeed: 3
+  approachRange: 2
+  holdRange: 4
+  meleeDamage: 10
+  attackRange: 5
+  attackCooldown: 2
+  attackDelay: 0.2
+  meleeSwingSounds:
+  - {fileID: 8300000, guid: b2150bad914d7e140b8c53f9f2f4be7e, type: 3}
+  meleeHitSounds:
+  - {fileID: 8300000, guid: d6812b1b1e84bf74fbcee4ff914182f6, type: 3}
+  pitchMin: 0.95
+  pitchMax: 1.05
+  swingVolume: 1
+  hitVolume: 1
+  separationRadius: 2
+  separationStrength: 7
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 192
+  groundCheck: {fileID: 2477441531443036319}
+  groundCheckRadius: 0.15
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  weaponSource: {fileID: 5921441697072847771}
 --- !u!82 &5921441697072847771
 AudioSource:
   m_ObjectHideFlags: 0
@@ -605,58 +770,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8120492025135821937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3106529849124541047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dde7c4ba56ea62459a38248a8515440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 50
-  hitEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
-  deathEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
-  destroyDelay: 5
-  possibleDrops:
-  - {fileID: 3915975824296301007, guid: afa8d02ecfc494143bfe3bfb606311a9, type: 3}
-  - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
-  - {fileID: 3915975824296301007, guid: 81ead485f093f6543aeab8d4ca2aa2a6, type: 3}
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  dropChance: 0.25
-  isDead: 0
---- !u!114 &8097332259537184846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3106529849124541047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb13c20104750424da0b9923f48521e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyController
-  moveSpeed: 2.5
-  approachRange: 3
-  holdRange: 2
-  meleeDamage: 10
-  attackRange: 2
-  attackCooldown: 2
-  attackDelay: 0.2
-  separationRadius: 0.6
-  separationStrength: 1.5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheck: {fileID: 2477441531443036319}
-  groundCheckRadius: 0.15
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &3546051316149716668
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3546051316149716668}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.5757132, w: 0.8176517}
+  m_LocalRotation: {x: 0, y: 0, z: 0.40438774, w: 0.9145877}
   m_LocalPosition: {x: 0.39719203, y: -0.0031841397, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -713,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3628301463572542962}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.45058724, w: 0.89273244}
+  m_LocalRotation: {x: 0, y: 0, z: 0.013632269, w: 0.9999071}
   m_LocalPosition: {x: 0.59066474, y: -0.008710876, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -841,7 +954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4287011134749715138}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.9601458, w: -0.2794997}
+  m_LocalRotation: {x: 0, y: 0, z: -0.99959403, w: -0.02849348}
   m_LocalPosition: {x: 0.55556417, y: -0.14315508, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1169,7 +1282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5902987657632672133}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.056139424, y: 0.1704048, z: -0.69797236, w: 0.6932859}
+  m_LocalRotation: {x: -0, y: -0, z: 0.3561874, w: 0.93441457}
   m_LocalPosition: {x: 0.4696892, y: -0.013403834, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1297,7 +1410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6744413691808266351}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.18045466, w: 0.9835834}
+  m_LocalRotation: {x: -0, y: -0, z: -0.010561314, w: 0.99994427}
   m_LocalPosition: {x: 0.8026774, y: -0.021230211, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1328,7 +1441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7427048793004200328}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17805424, y: -0.022047881, z: -0.2779513, w: 0.9436916}
+  m_LocalRotation: {x: -0, y: -0, z: 0.007347352, w: 0.99997306}
   m_LocalPosition: {x: 0.15405962, y: -0.00049912673, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1359,7 +1472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7597692938281069914}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7925618, w: 0.6097915}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9875319, w: 0.15741915}
   m_LocalPosition: {x: 0.40249145, y: 0.2402831, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1456,7 +1569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7997032175289979783}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.397534, w: 0.91758746}
+  m_LocalRotation: {x: 0, y: 0, z: 0.11479438, w: 0.9933893}
   m_LocalPosition: {x: 0.51831764, y: -0.09575133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

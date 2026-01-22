@@ -3,14 +3,15 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(EnemyHealth))]
+[RequireComponent(typeof(AudioSource))]
 public class MeleeEnemyController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 2.5f;
 
     [Header("Movement Ranges")]
-    public float approachRange = 1.4f;   // start walking if farther than this
-    public float holdRange = 1.0f;        // stop moving inside this
+    public float approachRange = 1.4f;
+    public float holdRange = 1.0f;
 
     [Header("Attack")]
     public int meleeDamage = 10;
@@ -18,6 +19,14 @@ public class MeleeEnemyController : MonoBehaviour
     public float attackCooldown = 1.2f;
     public float attackDelay = 0.2f;
     private int attackCounter;
+
+    [Header("Audio")]
+    public AudioClip[] meleeSwingSounds;
+    public AudioClip[] meleeHitSounds;
+    public float pitchMin = 0.95f;
+    public float pitchMax = 1.05f;
+    public float swingVolume = 1f;
+    public float hitVolume = 1f;
 
     [Header("Separation")]
     public float separationRadius = 0.6f;
@@ -33,6 +42,7 @@ public class MeleeEnemyController : MonoBehaviour
     Animator animator;
     Transform player;
     EnemyHealth enemyHealth;
+    public AudioSource weaponSource;
 
     bool facingRight = true;
     bool canAttack = true;
@@ -46,8 +56,8 @@ public class MeleeEnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyHealth = GetComponent<EnemyHealth>();
 
-        rb.gravityScale = 5f;      // gravity ON
-        rb.freezeRotation = true;  // prevent tipping
+        rb.gravityScale = 5f;
+        rb.freezeRotation = true;
     }
 
     void Start()
@@ -61,10 +71,7 @@ public class MeleeEnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (enemyHealth.isDead)
-            return;
-            
-        if (player == null)
+        if (enemyHealth.isDead || player == null)
             return;
 
         CheckGrounded();
@@ -80,7 +87,6 @@ public class MeleeEnemyController : MonoBehaviour
         float distance =
             Vector2.Distance(transform.position, player.position);
 
-        // TOO FAR → MOVE TOWARD PLAYER
         if (distance > approachRange)
         {
             Vector2 dir =
@@ -95,7 +101,6 @@ public class MeleeEnemyController : MonoBehaviour
             return;
         }
 
-        // WITHIN HOLD RANGE → STOP MOVING
         if (distance <= holdRange)
         {
             rb.linearVelocity = new Vector2(
@@ -108,7 +113,6 @@ public class MeleeEnemyController : MonoBehaviour
             return;
         }
 
-        // DEAD ZONE (between approach & hold) → IDLE
         rb.linearVelocity = new Vector2(
             0f,
             rb.linearVelocity.y
@@ -143,9 +147,6 @@ public class MeleeEnemyController : MonoBehaviour
 
     void TryAttack()
     {
-        if (enemyHealth.isDead)
-            return;
-            
         if (!canAttack)
             return;
 
@@ -160,34 +161,81 @@ public class MeleeEnemyController : MonoBehaviour
     {
         canAttack = false;
 
-        attackCounter = Random.Range(0,3);
+        PlaySwingSound();
+
+        attackCounter = Random.Range(0, 3);
         animator?.SetInteger("AttackCounter", attackCounter);
         animator?.SetTrigger("Attack");
 
         yield return new WaitForSeconds(attackDelay);
 
+        bool hit = false;
+
         if (player != null)
         {
-            player.GetComponent<PlayerHealth>()
-                ?.TakeDamage(meleeDamage);
+            PlayerHealth health =
+                player.GetComponent<PlayerHealth>();
+
+            if (health != null)
+            {
+                health.TakeDamage(meleeDamage);
+                hit = true;
+            }
         }
+
+        if (hit)
+            PlayHitSound();
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+    }
+
+    // ================= AUDIO =================
+
+    void PlaySwingSound()
+    {
+        if (meleeSwingSounds == null ||
+            meleeSwingSounds.Length == 0)
+            return;
+
+        AudioClip clip =
+            meleeSwingSounds[Random.Range(0, meleeSwingSounds.Length)];
+
+        weaponSource.pitch =
+            Random.Range(pitchMin, pitchMax);
+
+        weaponSource.volume = swingVolume;
+        weaponSource.PlayOneShot(clip);
+    }
+
+    void PlayHitSound()
+    {
+        if (meleeHitSounds == null ||
+            meleeHitSounds.Length == 0)
+            return;
+
+        AudioClip clip =
+            meleeHitSounds[Random.Range(0, meleeHitSounds.Length)];
+
+        weaponSource.pitch =
+            Random.Range(pitchMin, pitchMax);
+
+        weaponSource.volume = hitVolume;
+        weaponSource.PlayOneShot(clip);
     }
 
     // ================= SEPARATION =================
 
     void ApplySeparation()
     {
-        Collider2D[] neighbors =
-            Physics2D.OverlapCircleAll(
-                transform.position,
-                separationRadius,
-                enemyLayer
-            );
+        Collider2D[] neighbors = Physics2D.OverlapCircleAll(
+            transform.position,
+            separationRadius,
+            enemyLayer
+        );
 
         Vector2 separation = Vector2.zero;
+        int count = 0;
 
         foreach (var other in neighbors)
         {
@@ -198,16 +246,28 @@ public class MeleeEnemyController : MonoBehaviour
                 (Vector2)(transform.position - other.transform.position);
 
             float dist = diff.magnitude;
-            if (dist > 0f)
-                separation += diff.normalized / dist;
+            if (dist < 0.001f)
+            {
+                diff = Random.insideUnitCircle.normalized;
+                dist = 0.001f;
+            }
+
+            float strength = 1f - (dist / separationRadius);
+            separation += diff.normalized * strength;
+            count++;
         }
 
-        if (separation != Vector2.zero)
+        if (count > 0)
         {
-            rb.linearVelocity +=
-                separation.normalized *
+            separation /= count;
+
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x +
+                separation.normalized.x *
                 separationStrength *
-                Time.fixedDeltaTime;
+                Time.fixedDeltaTime,
+                rb.linearVelocity.y
+            );
         }
     }
 
@@ -223,31 +283,5 @@ public class MeleeEnemyController : MonoBehaviour
             groundCheckRadius,
             groundLayer
         );
-    }
-
-    // ================= DEBUG =================
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, holdRange);
-
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, approachRange);
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, separationRadius);
-
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(
-                groundCheck.position,
-                groundCheckRadius
-            );
-        }
     }
 }

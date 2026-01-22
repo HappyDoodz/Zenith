@@ -42,6 +42,24 @@ public class MainController : MonoBehaviour
     public int maxGrenades = 5;
     public int currentGrenades = 3;
 
+    // ================= LEVEL PROGRESSION =================
+
+    [Header("Progression")]
+    public int currentFloor = 1;  
+    public int currentKills = 0;
+    public string mainMenuSceneName = ""; // optional
+
+    // ================= DEFAULT LOADOUT =================
+
+    [Header("Default Loadout")]
+    public Weapon defaultPrimaryWeapon;
+    public Weapon defaultSecondaryWeapon;
+    public Weapon defaultMeleeWeapon;
+
+    public GameObject defaultGrenadePrefab;
+    public string defaultGrenadeName = "Frag Grenade";
+    public int defaultGrenadeCount = 3;
+
     bool initialized;
 
     // ================= UNITY =================
@@ -137,6 +155,9 @@ public class MainController : MonoBehaviour
             reserveAmmo = int.MaxValue,   // infinite reserve
             infiniteAmmo = true
         };
+
+        primaryWeaponAmmo.isReloading = false;
+        secondaryWeaponAmmo.isReloading = false;
     }
 
     void BuildSecondaryAmmo()
@@ -152,6 +173,9 @@ public class MainController : MonoBehaviour
             reserveAmmo = 120,              // starts empty unless pickup says otherwise
             infiniteAmmo = false
         };
+
+        primaryWeaponAmmo.isReloading = false;
+        secondaryWeaponAmmo.isReloading = false;
     }
 
     // ================= WEAPON HELPERS =================
@@ -298,5 +322,42 @@ public class MainController : MonoBehaviour
             reserveAmmo = ammoAmount,
             infiniteAmmo = false
         };
+    }
+
+    // ================= PROGRESSION API =================
+
+    public void ResetRun()
+    {
+        // ---------------- PROGRESSION ----------------
+        currentFloor = 1;
+        currentKills = 0;
+
+        // ---------------- HEALTH / ARMOUR ----------------
+        currentHealth = maxHealth;
+        currentArmour = 0f;
+
+        // ---------------- WEAPONS ----------------
+        primaryWeapon   = defaultPrimaryWeapon;
+        secondaryWeapon = defaultSecondaryWeapon;
+        meleeWeapon     = defaultMeleeWeapon;
+
+        usingPrimary = true; // always start with primary
+
+        // ---------------- AMMO ----------------
+        BuildPrimaryAmmo();
+        BuildSecondaryAmmo();
+
+        // ---------------- GRENADES ----------------
+        grenadePrefab   = defaultGrenadePrefab;
+        grenadeName     = defaultGrenadeName;
+        currentGrenades = defaultGrenadeCount;
+
+        // ---------------- FLAGS ----------------
+        canWeaponSelect = true;
+    }
+
+    public void AdvanceFloor()
+    {
+        currentFloor++;
     }
 }
