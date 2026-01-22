@@ -866,7 +866,7 @@ MonoBehaviour:
   moveSpeed: 8
   crouchSpeed: 3
   jumpForce: 20
-  dodgeSpeed: 25
+  dodgeSpeed: 35
   dodgeDuration: 0.25
   dodgeCooldown: 0.5
   dodgeLayerName: PlayerDash
@@ -1112,9 +1112,12 @@ MonoBehaviour:
   hitInvincibilityTime: 0.5
   hitEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
   deathEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
-  hurtSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: 58539ca1a87d35c468d972372b4701c2, type: 3}
+  - {fileID: 8300000, guid: acf7141220b0635458cc72f30b632365, type: 3}
   hurtSoundChance: 0.6
-  deathSounds: []
+  deathSounds:
+  - {fileID: 8300000, guid: 042b5981f5de3554a98cd41ac32eaf22, type: 3}
   pitchMin: 0.95
   pitchMax: 1.05
   audioSource: {fileID: 3855568092110458542}

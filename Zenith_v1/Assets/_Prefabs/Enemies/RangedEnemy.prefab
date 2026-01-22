@@ -622,9 +622,17 @@ MonoBehaviour:
   hitEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
   deathEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
   destroyDelay: 2
-  hurtSounds: []
-  hurtSoundChance: 0.5
-  deathSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: b026c5de6dcabdf44a89b65f954bdf58, type: 3}
+  - {fileID: 8300000, guid: 7569f1b15a57363429b2a4b795685a6e, type: 3}
+  - {fileID: 8300000, guid: 6c6ec4e1ac0882143832053f814330ee, type: 3}
+  - {fileID: 8300000, guid: f1998432ad137244190e278e4387e03c, type: 3}
+  - {fileID: 8300000, guid: c042ce4e66e03cc46a9d97641c884fea, type: 3}
+  - {fileID: 8300000, guid: fe4fb4386daaad5419e231160d56fa99, type: 3}
+  hurtSoundChance: 0.1
+  deathSounds:
+  - {fileID: 8300000, guid: d1df4f2fe97e4b947b9d013389a66e5c, type: 3}
+  - {fileID: 8300000, guid: 98b9218906bf94349863460a28992bb3, type: 3}
   pitchMin: 0.95
   pitchMax: 1.05
   possibleDrops:

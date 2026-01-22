@@ -4905,6 +4905,7 @@ GameObject:
   - component: {fileID: 1807466285037731275}
   - component: {fileID: 7918168210399115817}
   - component: {fileID: -7092545860983147947}
+  - component: {fileID: 4192322991893366434}
   m_Layer: 0
   m_Name: BloodSpurt
   m_TagString: Untagged
@@ -4953,8 +4954,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5038,3 +5039,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4192322991893366434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8313120589046483423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54233470344d6a449968dddf092ae3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnStart
+  clips:
+  - {fileID: 8300000, guid: 982a9f4b35ee5f34c99807dabdefcb77, type: 3}
+  - {fileID: 8300000, guid: a08590e666fc7bc4384a2ce559f8857d, type: 3}
+  - {fileID: 8300000, guid: 01f1e869a95fa3047ba711b5d5a12a39, type: 3}
+  volume: 0.2
+  pitchMin: 0.95
+  pitchMax: 1.05

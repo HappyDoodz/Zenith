@@ -5287,7 +5287,7 @@ MonoBehaviour:
     infiniteAmmo: 0
     reloadTime: 1.2
     isMelee: 1
-    meleeDamage: 20
+    meleeDamage: 30
     meleeRange: 3
     meleeWindup: 0.2
     meleeActiveTime: 0.12
@@ -5454,7 +5454,7 @@ MonoBehaviour:
     infiniteAmmo: 0
     reloadTime: 1.2
     isMelee: 1
-    meleeDamage: 20
+    meleeDamage: 30
     meleeRange: 3
     meleeWindup: 0.2
     meleeActiveTime: 0.12
@@ -6424,7 +6424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7497132373688940147, guid: 559acc9308ffcda41aa11365ad3303dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 7497132373688940147, guid: 559acc9308ffcda41aa11365ad3303dd, type: 3}
       propertyPath: m_LocalPosition.z

@@ -176,7 +176,7 @@ public class MeleeEnemyController : MonoBehaviour
             PlayerHealth health =
                 player.GetComponent<PlayerHealth>();
 
-            if (health != null)
+            if (health != null && !enemyHealth.isDead)
             {
                 health.TakeDamage(meleeDamage);
                 hit = true;
