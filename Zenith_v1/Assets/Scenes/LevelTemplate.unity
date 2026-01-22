@@ -2759,6 +2759,11 @@ MonoBehaviour:
   - {fileID: 166912006337400622, guid: d6ecdb7a915aef340a9f2a4332f515b9, type: 3}
   - {fileID: 166912006337400622, guid: 2542a0d70d357824e9b098b841092eca, type: 3}
   - {fileID: 166912006337400622, guid: 31423f6109cd93b4c9cef851e9803cf1, type: 3}
+  - {fileID: 166912006337400622, guid: 3affbcc98df0bfc47bc311c994d22f96, type: 3}
+  - {fileID: 166912006337400622, guid: 244a2bfdb617a224ea3e1bcccfd7f408, type: 3}
+  - {fileID: 166912006337400622, guid: 0274977fb70f372469b0232d4d752dda, type: 3}
+  - {fileID: 166912006337400622, guid: 0a68e695d0465a845aae71ef17bf271f, type: 3}
+  - {fileID: 166912006337400622, guid: d9468860b770ba748a9ea31c511443a5, type: 3}
   arenas_Floor16_19:
   - {fileID: 166912006337400622, guid: 60b55839c5e70394b995c6f1d7dba0a9, type: 3}
   - {fileID: 166912006337400622, guid: d24a169bb8c741f4d9e70f222d22cc83, type: 3}
@@ -4625,8 +4630,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
   player: {fileID: 2069886090}
   initialSpawnDelay: 5
-  timeBetweenWaves: 4
-  timeBetweenEnemySpawns: 0.25
+  timeBetweenWaves: 6
+  timeBetweenEnemySpawns: 2
   spawnDistance: 30
   levelLeftBound: -20
   levelRightBound: 20
@@ -6419,7 +6424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7497132373688940147, guid: 559acc9308ffcda41aa11365ad3303dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7359
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 7497132373688940147, guid: 559acc9308ffcda41aa11365ad3303dd, type: 3}
       propertyPath: m_LocalPosition.z

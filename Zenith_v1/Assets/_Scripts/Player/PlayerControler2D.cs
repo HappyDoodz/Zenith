@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHealth))]
@@ -11,7 +12,8 @@ public class PlayerController2D : MonoBehaviour
         Normal,
         Dodging,
         ElevatorLocked,
-        Dead
+        Dead,
+        IntroLocked
     }
 
     [Header("Movement")]
@@ -31,22 +33,15 @@ public class PlayerController2D : MonoBehaviour
     public LayerMask groundLayer;
 
     [Header("Audio")]
-    [Tooltip("Sounds played when jumping")]
     public AudioClip[] jumpSounds;
-
-    [Tooltip("Sounds played when dodging")]
     public AudioClip[] dodgeSounds;
-
-    [Range(0.9f, 1.1f)]
-    public float pitchMin = 0.95f;
-
-    [Range(0.9f, 1.1f)]
-    public float pitchMax = 1.05f;
+    [Range(0.9f, 1.1f)] public float pitchMin = 0.95f;
+    [Range(0.9f, 1.1f)] public float pitchMax = 1.05f;
 
     public bool IsGrounded { get; private set; }
     public bool IsCrouching { get; private set; }
     public bool IsInvincible { get; private set; }
-    public PlayerState State { get; private set; } = PlayerState.Normal;
+    public PlayerState State { get; private set; } = PlayerState.IntroLocked;
 
     Rigidbody2D rb;
     PlayerCombat combat;
@@ -58,8 +53,14 @@ public class PlayerController2D : MonoBehaviour
     public bool facingRight = true;
     bool canDodge = true;
 
-    int defaultLayer;
+    public bool CanAct =>
+    State == PlayerState.Normal;
+
     int dodgeLayer;
+
+    // Sprite sorting restore data
+    Dictionary<SpriteRenderer, string> originalSortingLayers =
+        new Dictionary<SpriteRenderer, string>();
 
     // ================= UNITY =================
 
@@ -67,8 +68,6 @@ public class PlayerController2D : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<PlayerHealth>();
-
-        defaultLayer = gameObject.layer;
         dodgeLayer = LayerMask.NameToLayer(dodgeLayerName);
     }
 
@@ -77,10 +76,12 @@ public class PlayerController2D : MonoBehaviour
         combat = GetComponent<PlayerCombat>();
         afterImage = GetComponent<AfterImageEffect>();
 
-        MusicManager.Instance.PlayGameplayMusic();
+        MusicManager.Instance?.PlayGameplayMusic();
 
         if (health != null)
             health.OnDeath += HandleDeath;
+
+        StartCoroutine(IntroLockRoutine());
     }
 
     void OnDestroy()
@@ -89,11 +90,51 @@ public class PlayerController2D : MonoBehaviour
             health.OnDeath -= HandleDeath;
     }
 
+    // ================= INTRO LOCK =================
+
+    IEnumerator IntroLockRoutine()
+    {
+        CacheAndMoveSpritesToBackground();
+
+        yield return new WaitForSeconds(1f);
+
+        RestoreSpriteSortingLayers();
+        State = PlayerState.Normal;
+    }
+
+    void CacheAndMoveSpritesToBackground()
+    {
+        originalSortingLayers.Clear();
+
+        SpriteRenderer[] renderers =
+            GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (var sr in renderers)
+        {
+            originalSortingLayers[sr] = sr.sortingLayerName;
+            sr.sortingLayerName = "Walls";
+        }
+    }
+
+    void RestoreSpriteSortingLayers()
+    {
+        foreach (var pair in originalSortingLayers)
+        {
+            if (pair.Key != null)
+                pair.Key.sortingLayerName = pair.Value;
+        }
+
+        originalSortingLayers.Clear();
+    }
+
+    // ================= UPDATE =================
+
     void Update()
     {
         if (State == PlayerState.Dead ||
             State == PlayerState.Dodging ||
-            State == PlayerState.ElevatorLocked)
+            State == PlayerState.ElevatorLocked ||
+            State == PlayerState.IntroLocked)
             return;
 
         moveInput = Input.GetAxisRaw("Horizontal");
@@ -115,11 +156,12 @@ public class PlayerController2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (State == PlayerState.Dead ||
-            State == PlayerState.ElevatorLocked)
-            return;
-
         CheckGrounded();
+
+        if (State == PlayerState.Dead ||
+            State == PlayerState.ElevatorLocked ||
+            State == PlayerState.IntroLocked)
+            return;
 
         if (State != PlayerState.Dodging)
             Move();
@@ -252,17 +294,6 @@ public class PlayerController2D : MonoBehaviour
         State = PlayerState.ElevatorLocked;
 
         rb.linearVelocity = Vector2.zero;
-        MoveSpritesToBackground();
-    }
-
-    void MoveSpritesToBackground()
-    {
-        SpriteRenderer[] renderers =
-            GetComponentsInChildren<SpriteRenderer>();
-
-        foreach (var sr in renderers)
-        {
-            sr.sortingLayerName = "BackGround";
-        }
+        CacheAndMoveSpritesToBackground();
     }
 }

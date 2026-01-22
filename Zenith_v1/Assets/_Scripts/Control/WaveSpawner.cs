@@ -209,7 +209,7 @@ public class WaveSpawner : MonoBehaviour
         else
             spawnX = rightVisible && !leftVisible ? leftX : rightX;
 
-        Vector3 pos = new Vector3(spawnX, 0f, 0f);
+        Vector3 pos = new Vector3(spawnX, -3f, 0f);
         Instantiate(prefab, pos, Quaternion.identity);
     }
 }

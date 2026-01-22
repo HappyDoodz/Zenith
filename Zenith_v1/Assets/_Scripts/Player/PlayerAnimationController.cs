@@ -45,6 +45,6 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void TriggerDeath()
     {
-        anim.SetTrigger("Die");
+        anim.SetBool("Die", true);
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5176207543182201876}
   m_Layer: 0
-  m_Name: RoomTemplate
+  m_Name: Room_alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1245599791
   m_SortingLayer: -2
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1291202924252101130, guid: 0ddab4fae04642e49acad536d41fa450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1245599791
   m_SortingLayer: -2
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1291202924252101130, guid: 0ddab4fae04642e49acad536d41fa450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1143,7 +1143,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1245599791
   m_SortingLayer: -2
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1291202924252101130, guid: 0ddab4fae04642e49acad536d41fa450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

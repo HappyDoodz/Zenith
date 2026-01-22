@@ -50,21 +50,36 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
+        // Read controller lock state
+        if (controller == null || !controller.CanAct)
+        {
+            // Ensure firing stop sound still plays correctly
+            if (wasFiring && !isFiring)
+                PlayFireStopSound();
+
+            wasFiring = false;
+            isFiring = false;
+            return;
+        }
+
         wasFiring = isFiring;
         isFiring = false;
 
         if (Input.GetKeyDown(KeyCode.Q))
             SwapWeapon();
 
+        // LMB = Shoot (unless grenade combo)
         if (Input.GetMouseButton(0) && !Input.GetKey(KeyCode.W))
             TryShoot();
 
+        // RMB = Melee
         if (Input.GetMouseButtonDown(1))
             Melee();
 
         if (Input.GetKeyDown(KeyCode.E))
             Reload();
 
+        // W + LMB = Grenade
         if (Input.GetKey(KeyCode.W) && Input.GetMouseButtonDown(0))
             ThrowGrenade();
 
