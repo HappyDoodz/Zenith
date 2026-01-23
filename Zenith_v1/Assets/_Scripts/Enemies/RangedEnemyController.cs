@@ -21,8 +21,13 @@ public class RangedEnemyController : MonoBehaviour
     public float fireRate = 0.4f;
     public float reloadTime = 1.6f;
 
+    [Header("Attack Timing")]
+    [Tooltip("Delay before the first shot when entering attack stance")]
+    public float firstShotDelay = 0.5f;
+
     int currentClip;
     float fireTimer;
+    float attackEnterTimer;
     bool isReloading;
     bool isAttacking;
 
@@ -89,13 +94,13 @@ public class RangedEnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (enemyHealth.isDead)
-            return;
-            
-        if (player == null)
+        if (enemyHealth.isDead || player == null)
             return;
 
         fireTimer -= Time.fixedDeltaTime;
+
+        if (isAttacking)
+            attackEnterTimer -= Time.fixedDeltaTime;
 
         HandleFacing();
         HandleMovement();
@@ -174,6 +179,7 @@ public class RangedEnemyController : MonoBehaviour
             return;
 
         isAttacking = true;
+        attackEnterTimer = firstShotDelay;
 
         isCrouching =
             Random.value < crouchChance;
@@ -188,6 +194,7 @@ public class RangedEnemyController : MonoBehaviour
             return;
 
         isAttacking = false;
+        attackEnterTimer = 0f;
 
         animator?.SetBool("IsAttacking", false);
         animator?.SetBool("IsCrouching", false);
@@ -197,10 +204,13 @@ public class RangedEnemyController : MonoBehaviour
 
     void TryShoot()
     {
-        if (enemyHealth.isDead)
+        if (enemyHealth.isDead ||
+            !isAttacking ||
+            isReloading)
             return;
 
-        if (!isAttacking || isReloading)
+        // ⏱ wait for first-shot delay
+        if (attackEnterTimer > 0f)
             return;
 
         if (fireTimer > 0f)
@@ -252,7 +262,6 @@ public class RangedEnemyController : MonoBehaviour
         isReloading = true;
         StopAttacking();
 
-        //animator?.SetTrigger("Reload");
         PlayReloadSound();
 
         yield return new WaitForSeconds(reloadTime);
@@ -335,14 +344,12 @@ public class RangedEnemyController : MonoBehaviour
             Vector2 diff = (Vector2)(transform.position - other.transform.position);
             float dist = diff.magnitude;
 
-            // If overlapping exactly, push randomly
             if (dist < 0.001f)
             {
                 diff = Random.insideUnitCircle.normalized;
                 dist = 0.001f;
             }
 
-            // Stronger force when closer
             float strength = 1f - (dist / separationRadius);
 
             separation += diff.normalized * strength;
@@ -355,7 +362,6 @@ public class RangedEnemyController : MonoBehaviour
 
             Vector2 push = separation.normalized * separationStrength;
 
-            // Apply force WITHOUT breaking vertical velocity
             rb.linearVelocity = new Vector2(
                 rb.linearVelocity.x + push.x * Time.fixedDeltaTime,
                 rb.linearVelocity.y
