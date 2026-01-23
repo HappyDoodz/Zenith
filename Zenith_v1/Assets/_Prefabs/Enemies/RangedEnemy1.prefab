@@ -396,9 +396,10 @@ GameObject:
   - component: {fileID: 7414726178121262189}
   - component: {fileID: 1130323553815048967}
   - component: {fileID: 2534053051001448501}
+  - component: {fileID: 7574244914866974518}
   - component: {fileID: 5921441697072847771}
   - component: {fileID: 8120492025135821937}
-  - component: {fileID: 7574244914866974518}
+  - component: {fileID: 2314474805651851128}
   m_Layer: 7
   m_Name: RangedEnemy1
   m_TagString: Enemy
@@ -509,6 +510,53 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7574244914866974518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106529849124541047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6386a428fd74e4fbefb96be4a92e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RangedEnemyController
+  moveSpeed: 2.2
+  approachRange: 10
+  holdRange: 15
+  attackRange: 30
+  projectilePrefab: {fileID: 1602339330159018145, guid: a0b2abd97c64c064b882d311a542c9a5, type: 3}
+  firePoint: {fileID: 2885290206625001765}
+  clipSize: 12
+  fireRate: 0.4
+  reloadTime: 1.6
+  crouchChance: 0.5
+  lefttArmRecoil: {fileID: 3694724857558467508}
+  recoilOffset: {x: 0, y: 0.08}
+  recoilKickTime: 0.05
+  recoilReturnTime: 0.1
+  muzzleFlashSprites:
+  - {fileID: -7534115186340659281, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+  - {fileID: -453492232900831130, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+  - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+  - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+  - {fileID: -3461397254486618878, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+  - {fileID: 5512239235338996651, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
+  muzzleFlashOffset: {x: 0, y: 0}
+  muzzleFlashScale: 1
+  muzzleFlashLifetime: 0.05
+  muzzleFlashSortingLayer: Projectiles
+  muzzleFlashSortingOrder: 0
+  weaponSource: {fileID: 5921441697072847771}
+  fireSound: {fileID: 8300000, guid: 0245af1235812544a8c6c76b2252c220, type: 3}
+  reloadSound: {fileID: 8300000, guid: 30d735c1f4aba1e4db9f47f9dce7d1ff, type: 3}
+  pitchVariance: 0.05
+  separationRadius: 2
+  separationStrength: 7
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!82 &5921441697072847771
 AudioSource:
   m_ObjectHideFlags: 0
@@ -646,54 +694,104 @@ MonoBehaviour:
   - {fileID: 3915975824296301007, guid: 81ead485f093f6543aeab8d4ca2aa2a6, type: 3}
   dropChance: 0.2
   isDead: 0
-  audioSource: {fileID: 0}
---- !u!114 &7574244914866974518
-MonoBehaviour:
+  audioSource: {fileID: 2314474805651851128}
+--- !u!82 &2314474805651851128
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3106529849124541047}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b6386a428fd74e4fbefb96be4a92e5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RangedEnemyController
-  moveSpeed: 2.2
-  approachRange: 10
-  holdRange: 15
-  attackRange: 30
-  projectilePrefab: {fileID: 1602339330159018145, guid: a0b2abd97c64c064b882d311a542c9a5, type: 3}
-  firePoint: {fileID: 2885290206625001765}
-  clipSize: 12
-  fireRate: 0.4
-  reloadTime: 1.6
-  crouchChance: 0.5
-  lefttArmRecoil: {fileID: 3694724857558467508}
-  recoilOffset: {x: 0, y: 0.08}
-  recoilKickTime: 0.05
-  recoilReturnTime: 0.1
-  muzzleFlashSprites:
-  - {fileID: -7534115186340659281, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-  - {fileID: -453492232900831130, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-  - {fileID: -54832377295308951, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-  - {fileID: 6237251620167175040, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-  - {fileID: -3461397254486618878, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-  - {fileID: 5512239235338996651, guid: 1a49e23518b5bd841a96f3a1fe895587, type: 3}
-  muzzleFlashOffset: {x: 0, y: 0}
-  muzzleFlashScale: 1
-  muzzleFlashLifetime: 0.05
-  muzzleFlashSortingLayer: Projectiles
-  muzzleFlashSortingOrder: 0
-  weaponSource: {fileID: 5921441697072847771}
-  fireSound: {fileID: 8300000, guid: 0245af1235812544a8c6c76b2252c220, type: 3}
-  reloadSound: {fileID: 8300000, guid: 30d735c1f4aba1e4db9f47f9dce7d1ff, type: 3}
-  pitchVariance: 0.05
-  separationRadius: 2
-  separationStrength: 7
-  enemyLayer:
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
     serializedVersion: 2
-    m_Bits: 192
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3546051316149716668
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,12 +53,12 @@ public class PlayerController2D : MonoBehaviour
     public bool facingRight = true;
     bool canDodge = true;
 
+    int dodgeLayer;
+    Coroutine dodgeRoutine;
+
     public bool CanAct =>
     State == PlayerState.Normal;
 
-    int dodgeLayer;
-
-    // Sprite sorting restore data
     Dictionary<SpriteRenderer, string> originalSortingLayers =
         new Dictionary<SpriteRenderer, string>();
 
@@ -95,9 +95,7 @@ public class PlayerController2D : MonoBehaviour
     IEnumerator IntroLockRoutine()
     {
         CacheAndMoveSpritesToBackground();
-
         yield return new WaitForSeconds(1f);
-
         RestoreSpriteSortingLayers();
         State = PlayerState.Normal;
     }
@@ -106,10 +104,7 @@ public class PlayerController2D : MonoBehaviour
     {
         originalSortingLayers.Clear();
 
-        SpriteRenderer[] renderers =
-            GetComponentsInChildren<SpriteRenderer>();
-
-        foreach (var sr in renderers)
+        foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
         {
             originalSortingLayers[sr] = sr.sortingLayerName;
             sr.sortingLayerName = "Walls";
@@ -131,10 +126,7 @@ public class PlayerController2D : MonoBehaviour
 
     void Update()
     {
-        if (State == PlayerState.Dead ||
-            State == PlayerState.Dodging ||
-            State == PlayerState.ElevatorLocked ||
-            State == PlayerState.IntroLocked)
+        if (State != PlayerState.Normal)
             return;
 
         moveInput = Input.GetAxisRaw("Horizontal");
@@ -148,7 +140,7 @@ public class PlayerController2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDodge &&
             (combat == null || !combat.IsBusy))
         {
-            StartCoroutine(Dodge());
+            dodgeRoutine = StartCoroutine(Dodge());
         }
 
         HandleFacing();
@@ -158,12 +150,7 @@ public class PlayerController2D : MonoBehaviour
     {
         CheckGrounded();
 
-        if (State == PlayerState.Dead ||
-            State == PlayerState.ElevatorLocked ||
-            State == PlayerState.IntroLocked)
-            return;
-
-        if (State != PlayerState.Dodging)
+        if (State == PlayerState.Normal)
             Move();
     }
 
@@ -203,44 +190,63 @@ public class PlayerController2D : MonoBehaviour
 
         yield return new WaitForSeconds(dodgeDuration);
 
-        rb.gravityScale = originalGravity;
-        gameObject.layer = originalLayer;
-
-        IsInvincible = false;
-        State = PlayerState.Normal;
+        EndDodge(originalGravity, originalLayer);
 
         yield return new WaitForSeconds(dodgeCooldown);
         canDodge = true;
+    }
+
+    void EndDodge(float gravity, int layer)
+    {
+        rb.gravityScale = gravity;
+        gameObject.layer = layer;
+        IsInvincible = false;
+
+        if (State == PlayerState.Dodging)
+            State = PlayerState.Normal;
+    }
+
+    void ForceCancelDodge()
+    {
+        if (State != PlayerState.Dodging)
+            return;
+
+        if (dodgeRoutine != null)
+            StopCoroutine(dodgeRoutine);
+
+        dodgeRoutine = null;
+
+        rb.gravityScale = 1f;
+        gameObject.layer = LayerMask.NameToLayer("Player");
+
+        IsInvincible = false;
+        State = PlayerState.Normal;
     }
 
     // ================= AUDIO =================
 
     void PlayJumpSound()
     {
-        if (jumpSounds == null || jumpSounds.Length == 0)
-            return;
-
-        AudioClip clip =
-            jumpSounds[UnityEngine.Random.Range(0, jumpSounds.Length)];
+        if (jumpSounds.Length == 0) return;
 
         audioSource.pitch =
             UnityEngine.Random.Range(pitchMin, pitchMax);
 
-        audioSource.PlayOneShot(clip);
+        audioSource.PlayOneShot(
+            jumpSounds[UnityEngine.Random.Range(0, jumpSounds.Length)]
+        );
     }
 
     void PlayDodgeSound()
     {
-        if (dodgeSounds == null || dodgeSounds.Length == 0)
-            return;
-
-        AudioClip clip =
-            dodgeSounds[UnityEngine.Random.Range(0, dodgeSounds.Length)];
+        if (dodgeSounds.Length == 0) return;
 
         audioSource.pitch =
             UnityEngine.Random.Range(pitchMin, pitchMax);
 
-        audioSource.PlayOneShot(clip);
+        audioSource.PlayOneShot(
+            dodgeSounds[UnityEngine.Random.Range(0, dodgeSounds.Length)]
+        );
     }
 
     // ================= FACING =================
@@ -254,12 +260,8 @@ public class PlayerController2D : MonoBehaviour
     void Flip()
     {
         facingRight = !facingRight;
-
-        transform.localRotation = Quaternion.Euler(
-            0f,
-            facingRight ? 0f : 180f,
-            0f
-        );
+        transform.localRotation =
+            Quaternion.Euler(0f, facingRight ? 0f : 180f, 0f);
     }
 
     // ================= GROUND =================
@@ -277,9 +279,8 @@ public class PlayerController2D : MonoBehaviour
 
     void HandleDeath()
     {
+        ForceCancelDodge();
         State = PlayerState.Dead;
-        IsInvincible = true;
-
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;
     }
@@ -291,9 +292,11 @@ public class PlayerController2D : MonoBehaviour
         if (State == PlayerState.Dead)
             return;
 
-        State = PlayerState.ElevatorLocked;
+        ForceCancelDodge(); // 🔑 THIS is the fix
 
+        State = PlayerState.ElevatorLocked;
         rb.linearVelocity = Vector2.zero;
+
         CacheAndMoveSpritesToBackground();
     }
 }
