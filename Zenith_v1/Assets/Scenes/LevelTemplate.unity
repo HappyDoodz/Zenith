@@ -4638,11 +4638,7 @@ MonoBehaviour:
   basicEnemies:
   - prefab: {fileID: 3106529849124541047, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
     unlockFloor: 1
-  - prefab: {fileID: 3106529849124541047, guid: e5ae2b7dddd7eff499b28247e57c163f, type: 3}
-    unlockFloor: 1
   - prefab: {fileID: 3106529849124541047, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
-    unlockFloor: 3
-  - prefab: {fileID: 3106529849124541047, guid: 2b06d72611b6f65438b7551cd546c27b, type: 3}
     unlockFloor: 3
   eliteEnemies: []
   eliteSpawnChance: 0.25
