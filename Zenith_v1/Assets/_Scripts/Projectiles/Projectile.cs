@@ -43,7 +43,9 @@ public class Projectile : MonoBehaviour
     public GameObject explosionEffect;
 
     Rigidbody2D rb;
-    HashSet<Collider2D> hitTargets = new();
+
+    // Track DAMAGE RECEIVERS, not colliders
+    HashSet<object> hitTargets = new();
 
     void Awake()
     {
@@ -52,7 +54,6 @@ public class Projectile : MonoBehaviour
         rb.gravityScale = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-        // Force trigger collider
         GetComponent<Collider2D>().isTrigger = true;
     }
 
@@ -70,16 +71,10 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Layer filter (safe)
+        // Layer filter
         if (hitLayers.value != 0 &&
             (hitLayers.value & (1 << other.gameObject.layer)) == 0)
             return;
-
-        // Prevent multi-hit on same collider
-        if (hitTargets.Contains(other))
-            return;
-
-        hitTargets.Add(other);
 
         if (explosive)
         {
@@ -87,40 +82,60 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        ApplyDamage(other);
+        if (!ApplyDamage(other))
+            return;
+
         HandlePiercing();
     }
 
     // ================= DAMAGE =================
 
-    void ApplyDamage(Collider2D target)
+    bool ApplyDamage(Collider2D target)
     {
+        // ENEMY
         EnemyHealth enemy =
             target.GetComponentInParent<EnemyHealth>();
 
         if (enemy != null && canHitEnemies)
         {
+            if (hitTargets.Contains(enemy))
+                return false;
+
+            hitTargets.Add(enemy);
+
             enemy.TakeDamage(damage);
             ApplyKnockback(target);
+
+            SpawnHitEffect();
+            return true;
         }
 
+        // PLAYER
         PlayerHealth player =
             target.GetComponentInParent<PlayerHealth>();
 
         if (player != null && canHitPlayer)
         {
+            if (hitTargets.Contains(player))
+                return false;
+
+            hitTargets.Add(player);
+
             player.TakeDamage(damage);
             ApplyKnockback(target);
+
+            SpawnHitEffect();
+            return true;
         }
 
-        if (hitEffect != null)
-            Instantiate(hitEffect, transform.position, Quaternion.identity);
+        return false;
     }
 
     void ApplyKnockback(Collider2D target)
     {
         Rigidbody2D targetRb = target.attachedRigidbody;
-        if (targetRb == null) return;
+        if (targetRb == null)
+            return;
 
         Vector2 direction =
             (target.transform.position - transform.position).normalized;
@@ -129,6 +144,12 @@ public class Projectile : MonoBehaviour
             direction * knockbackForce,
             ForceMode2D.Impulse
         );
+    }
+
+    void SpawnHitEffect()
+    {
+        if (hitEffect != null)
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
     }
 
     // ================= EXPLOSION =================
