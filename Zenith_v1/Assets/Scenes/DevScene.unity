@@ -1976,39 +1976,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666094895134307663, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6132188
+      value: 0.5868434
       objectReference: {fileID: 0}
     - target: {fileID: 2666094895134307663, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7899131
+      value: -0.8097005
       objectReference: {fileID: 0}
     - target: {fileID: 3106529849124541047, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3106529849124541047, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3410218551364912633, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98573685
+      value: 0.9868802
       objectReference: {fileID: 0}
     - target: {fileID: 3410218551364912633, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.16829415
+      value: 0.16145457
       objectReference: {fileID: 0}
     - target: {fileID: 3902555661442141941, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.63623554
+      value: 0.63623637
       objectReference: {fileID: 0}
     - target: {fileID: 3902555661442141941, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.77149487
+      value: 0.7714942
       objectReference: {fileID: 0}
     - target: {fileID: 3959466640724500082, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8275222
+      value: 0.7790665
       objectReference: {fileID: 0}
     - target: {fileID: 3959466640724500082, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.56143296
+      value: 0.6269413
       objectReference: {fileID: 0}
     - target: {fileID: 6410987973747841779, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2020,35 +2024,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6872217652622909908, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9989096
+      value: 0.9992094
       objectReference: {fileID: 0}
     - target: {fileID: 6872217652622909908, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.046686474
+      value: -0.039758485
       objectReference: {fileID: 0}
     - target: {fileID: 7552202924639759873, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9763565
+      value: 0.97635645
       objectReference: {fileID: 0}
     - target: {fileID: 7552202924639759873, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21616682
+      value: -0.21616694
       objectReference: {fileID: 0}
     - target: {fileID: 7973733180381847741, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98093575
+      value: 0.9703535
       objectReference: {fileID: 0}
     - target: {fileID: 7973733180381847741, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.19433251
+      value: -0.24168995
       objectReference: {fileID: 0}
     - target: {fileID: 8630019826685352195, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3067963
+      value: 0.30679756
       objectReference: {fileID: 0}
     - target: {fileID: 8630019826685352195, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9517752
+      value: -0.95177484
       objectReference: {fileID: 0}
     - target: {fileID: 8875668072427847786, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2445,23 +2449,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666094895134307663, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.15741915
+      value: 0.15153535
       objectReference: {fileID: 0}
     - target: {fileID: 2666094895134307663, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9875319
+      value: -0.98845184
       objectReference: {fileID: 0}
     - target: {fileID: 3106529849124541047, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3106529849124541047, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3410218551364912633, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9933893
+      value: 0.9973763
       objectReference: {fileID: 0}
     - target: {fileID: 3410218551364912633, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.11479438
+      value: -0.07239187
       objectReference: {fileID: 0}
     - target: {fileID: 3902555661442141941, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2473,11 +2481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3959466640724500082, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.55564445
+      value: 0.52185774
       objectReference: {fileID: 0}
     - target: {fileID: 3959466640724500082, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.83142
+      value: 0.8530326
       objectReference: {fileID: 0}
     - target: {fileID: 6410987973747841779, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2489,7 +2497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6872217652622909908, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99997306
+      value: 0.9810766
       objectReference: {fileID: 0}
     - target: {fileID: 6872217652622909908, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2501,7 +2509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6872217652622909908, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.007347352
+      value: 0.19362003
       objectReference: {fileID: 0}
     - target: {fileID: 7552202924639759873, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2521,7 +2529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7973733180381847741, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.93441457
+      value: 0.94603294
       objectReference: {fileID: 0}
     - target: {fileID: 7973733180381847741, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2533,7 +2541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7973733180381847741, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3561874
+      value: 0.3240706
       objectReference: {fileID: 0}
     - target: {fileID: 8630019826685352195, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3729,6 +3737,135 @@ MonoBehaviour:
   grenadeName: Frag Grenade
   maxGrenades: 5
   currentGrenades: 3
+  currentFloor: 1
+  currentKills: 0
+  gameOverSceneName: 
+  defaultPrimaryWeapon:
+    weaponId: 
+    weaponName: 
+    weaponPrefab: {fileID: 0}
+    isRanged: 1
+    projectilePrefab: {fileID: 0}
+    fireRate: 0.2
+    projectileSpeed: 15
+    clipSize: 12
+    infiniteAmmo: 0
+    reloadTime: 1.2
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
+    muzzleFlashSprites: []
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: 0, y: 0.05}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
+    fireSounds: []
+    reloadSound: {fileID: 0}
+    readySound: {fileID: 0}
+    fireStopSound: {fileID: 0}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
+    fireStopVolume: 1
+    meleeSwingSounds: []
+    meleeHitSounds: []
+    meleeHitVolume: 1
+  defaultSecondaryWeapon:
+    weaponId: 
+    weaponName: 
+    weaponPrefab: {fileID: 0}
+    isRanged: 1
+    projectilePrefab: {fileID: 0}
+    fireRate: 0.2
+    projectileSpeed: 15
+    clipSize: 12
+    infiniteAmmo: 0
+    reloadTime: 1.2
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
+    muzzleFlashSprites: []
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: 0, y: 0.05}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
+    fireSounds: []
+    reloadSound: {fileID: 0}
+    readySound: {fileID: 0}
+    fireStopSound: {fileID: 0}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
+    fireStopVolume: 1
+    meleeSwingSounds: []
+    meleeHitSounds: []
+    meleeHitVolume: 1
+  defaultMeleeWeapon:
+    weaponId: 
+    weaponName: 
+    weaponPrefab: {fileID: 0}
+    isRanged: 1
+    projectilePrefab: {fileID: 0}
+    fireRate: 0.2
+    projectileSpeed: 15
+    clipSize: 12
+    infiniteAmmo: 0
+    reloadTime: 1.2
+    isMelee: 0
+    meleeDamage: 25
+    meleeRange: 1
+    meleeWindup: 0.15
+    meleeActiveTime: 0.2
+    meleeRecovery: 0.3
+    meleeKnockback: 4
+    meleeHitLayers:
+      serializedVersion: 2
+      m_Bits: 0
+    muzzleFlashSprites: []
+    muzzleFlashLifetime: 0.05
+    muzzleFlashScale: 1
+    muzzleFlashOffset: {x: 0, y: 0}
+    recoilOffset: {x: 0, y: 0.05}
+    recoilKickTime: 0.05
+    recoilReturnTime: 0.08
+    fireSounds: []
+    reloadSound: {fileID: 0}
+    readySound: {fileID: 0}
+    fireStopSound: {fileID: 0}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    fireVolume: 1
+    reloadVolume: 1
+    readyVolume: 1
+    fireStopVolume: 1
+    meleeSwingSounds: []
+    meleeHitSounds: []
+    meleeHitVolume: 1
+  defaultGrenadePrefab: {fileID: 0}
+  defaultGrenadeName: Frag Grenade
+  defaultGrenadeCount: 3
 --- !u!4 &2009059629
 Transform:
   m_ObjectHideFlags: 0
@@ -3875,19 +4012,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049040422299570280, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.45091107
+      value: 0.45091105
       objectReference: {fileID: 0}
     - target: {fileID: 1049040422299570280, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.8925689
+      value: -0.89256895
       objectReference: {fileID: 0}
     - target: {fileID: 1172518027984469727, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.75687385
+      value: 0.7568739
       objectReference: {fileID: 0}
     - target: {fileID: 1172518027984469727, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.653561
+      value: 0.65356094
       objectReference: {fileID: 0}
     - target: {fileID: 1271802165533135257, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3987,7 +4124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8281601979511510555, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.261336
+      value: -0.2613359
       objectReference: {fileID: 0}
     - target: {fileID: 8485894308022993218, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w

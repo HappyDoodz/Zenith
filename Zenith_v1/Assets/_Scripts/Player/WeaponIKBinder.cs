@@ -16,6 +16,6 @@ public class WeaponIKBinder : MonoBehaviour
             return;
 
         leftHandIKTarget.position = view.LeftHandGrip.position;
-        leftHandIKTarget.rotation = view.LeftHandGrip.rotation;
+        //leftHandIKTarget.rotation = view.LeftHandGrip.rotation;
     }
 }
