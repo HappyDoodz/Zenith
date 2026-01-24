@@ -2777,6 +2777,8 @@ MonoBehaviour:
   - {fileID: 166912006337400622, guid: ede9c4355a5f4024f940fbe196c0973e, type: 3}
   - {fileID: 166912006337400622, guid: 647b04f7f57d7304fb8751eabd187fb2, type: 3}
   - {fileID: 166912006337400622, guid: d1fc6cd1c54354745919aa49bd3abe7d, type: 3}
+  - {fileID: 166912006337400622, guid: 691888d38550bbb4993c3509e29244fb, type: 3}
+  - {fileID: 166912006337400622, guid: e0ac83b0107d2194ba932b8a809260c9, type: 3}
   arenas_Floor16_19:
   - {fileID: 166912006337400622, guid: 60b55839c5e70394b995c6f1d7dba0a9, type: 3}
   - {fileID: 166912006337400622, guid: d24a169bb8c741f4d9e70f222d22cc83, type: 3}
@@ -4655,24 +4657,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
   player: {fileID: 2069886090}
   initialSpawnDelay: 5
-  timeBetweenWaves: 6
-  timeBetweenEnemySpawns: 2
+  baseTimeBetweenWaves: 6
+  baseTimeBetweenEnemySpawns: 2
+  waveTimeMultiplierPerFloor: 0.985
+  enemySpawnMultiplierPerFloor: 0.99
+  minTimeBetweenWaves: 1.5
+  minTimeBetweenEnemySpawns: 0.25
   spawnDistance: 30
   levelLeftBound: -20
   levelRightBound: 20
   basicEnemies:
   - prefab: {fileID: 3106529849124541047, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
     unlockFloor: 1
+    lockFloor: 0
   - prefab: {fileID: 3106529849124541047, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
     unlockFloor: 3
+    lockFloor: 0
   eliteEnemies:
   - prefab: {fileID: 3106529849124541047, guid: 395eea6fc9610b14da22c41c45cba238, type: 3}
     unlockFloor: 1
+    lockFloor: 0
   - prefab: {fileID: 3106529849124541047, guid: c3b7e88f2876cbb43bec2c2bb17cfd88, type: 3}
     unlockFloor: 1
+    lockFloor: 0
   - prefab: {fileID: 3106529849124541047, guid: 520c75505f5079d4793486d282f04c07, type: 3}
     unlockFloor: 1
-  eliteSpawnChance: 0.15
+    lockFloor: 0
+  baseEliteChance: 0.2
+  eliteChancePerFloor: 0.01
+  maxEliteChance: 0.45
   bossEnemies: []
   finalBoss: {fileID: 0}
   bossEveryFloors: 5

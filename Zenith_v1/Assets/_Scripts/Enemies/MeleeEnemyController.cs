@@ -160,32 +160,44 @@ public class MeleeEnemyController : MonoBehaviour
     IEnumerator AttackRoutine()
     {
         canAttack = false;
-
+    
         PlaySwingSound();
-
+    
         attackCounter = Random.Range(0, 3);
         animator?.SetInteger("AttackCounter", attackCounter);
         animator?.SetTrigger("Attack");
-
+    
         yield return new WaitForSeconds(attackDelay);
-
-        bool hit = false;
-
-        if (player != null)
+    
+        if (enemyHealth.isDead || player == null)
+            yield break;
+    
+        // ===== RE-CHECK RANGE AT HIT TIME =====
+    
+        float dist = Vector2.Distance(transform.position, player.position);
+    
+        // Player must still be in attack range
+        if (dist > attackRange)
+            goto EndAttack;
+    
+        // Player must be in front of enemy (not behind)
+        float dirToPlayer = player.position.x - transform.position.x;
+        if (facingRight && dirToPlayer < 0f)
+            goto EndAttack;
+        if (!facingRight && dirToPlayer > 0f)
+            goto EndAttack;
+    
+        // ===== APPLY DAMAGE =====
+    
+        PlayerHealth health = player.GetComponent<PlayerHealth>();
+        if (health != null)
         {
-            PlayerHealth health =
-                player.GetComponent<PlayerHealth>();
-
-            if (health != null && !enemyHealth.isDead)
-            {
-                health.TakeDamage(meleeDamage);
-                hit = true;
-            }
-        }
-
-        if (hit)
+            health.TakeDamage(meleeDamage);
             PlayHitSound();
-
+        }
+    
+    EndAttack:
+    
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }

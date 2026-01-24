@@ -725,9 +725,9 @@ MonoBehaviour:
   attackCooldown: 2
   attackDelay: 0.5
   meleeSwingSounds:
-  - {fileID: 8300000, guid: b2150bad914d7e140b8c53f9f2f4be7e, type: 3}
+  - {fileID: 8300000, guid: 2ad34d91bf880904eb76fedd1a00e6e3, type: 3}
   meleeHitSounds:
-  - {fileID: 8300000, guid: d6812b1b1e84bf74fbcee4ff914182f6, type: 3}
+  - {fileID: 8300000, guid: de76be2902bc91047a015f4c52e40319, type: 3}
   pitchMin: 0.95
   pitchMax: 1.05
   swingVolume: 1
@@ -1150,7 +1150,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -75116293
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: d4cfa3f8d1d757a4589bdec958c40e77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
