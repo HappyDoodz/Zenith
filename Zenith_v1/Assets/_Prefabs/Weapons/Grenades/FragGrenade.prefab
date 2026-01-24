@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Grenade
   fuseTime: 1
   explosionRadius: 4
-  damage: 50
+  damage: 75
   damageLayers:
     serializedVersion: 2
     m_Bits: 128
