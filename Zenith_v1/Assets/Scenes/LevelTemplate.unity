@@ -4670,6 +4670,8 @@ MonoBehaviour:
     unlockFloor: 1
   - prefab: {fileID: 3106529849124541047, guid: c3b7e88f2876cbb43bec2c2bb17cfd88, type: 3}
     unlockFloor: 1
+  - prefab: {fileID: 3106529849124541047, guid: 520c75505f5079d4793486d282f04c07, type: 3}
+    unlockFloor: 1
   eliteSpawnChance: 0.15
   bossEnemies: []
   finalBoss: {fileID: 0}
@@ -5964,11 +5966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902555661442141941, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7568736
+      value: 0.68027186
       objectReference: {fileID: 0}
     - target: {fileID: 3902555661442141941, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.65356135
+      value: 0.73295987
       objectReference: {fileID: 0}
     - target: {fileID: 3959466640724500082, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6036,11 +6038,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7552202924639759873, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96524775
+      value: 0.95636195
       objectReference: {fileID: 0}
     - target: {fileID: 7552202924639759873, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.26133642
+      value: -0.2921847
       objectReference: {fileID: 0}
     - target: {fileID: 7973733180381847741, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6065,6 +6067,10 @@ PrefabInstance:
     - target: {fileID: 8485894308022993218, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.0073875776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630019826685352195, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.37973258
       objectReference: {fileID: 0}
     - target: {fileID: 8875668072427847786, guid: a47a050fe42bb6d458c5939835721a72, type: 3}
       propertyPath: m_LocalPosition.x
