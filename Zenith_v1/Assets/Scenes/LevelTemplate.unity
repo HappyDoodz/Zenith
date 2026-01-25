@@ -3805,7 +3805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1458084523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,6 +4688,8 @@ MonoBehaviour:
   maxEliteChance: 0.45
   bossEnemies:
   - {fileID: 3106529849124541047, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
+  - {fileID: 3106529849124541047, guid: 74413254b23704b4eb19a10a5aa1decf, type: 3}
+  - {fileID: 3106529849124541047, guid: e3f00da1c55ac264f94eaaeec7e646f4, type: 3}
   finalBoss: {fileID: 0}
   bossEveryFloors: 5
   finalBossFloor: 20
