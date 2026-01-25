@@ -18,6 +18,14 @@ public class FlyingRangedEnemyController : MonoBehaviour
     public float holdRange = 4.5f;
     public float attackRange = 5f;
 
+    [Header("Strafing")]
+    public bool canStrafe = true;
+    public float strafeSpeed = 1.5f;
+    public float strafeDirectionChangeTime = 1.5f;
+
+    float strafeTimer;
+    int strafeDirection = 1;
+
     [Header("Weapon")]
     public GameObject projectilePrefab;
     public Transform firePoint;
@@ -76,7 +84,7 @@ public class FlyingRangedEnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyHealth = GetComponent<EnemyHealth>();
 
-        rb.gravityScale = 0f;           // ✈️ flying
+        rb.gravityScale = 0f;
         rb.freezeRotation = true;
 
         currentClip = clipSize;
@@ -89,6 +97,8 @@ public class FlyingRangedEnemyController : MonoBehaviour
 
         if (playerObj != null)
             player = playerObj.transform;
+
+        PickNewStrafeDirection();
     }
 
     void FixedUpdate()
@@ -97,6 +107,7 @@ public class FlyingRangedEnemyController : MonoBehaviour
             return;
 
         fireTimer -= Time.fixedDeltaTime;
+
         if (isAttacking)
             attackEnterTimer -= Time.fixedDeltaTime;
 
@@ -104,7 +115,6 @@ public class FlyingRangedEnemyController : MonoBehaviour
         AimFirePointAtPlayer();
         HandleMovement();
         MaintainAltitude();
-        //RotateFirePointTowardPlayer();
         ApplySeparation();
     }
 
@@ -124,14 +134,40 @@ public class FlyingRangedEnemyController : MonoBehaviour
 
         if (distance <= holdRange && distance <= attackRange)
         {
-            StopMovement();
             StartAttacking();
+            HandleAttackMovement();
             TryShoot();
             return;
         }
 
         StopAttacking();
         StopMovement();
+    }
+
+    void HandleAttackMovement()
+    {
+        if (!canStrafe)
+        {
+            StopMovement();
+            return;
+        }
+
+        strafeTimer -= Time.fixedDeltaTime;
+        if (strafeTimer <= 0f)
+            PickNewStrafeDirection();
+
+        rb.linearVelocity = new Vector2(
+            strafeDirection * strafeSpeed,
+            rb.linearVelocity.y
+        );
+
+        animator?.SetBool("IsMoving", true);
+    }
+
+    void PickNewStrafeDirection()
+    {
+        strafeDirection = Random.value < 0.5f ? -1 : 1;
+        strafeTimer = strafeDirectionChangeTime;
     }
 
     void MoveHorizontallyTowardPlayer()
@@ -195,21 +231,6 @@ public class FlyingRangedEnemyController : MonoBehaviour
 
     // ================= AIMING =================
 
-    void RotateFirePointTowardPlayer()
-    {
-        if (firePoint == null)
-            return;
-
-        Vector2 dir =
-            player.position - firePoint.position;
-
-        float angle =
-            Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-        firePoint.rotation =
-            Quaternion.Euler(0f, 0f, angle);
-    }
-
     void AimFirePointAtPlayer()
     {
         if (firePoint == null || player == null)
@@ -221,7 +242,7 @@ public class FlyingRangedEnemyController : MonoBehaviour
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
-    // ================= ATTACK STATE =================
+    // ================= ATTACK =================
 
     void StartAttacking()
     {
@@ -230,7 +251,6 @@ public class FlyingRangedEnemyController : MonoBehaviour
 
         isAttacking = true;
         attackEnterTimer = firstShotDelay;
-
         animator?.SetBool("IsAttacking", true);
     }
 
@@ -241,11 +261,8 @@ public class FlyingRangedEnemyController : MonoBehaviour
 
         isAttacking = false;
         attackEnterTimer = 0f;
-
         animator?.SetBool("IsAttacking", false);
     }
-
-    // ================= SHOOTING =================
 
     void TryShoot()
     {
@@ -277,7 +294,9 @@ public class FlyingRangedEnemyController : MonoBehaviour
                 firePoint.rotation
             );
 
-            ProjectileRotation p = proj.GetComponent<ProjectileRotation>();
+            ProjectileRotation p =
+                proj.GetComponent<ProjectileRotation>();
+
             if (p != null)
             {
                 p.canHitPlayer = true;
@@ -287,13 +306,6 @@ public class FlyingRangedEnemyController : MonoBehaviour
 
         SpawnMuzzleFlash();
         PlayFireSound();
-
-        lefttArmRecoil?.ApplyRecoil(
-            recoilOffset,
-            recoilKickTime,
-            recoilReturnTime,
-            facingRight
-        );
     }
 
     IEnumerator ReloadRoutine()

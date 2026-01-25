@@ -286,6 +286,9 @@ MonoBehaviour:
   approachRange: 7
   holdRange: 10
   attackRange: 30
+  canStrafe: 1
+  strafeSpeed: 4
+  strafeDirectionChangeTime: 2.5
   projectilePrefab: {fileID: 1602339330159018145, guid: 97943c410f09c8e4fba779a428697d3a, type: 3}
   firePoint: {fileID: 7159776761092510325}
   clipSize: 30
