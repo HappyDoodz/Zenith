@@ -435,16 +435,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f19f7d80aa386c144aec24c1ca1ecb38, type: 3}
   pitchMin: 0.95
   pitchMax: 1.05
-  possibleDrops:
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  - {fileID: 3915975824296301007, guid: afa8d02ecfc494143bfe3bfb606311a9, type: 3}
-  - {fileID: 3915975824296301007, guid: afa8d02ecfc494143bfe3bfb606311a9, type: 3}
-  - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
-  - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
-  - {fileID: 3915975824296301007, guid: 81ead485f093f6543aeab8d4ca2aa2a6, type: 3}
-  dropChance: 0.2
+  possibleDrops: []
+  dropChance: 0
   isDead: 0
   audioSource: {fileID: 2314474805651851128}
 --- !u!82 &2314474805651851128

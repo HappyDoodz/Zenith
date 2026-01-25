@@ -667,19 +667,12 @@ MonoBehaviour:
   pitchMin: 0.95
   pitchMax: 1.05
   possibleDrops:
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  - {fileID: 3915975824296301007, guid: 0ad07ae2bc18a7940b95ce3abad2eddd, type: 3}
-  - {fileID: 3915975824296301007, guid: afa8d02ecfc494143bfe3bfb606311a9, type: 3}
-  - {fileID: 3915975824296301007, guid: afa8d02ecfc494143bfe3bfb606311a9, type: 3}
-  - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
-  - {fileID: 3915975824296301007, guid: d8bbf3c7bc9e3e9438806738140ef08e, type: 3}
-  - {fileID: 7097896014897178159, guid: b9c11b272fd096446b7706d4e19acb42, type: 3}
-  - {fileID: 7097896014897178159, guid: 9d9bb3c1e0ac65547ab89a14ce13c8d2, type: 3}
-  - {fileID: 7097896014897178159, guid: 9aa55037ca9ed2e4795de1c84c53145a, type: 3}
-  - {fileID: 7097896014897178159, guid: 8fba35efc03051145b09f286a62cb17a, type: 3}
-  - {fileID: 7097896014897178159, guid: 87f20d7e80b548e40acd218f80a050a3, type: 3}
-  dropChance: 0.5
+  - {fileID: 6170052575207994937, guid: 3b699afb057588740b18551ad7f4b360, type: 3}
+  - {fileID: 6170052575207994937, guid: 6c055231c5b4b974793182fcc1e575c5, type: 3}
+  - {fileID: 6170052575207994937, guid: bc849a00fe94078409c47a9c4221e85a, type: 3}
+  - {fileID: 6170052575207994937, guid: a86fb77bfba46194ab8d03d4a7d6f6cf, type: 3}
+  - {fileID: 6170052575207994937, guid: f9cf5545e5d096846a47d7d080bbfb2a, type: 3}
+  dropChance: 0.912
   isDead: 0
   audioSource: {fileID: 2314474805651851128}
 --- !u!82 &2314474805651851128

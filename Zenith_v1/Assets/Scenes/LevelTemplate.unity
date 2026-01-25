@@ -4690,6 +4690,7 @@ MonoBehaviour:
   - {fileID: 3106529849124541047, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
   - {fileID: 3106529849124541047, guid: 74413254b23704b4eb19a10a5aa1decf, type: 3}
   - {fileID: 3106529849124541047, guid: e3f00da1c55ac264f94eaaeec7e646f4, type: 3}
+  - {fileID: 3106529849124541047, guid: 09562fc7ff8356a49b96c0e80a176daa, type: 3}
   finalBoss: {fileID: 3106529849124541047, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
   bossEveryFloors: 5
   finalBossFloor: 20
