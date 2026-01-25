@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 697270018995603675}
   - component: {fileID: 2429102719097841042}
-  - component: {fileID: 8544782059277132187}
   - component: {fileID: -8355680632210354090}
+  - component: {fileID: 2885018506819937083}
   m_Layer: 8
-  m_Name: EnemyBullet
+  m_Name: DroneBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,37 +62,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8544782059277132187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602339330159018145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23f77d8386677145b62e0d1c22b007b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  damage: 5
-  damageType: 0
-  speed: 50
-  lifetime: 0.2
-  pierceCount: 0
-  explosive: 0
-  explosionRadius: 2
-  explosionLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  knockbackForce: 5
-  hitLayers:
-    serializedVersion: 2
-    m_Bits: 72
-  destroyOnHit: 1
-  canHitPlayer: 0
-  canHitEnemies: 1
-  hitEffect: {fileID: 0}
-  explosionEffect: {fileID: 0}
 --- !u!58 &-8355680632210354090
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -129,6 +98,37 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.1
+--- !u!114 &2885018506819937083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602339330159018145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea2caa9ee8575b469738927d6644de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileRotation
+  damage: 5
+  damageType: 0
+  speed: 50
+  lifetime: 0.2
+  pierceCount: 0
+  explosive: 0
+  explosionRadius: 2
+  explosionLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  knockbackForce: 5
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 72
+  destroyOnHit: 1
+  canHitPlayer: 0
+  canHitEnemies: 1
+  hitEffect: {fileID: 0}
+  explosionEffect: {fileID: 0}
 --- !u!1 &3468690757681094654
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 697270018995603675}
@@ -211,8 +211,8 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 0.93725497, g: 0.16470589, b: 0.6392157, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -287,21 +287,12 @@ TrailRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.85490197, b: 0, a: 1}
+      key0: {r: 0.93725497, g: 0.16470589, b: 0.6392157, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -336,7 +327,7 @@ TrailRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.05
+  m_MinVertexDistance: 1
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1

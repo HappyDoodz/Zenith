@@ -4686,7 +4686,8 @@ MonoBehaviour:
   baseEliteChance: 0.2
   eliteChancePerFloor: 0.01
   maxEliteChance: 0.45
-  bossEnemies: []
+  bossEnemies:
+  - {fileID: 3106529849124541047, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
   finalBoss: {fileID: 0}
   bossEveryFloors: 5
   finalBossFloor: 20
@@ -4696,6 +4697,8 @@ MonoBehaviour:
   enemiesPerFloor: 1
   minEnemiesPerWave: 2
   maxEnemiesPerWave: 10
+  bossWaveMultiplier: 0.5
+  bossEnemyMultiplier: 0.5
 --- !u!4 &1655458094
 Transform:
   m_ObjectHideFlags: 0

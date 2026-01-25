@@ -717,10 +717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13c20104750424da0b9923f48521e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyController
-  moveSpeed: 4
+  moveSpeed: 3.5
   approachRange: 2
   holdRange: 4
-  meleeDamage: 10
+  meleeDamage: 20
   attackRange: 3
   attackCooldown: 2
   attackDelay: 0.5

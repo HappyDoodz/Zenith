@@ -161,13 +161,13 @@ public class MeleeEnemyController : MonoBehaviour
     {
         canAttack = false;
     
-        PlaySwingSound();
-    
         attackCounter = Random.Range(0, 3);
         animator?.SetInteger("AttackCounter", attackCounter);
         animator?.SetTrigger("Attack");
     
         yield return new WaitForSeconds(attackDelay);
+
+        PlaySwingSound();
     
         if (enemyHealth.isDead || player == null)
             yield break;

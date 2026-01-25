@@ -24,7 +24,6 @@ public class WaveSpawner : MonoBehaviour
 
     [Tooltip("Minimum cap so things never get insane")]
     public float minTimeBetweenWaves = 1.5f;
-
     public float minTimeBetweenEnemySpawns = 0.08f;
 
     float timeBetweenWaves;
@@ -45,11 +44,7 @@ public class WaveSpawner : MonoBehaviour
     public class EnemyTier
     {
         public GameObject prefab;
-
-        [Tooltip("Floor this enemy becomes available")]
         public int unlockFloor = 1;
-
-        [Tooltip("Floor this enemy becomes unavailable (0 = never locks)")]
         public int lockFloor = 0;
     }
 
@@ -63,10 +58,8 @@ public class WaveSpawner : MonoBehaviour
     [Range(0f, 1f)]
     public float baseEliteChance = 0.2f;
 
-    [Tooltip("Added per floor")]
     public float eliteChancePerFloor = 0.01f;
 
-    [Tooltip("Hard cap")]
     [Range(0f, 1f)]
     public float maxEliteChance = 0.45f;
 
@@ -90,7 +83,15 @@ public class WaveSpawner : MonoBehaviour
     public int minEnemiesPerWave = 2;
     public int maxEnemiesPerWave = 10;
 
+    [Header("Boss Floor Scaling")]
+    [Range(0.1f, 1f)]
+    public float bossWaveMultiplier = 0.5f;
+
+    [Range(0.1f, 1f)]
+    public float bossEnemyMultiplier = 0.5f;
+
     int wavesRemaining;
+    bool isBossFloor;
 
     // ================= UNITY =================
 
@@ -107,21 +108,24 @@ public class WaveSpawner : MonoBehaviour
 
         int floor = MainController.Instance.currentFloor;
 
+        isBossFloor =
+            floor == finalBossFloor ||
+            (floor % bossEveryFloors == 0);
+
         SetupScaling(floor);
         SetupWaves(floor);
 
-        // -------- BOSS LOGIC --------
+        // -------- BOSS SPAWN --------
 
         if (floor == finalBossFloor && finalBoss != null)
         {
             SpawnEnemy(finalBoss);
         }
-        else if (floor % bossEveryFloors == 0 && bossEnemies.Length > 0)
+        else if (isBossFloor && bossEnemies.Length > 0)
         {
             SpawnEnemy(
                 bossEnemies[Random.Range(0, bossEnemies.Length)]
             );
-            wavesRemaining = Mathf.Max(1, wavesRemaining - 2);
         }
 
         // -------- WAVES --------
@@ -149,18 +153,30 @@ public class WaveSpawner : MonoBehaviour
     {
         timeBetweenWaves = Mathf.Max(
             minTimeBetweenWaves,
-            baseTimeBetweenWaves * Mathf.Pow(waveTimeMultiplierPerFloor, floor - 1)
+            baseTimeBetweenWaves *
+            Mathf.Pow(waveTimeMultiplierPerFloor, floor - 1)
         );
 
         timeBetweenEnemySpawns = Mathf.Max(
             minTimeBetweenEnemySpawns,
-            baseTimeBetweenEnemySpawns * Mathf.Pow(enemySpawnMultiplierPerFloor, floor - 1)
+            baseTimeBetweenEnemySpawns *
+            Mathf.Pow(enemySpawnMultiplierPerFloor, floor - 1)
         );
     }
 
     void SetupWaves(int floor)
     {
-        wavesRemaining = baseWaves + (floor / wavesPerFloor);
+        int baseCount =
+            baseWaves + (floor / wavesPerFloor);
+
+        if (isBossFloor)
+        {
+            baseCount = Mathf.CeilToInt(
+                baseCount * bossWaveMultiplier
+            );
+        }
+
+        wavesRemaining = Mathf.Max(1, baseCount);
     }
 
     // ================= WAVE SPAWN =================
@@ -169,6 +185,13 @@ public class WaveSpawner : MonoBehaviour
     {
         int enemyCount =
             baseEnemiesPerWave + floor * enemiesPerFloor;
+
+        if (isBossFloor)
+        {
+            enemyCount = Mathf.CeilToInt(
+                enemyCount * bossEnemyMultiplier
+            );
+        }
 
         enemyCount = Mathf.Clamp(
             enemyCount,

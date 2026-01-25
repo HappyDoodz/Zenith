@@ -3,11 +3,15 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(EnemyHealth))]
-public class RangedEnemyController : MonoBehaviour
+public class FlyingRangedEnemyController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 2.2f;
-    public float gravity = 5;
+
+    [Header("Flying")]
+    public float desiredAltitude = 3f;
+    public float altitudeAdjustSpeed = 2.5f;
+    public float altitudeDeadZone = 0.1f;
 
     [Header("Ranges")]
     public float approachRange = 6f;
@@ -23,7 +27,6 @@ public class RangedEnemyController : MonoBehaviour
     public float reloadTime = 1.6f;
 
     [Header("Attack Timing")]
-    [Tooltip("Delay before the first shot when entering attack stance")]
     public float firstShotDelay = 0.5f;
 
     int currentClip;
@@ -31,11 +34,6 @@ public class RangedEnemyController : MonoBehaviour
     float attackEnterTimer;
     bool isReloading;
     bool isAttacking;
-
-    [Header("Attack Variants")]
-    [Range(0f, 1f)]
-    public float crouchChance = 0.5f;
-    bool isCrouching;
 
     [Header("IK Recoil")]
     public ArmRecoilController lefttArmRecoil;
@@ -78,7 +76,7 @@ public class RangedEnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyHealth = GetComponent<EnemyHealth>();
 
-        rb.gravityScale = gravity;
+        rb.gravityScale = 0f;           // ✈️ flying
         rb.freezeRotation = true;
 
         currentClip = clipSize;
@@ -99,12 +97,14 @@ public class RangedEnemyController : MonoBehaviour
             return;
 
         fireTimer -= Time.fixedDeltaTime;
-
         if (isAttacking)
             attackEnterTimer -= Time.fixedDeltaTime;
 
         HandleFacing();
+        AimFirePointAtPlayer();
         HandleMovement();
+        MaintainAltitude();
+        //RotateFirePointTowardPlayer();
         ApplySeparation();
     }
 
@@ -118,7 +118,7 @@ public class RangedEnemyController : MonoBehaviour
         if (distance > approachRange)
         {
             StopAttacking();
-            MoveTowardPlayer();
+            MoveHorizontallyTowardPlayer();
             return;
         }
 
@@ -134,10 +134,12 @@ public class RangedEnemyController : MonoBehaviour
         StopMovement();
     }
 
-    void MoveTowardPlayer()
+    void MoveHorizontallyTowardPlayer()
     {
+        float dir = Mathf.Sign(player.position.x - transform.position.x);
+
         rb.linearVelocity = new Vector2(
-            Mathf.Sign(player.position.x - transform.position.x) * moveSpeed,
+            dir * moveSpeed,
             rb.linearVelocity.y
         );
 
@@ -148,6 +150,25 @@ public class RangedEnemyController : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         animator?.SetBool("IsMoving", false);
+    }
+
+    // ================= ALTITUDE =================
+
+    void MaintainAltitude()
+    {
+        float targetY = player.position.y + desiredAltitude;
+        float delta = targetY - transform.position.y;
+
+        if (Mathf.Abs(delta) < altitudeDeadZone)
+            return;
+
+        float verticalSpeed =
+            Mathf.Clamp(delta, -1f, 1f) * altitudeAdjustSpeed;
+
+        rb.linearVelocity = new Vector2(
+            rb.linearVelocity.x,
+            verticalSpeed
+        );
     }
 
     // ================= FACING =================
@@ -172,6 +193,34 @@ public class RangedEnemyController : MonoBehaviour
         );
     }
 
+    // ================= AIMING =================
+
+    void RotateFirePointTowardPlayer()
+    {
+        if (firePoint == null)
+            return;
+
+        Vector2 dir =
+            player.position - firePoint.position;
+
+        float angle =
+            Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        firePoint.rotation =
+            Quaternion.Euler(0f, 0f, angle);
+    }
+
+    void AimFirePointAtPlayer()
+    {
+        if (firePoint == null || player == null)
+            return;
+
+        Vector2 dir = player.position - firePoint.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+
     // ================= ATTACK STATE =================
 
     void StartAttacking()
@@ -182,11 +231,7 @@ public class RangedEnemyController : MonoBehaviour
         isAttacking = true;
         attackEnterTimer = firstShotDelay;
 
-        isCrouching =
-            Random.value < crouchChance;
-
         animator?.SetBool("IsAttacking", true);
-        animator?.SetBool("IsCrouching", isCrouching);
     }
 
     void StopAttacking()
@@ -198,23 +243,16 @@ public class RangedEnemyController : MonoBehaviour
         attackEnterTimer = 0f;
 
         animator?.SetBool("IsAttacking", false);
-        animator?.SetBool("IsCrouching", false);
     }
 
     // ================= SHOOTING =================
 
     void TryShoot()
     {
-        if (enemyHealth.isDead ||
-            !isAttacking ||
-            isReloading)
+        if (!isAttacking || isReloading)
             return;
 
-        // ⏱ wait for first-shot delay
-        if (attackEnterTimer > 0f)
-            return;
-
-        if (fireTimer > 0f)
+        if (attackEnterTimer > 0f || fireTimer > 0f)
             return;
 
         if (currentClip <= 0)
@@ -239,7 +277,7 @@ public class RangedEnemyController : MonoBehaviour
                 firePoint.rotation
             );
 
-            Projectile p = proj.GetComponent<Projectile>();
+            ProjectileRotation p = proj.GetComponent<ProjectileRotation>();
             if (p != null)
             {
                 p.canHitPlayer = true;
@@ -271,7 +309,7 @@ public class RangedEnemyController : MonoBehaviour
         isReloading = false;
     }
 
-    // ================= MUZZLE FLASH =================
+    // ================= EFFECTS =================
 
     void SpawnMuzzleFlash()
     {
@@ -288,9 +326,7 @@ public class RangedEnemyController : MonoBehaviour
         flash.transform.position =
             firePoint.position + (Vector3)muzzleFlashOffset;
 
-        float zRotation = facingRight ? 0f : 180f;
-        flash.transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
-
+        flash.transform.rotation = firePoint.rotation;
         flash.transform.localScale =
             Vector3.one * muzzleFlashScale;
 
@@ -342,15 +378,10 @@ public class RangedEnemyController : MonoBehaviour
             if (other.gameObject == gameObject)
                 continue;
 
-            Vector2 diff = (Vector2)(transform.position - other.transform.position);
-            float dist = diff.magnitude;
+            Vector2 diff =
+                (Vector2)(transform.position - other.transform.position);
 
-            if (dist < 0.001f)
-            {
-                diff = Random.insideUnitCircle.normalized;
-                dist = 0.001f;
-            }
-
+            float dist = Mathf.Max(diff.magnitude, 0.001f);
             float strength = 1f - (dist / separationRadius);
 
             separation += diff.normalized * strength;
@@ -361,11 +392,9 @@ public class RangedEnemyController : MonoBehaviour
         {
             separation /= count;
 
-            Vector2 push = separation.normalized * separationStrength;
-
-            rb.linearVelocity = new Vector2(
-                rb.linearVelocity.x + push.x * Time.fixedDeltaTime,
-                rb.linearVelocity.y
+            rb.linearVelocity += new Vector2(
+                separation.x * separationStrength * Time.fixedDeltaTime,
+                0f
             );
         }
     }
