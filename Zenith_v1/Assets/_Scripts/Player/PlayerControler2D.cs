@@ -73,6 +73,9 @@ public class PlayerController2D : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         combat = GetComponent<PlayerCombat>();
         afterImage = GetComponent<AfterImageEffect>();
 
