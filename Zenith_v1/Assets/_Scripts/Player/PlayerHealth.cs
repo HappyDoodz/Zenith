@@ -127,7 +127,7 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return ScreenFader.Instance.FadeOut();
 
-        MainController.Instance.ResetRun();
+        //MainController.Instance.ResetRun();
 
         string menu = MainController.Instance.gameOverSceneName;
 

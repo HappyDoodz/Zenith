@@ -5389,7 +5389,11 @@ MonoBehaviour:
   currentGrenades: 3
   currentFloor: 1
   currentKills: 0
-  gameOverSceneName: 
+  basicKills: 0
+  eliteKills: 0
+  bossKills: 0
+  gameOverSceneName: GameOver
+  mainMenuSceneName: MainMenu
   defaultPrimaryWeapon:
     weaponId: Pistol
     weaponName: Pistol

@@ -34,7 +34,8 @@ public class FloorUI : MonoBehaviour
         if (MainController.Instance == null || floorText == null)
             return;
 
-        floorText.text = $"FLOOR {MainController.Instance.currentFloor}";
+        if (MainController.Instance.towerMode) { floorText.text = $"FLOOR {MainController.Instance.currentFloor}"; }
+        if (MainController.Instance.survivaMode) { floorText.text = $"WAVE {MainController.Instance.currentWaves}"; }
     }
 
     void UpdateKills()

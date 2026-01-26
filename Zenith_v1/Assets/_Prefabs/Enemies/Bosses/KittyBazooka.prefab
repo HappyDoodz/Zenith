@@ -656,6 +656,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 1500
+  basic: 1
+  elite: 0
+  boss: 0
   hitEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
   deathEffect: {fileID: 8313120589046483423, guid: 8a04620c68053044d909add3e6a63793, type: 3}
   destroyDelay: 2
@@ -785,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossNameTagSpawner
   nameTagPrefab: {fileID: 8033256498533028772, guid: 8a17771a03d57b646b318969ec48bb09, type: 3}
-  bossName: Total Baddie Mina
+  bossName: Ace Gunner Mina
   nameTagOffset: {x: 0, y: 2.5, z: 0}
 --- !u!1 &3260652720671881365
 GameObject:

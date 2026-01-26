@@ -6,6 +6,11 @@ public class EnemyHealth : MonoBehaviour
     [Header("Health")]
     public int maxHealth = 50;
 
+    [Header("Enemy Type")]
+    public bool basic = true;
+    public bool elite = false;
+    public bool boss = false;
+
     [Header("Feedback")]
     public GameObject hitEffect;
     public GameObject deathEffect;
@@ -76,6 +81,9 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
 
         MainController.Instance.currentKills ++;
+        if (basic) { MainController.Instance.basicKills ++; }
+        if (elite) { MainController.Instance.eliteKills ++; }
+        if (boss) { MainController.Instance.bossKills ++; }
 
         if (deathEffect != null)
             Instantiate(deathEffect, transform.position, Quaternion.identity);

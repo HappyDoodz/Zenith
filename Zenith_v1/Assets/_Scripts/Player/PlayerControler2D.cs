@@ -280,9 +280,11 @@ public class PlayerController2D : MonoBehaviour
     void HandleDeath()
     {
         ForceCancelDodge();
+
         State = PlayerState.Dead;
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated = false;
+        IsInvincible = true;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        rb.simulated = true;
     }
 
     // ================= ELEVATOR =================

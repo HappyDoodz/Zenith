@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainMenu.unity
+    guid: 329a734d2e506634e85f688c20a8fb39
+  - enabled: 1
+    path: Assets/Scenes/TowerMode.unity
+    guid: c9a5c3d7b7ca2014592ac068e6f2dfdd
+  - enabled: 1
+    path: Assets/Scenes/SurvivalMode.unity
+    guid: f4f88cf7e03459947a2234413e033608
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 6d32ac6f326f04940822724b78885e6f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

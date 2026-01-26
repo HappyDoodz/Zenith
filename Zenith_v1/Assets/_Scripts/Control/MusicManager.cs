@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
 
     public enum MusicState
     {
+        None,
         Menu,
         Gameplay,
         GameOver
@@ -67,6 +68,8 @@ public class MusicManager : MonoBehaviour
 
         activeSource = sourceA;
         inactiveSource = sourceB;
+
+        currentState = MusicState.None;
     }
 
     // ================= PUBLIC API =================
@@ -96,19 +99,16 @@ public class MusicManager : MonoBehaviour
         if (currentState == MusicState.Gameplay)
             return;
 
-        SwitchState(
-            MusicState.Gameplay,
-            null,
-            false,
-            gameplayVolume
-        );
+        // FADE OUT CURRENT TRACK FIRST
+        StartCoroutine(FadeOutActiveSource());
+
+        currentState = MusicState.Gameplay;
 
         if (gameplayRoutine != null)
             StopCoroutine(gameplayRoutine);
 
         gameplayRoutine = StartCoroutine(GameplayMusicLoop());
     }
-
     // ================= INTERNAL =================
 
     void SwitchState(
@@ -206,5 +206,21 @@ public class MusicManager : MonoBehaviour
         masterVolume = Mathf.Clamp01(value);
 
         activeSource.volume *= masterVolume;
+    }
+
+    IEnumerator FadeOutActiveSource()
+    {
+        float startVolume = activeSource.volume;
+        float t = 0f;
+    
+        while (t < fadeDuration)
+        {
+            t += Time.deltaTime;
+            activeSource.volume = Mathf.Lerp(startVolume, 0f, t / fadeDuration);
+            yield return null;
+        }
+    
+        activeSource.Stop();
+        activeSource.volume = 0f;
     }
 }

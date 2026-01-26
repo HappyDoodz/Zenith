@@ -47,7 +47,14 @@ public class MainController : MonoBehaviour
     [Header("Progression")]
     public int currentFloor = 1;  
     public int currentKills = 0;
+    public int basicKills = 0;
+    public int eliteKills = 0;
+    public int bossKills = 0;
+    public int currentWaves = 0;
+    public bool towerMode = false;
+    public bool survivaMode = false;
     public string gameOverSceneName = ""; // optional
+    public string mainMenuSceneName = "";
 
     // ================= DEFAULT LOADOUT =================
 
@@ -331,6 +338,12 @@ public class MainController : MonoBehaviour
         // ---------------- PROGRESSION ----------------
         currentFloor = 1;
         currentKills = 0;
+        basicKills = 0;
+        eliteKills = 0;
+        bossKills = 0;
+        currentWaves = 0;
+        towerMode = false;
+        survivaMode = false;
 
         // ---------------- HEALTH / ARMOUR ----------------
         currentHealth = maxHealth;
