@@ -1756,7 +1756,7 @@ MonoBehaviour:
     projectileSpeed: 50
     clipSize: 12
     infiniteAmmo: 1
-    reloadTime: 0.5
+    reloadTime: 1
     isMelee: 0
     meleeDamage: 25
     meleeRange: 1
@@ -1807,7 +1807,7 @@ MonoBehaviour:
     projectileSpeed: 50
     clipSize: 30
     infiniteAmmo: 0
-    reloadTime: 0.6
+    reloadTime: 1.2
     isMelee: 0
     meleeDamage: 25
     meleeRange: 1
@@ -1930,7 +1930,7 @@ MonoBehaviour:
     projectileSpeed: 50
     clipSize: 12
     infiniteAmmo: 1
-    reloadTime: 0.5
+    reloadTime: 1
     isMelee: 0
     meleeDamage: 25
     meleeRange: 1
@@ -1981,7 +1981,7 @@ MonoBehaviour:
     projectileSpeed: 50
     clipSize: 30
     infiniteAmmo: 0
-    reloadTime: 0.6
+    reloadTime: 1.2
     isMelee: 0
     meleeDamage: 25
     meleeRange: 1
