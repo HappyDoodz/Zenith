@@ -80,6 +80,18 @@ public class MeleeEnemyController : MonoBehaviour
         ApplySeparation();
     }
 
+    void LateUpdate()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Body")
+            {
+                child.localPosition = Vector3.zero;
+                child.localRotation = Quaternion.identity;
+            }
+        }
+    }
+
     // ================= MOVEMENT =================
 
     void HandleMovement()

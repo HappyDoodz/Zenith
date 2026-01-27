@@ -12,9 +12,9 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Zenith_v1
-  defaultCursor: {fileID: 2800000, guid: 10404d1e198b37c4e81d398103317331, type: 3}
+  companyName: HappyDoodzStudios
+  productName: Zenith
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -301,7 +301,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 10404d1e198b37c4e81d398103317331, type: 3}
+      m_Icon: {fileID: 2800000, guid: 33e15e5a2b253fa4a9bc1813cded60bb, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -401,6 +401,9 @@ PlayerSettings:
   m_BuildTargetBatching:
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
+    m_DynamicBatching: 0
+  - m_BuildTarget: Standalone
+    m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []

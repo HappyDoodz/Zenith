@@ -666,6 +666,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 2500
+  basic: 1
+  elite: 0
+  boss: 0
   hitEffect: {fileID: 8313120589046483423, guid: a7d234e8c13f4bd499602e3f8e8cf906, type: 3}
   deathEffect: {fileID: 8313120589046483423, guid: fcab40fb79adf064d863feb046120e06, type: 3}
   destroyDelay: 0
@@ -1377,6 +1380,7 @@ GameObject:
   - component: {fileID: 772089949250050358}
   - component: {fileID: 2656829036446504066}
   - component: {fileID: 1210995255587131778}
+  - component: {fileID: 3092389474531402898}
   m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
@@ -1537,6 +1541,18 @@ MonoBehaviour:
     showGizmo: 1
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+--- !u!114 &3092389474531402898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777405372937450308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f50040ae7391184d9297a7243ab1762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteSkinLateFix
 --- !u!1 &7015815150745035848
 GameObject:
   m_ObjectHideFlags: 0
