@@ -666,9 +666,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 2500
-  basic: 1
+  basic: 0
   elite: 0
-  boss: 0
+  boss: 1
   hitEffect: {fileID: 8313120589046483423, guid: a7d234e8c13f4bd499602e3f8e8cf906, type: 3}
   deathEffect: {fileID: 8313120589046483423, guid: fcab40fb79adf064d863feb046120e06, type: 3}
   destroyDelay: 0

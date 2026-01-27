@@ -3492,30 +3492,33 @@ MonoBehaviour:
   levelLeftBound: -20
   levelRightBound: 20
   basicEnemies:
-  - prefab: {fileID: 3106529849124541047, guid: 47d6c184814d6d64f9f3798948313eac, type: 3}
+  - prefab: {fileID: 3106529849124541047, guid: 520c75505f5079d4793486d282f04c07, type: 3}
     unlockWave: 1
     lockWave: 0
   - prefab: {fileID: 3106529849124541047, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
     unlockWave: 12
     lockWave: 0
+  - prefab: {fileID: 3106529849124541047, guid: c3b7e88f2876cbb43bec2c2bb17cfd88, type: 3}
+    unlockWave: 18
+    lockWave: 0
   eliteEnemies:
-  - prefab: {fileID: 3106529849124541047, guid: 395eea6fc9610b14da22c41c45cba238, type: 3}
+  - prefab: {fileID: 3106529849124541047, guid: 74413254b23704b4eb19a10a5aa1decf, type: 3}
     unlockWave: 4
     lockWave: 0
-  - prefab: {fileID: 3106529849124541047, guid: 520c75505f5079d4793486d282f04c07, type: 3}
+  - prefab: {fileID: 3106529849124541047, guid: 09562fc7ff8356a49b96c0e80a176daa, type: 3}
+    unlockWave: 16
+    lockWave: 0
+  - prefab: {fileID: 3106529849124541047, guid: e3f00da1c55ac264f94eaaeec7e646f4, type: 3}
     unlockWave: 21
     lockWave: 0
-  - prefab: {fileID: 3106529849124541047, guid: c3b7e88f2876cbb43bec2c2bb17cfd88, type: 3}
-    unlockWave: 16
+  - prefab: {fileID: 3106529849124541047, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
+    unlockWave: 4
     lockWave: 0
   baseEliteChance: 0.15
   eliteChancePerWave: 0.005
   maxEliteChance: 0.45
   bossEnemies:
-  - {fileID: 3106529849124541047, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
-  - {fileID: 3106529849124541047, guid: 09562fc7ff8356a49b96c0e80a176daa, type: 3}
-  - {fileID: 3106529849124541047, guid: 74413254b23704b4eb19a10a5aa1decf, type: 3}
-  - {fileID: 3106529849124541047, guid: e3f00da1c55ac264f94eaaeec7e646f4, type: 3}
+  - {fileID: 3106529849124541047, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
   bossEveryWaves: 15
   finalBoss: {fileID: 3106529849124541047, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
   finalBossWave: 100

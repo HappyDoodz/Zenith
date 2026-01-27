@@ -682,7 +682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &176435957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1614,7 +1614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &543436522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3897,17 +3897,17 @@ MonoBehaviour:
     unlockFloor: 1
     lockFloor: 0
   - prefab: {fileID: 3106529849124541047, guid: 00cc5bf44ee3e8244beb1e595a09057c, type: 3}
-    unlockFloor: 3
+    unlockFloor: 4
     lockFloor: 0
   eliteEnemies:
   - prefab: {fileID: 3106529849124541047, guid: 395eea6fc9610b14da22c41c45cba238, type: 3}
-    unlockFloor: 6
+    unlockFloor: 2
     lockFloor: 0
   - prefab: {fileID: 3106529849124541047, guid: c3b7e88f2876cbb43bec2c2bb17cfd88, type: 3}
-    unlockFloor: 11
+    unlockFloor: 8
     lockFloor: 0
   - prefab: {fileID: 3106529849124541047, guid: 520c75505f5079d4793486d282f04c07, type: 3}
-    unlockFloor: 8
+    unlockFloor: 5
     lockFloor: 0
   baseEliteChance: 0.2
   eliteChancePerFloor: 0.01
@@ -3918,7 +3918,7 @@ MonoBehaviour:
   - {fileID: 3106529849124541047, guid: e3f00da1c55ac264f94eaaeec7e646f4, type: 3}
   - {fileID: 3106529849124541047, guid: 09562fc7ff8356a49b96c0e80a176daa, type: 3}
   finalBoss: {fileID: 3106529849124541047, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
-  bossEveryFloors: 5
+  bossEveryFloors: 3
   finalBossFloor: 20
   baseWaves: 3
   wavesPerFloor: 1

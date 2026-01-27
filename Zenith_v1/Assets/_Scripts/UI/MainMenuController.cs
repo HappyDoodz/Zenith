@@ -10,7 +10,7 @@ public class MainMenuController : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        
+
         MusicManager.Instance.PlayMenuMusic();
     }
 
@@ -24,6 +24,12 @@ public class MainMenuController : MonoBehaviour
     {
         MainController.Instance.survivaMode = true;
         LoadScene("SurvivalMode");
+    }
+
+    public void LoadEliteMode()
+    {
+        MainController.Instance.survivaMode = true;
+        LoadScene("EliteMode");
     }
 
     public void QuitGame()
