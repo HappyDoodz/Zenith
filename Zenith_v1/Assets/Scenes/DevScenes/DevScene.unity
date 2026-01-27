@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeavyHitter
       objectReference: {fileID: 0}
+    - target: {fileID: 3106529849124541047, guid: 09562fc7ff8356a49b96c0e80a176daa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3316556815775690759, guid: 09562fc7ff8356a49b96c0e80a176daa, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9979158
@@ -1165,7 +1169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3106529849124541047, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4007690690618310968, guid: 7ce5e5dca5b03294b97b737e157a70dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2459,7 +2463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3106529849124541047, guid: 74413254b23704b4eb19a10a5aa1decf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4204658567577081911, guid: 74413254b23704b4eb19a10a5aa1decf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4424,7 +4428,14 @@ MonoBehaviour:
   currentGrenades: 3
   currentFloor: 1
   currentKills: 0
+  basicKills: 0
+  eliteKills: 0
+  bossKills: 0
+  currentWaves: 0
+  towerMode: 0
+  survivaMode: 0
   gameOverSceneName: 
+  mainMenuSceneName: 
   defaultPrimaryWeapon:
     weaponId: 
     weaponName: 
@@ -4586,6 +4597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rion
       objectReference: {fileID: 0}
+    - target: {fileID: 3106529849124541047, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4396329064354904755, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.99999285
@@ -4730,6 +4745,10 @@ PrefabInstance:
     - target: {fileID: 6170052575207994937, guid: 3b699afb057588740b18551ad7f4b360, type: 3}
       propertyPath: m_Name
       value: BossDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170052575207994937, guid: 3b699afb057588740b18551ad7f4b360, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986285651808705755, guid: 3b699afb057588740b18551ad7f4b360, type: 3}
       propertyPath: m_LocalPosition.x

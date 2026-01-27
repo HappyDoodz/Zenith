@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
 
     [Header("Spawn Distance")]
     public float spawnDistance = 15f;
+    public float yOffset = -3;
 
     [Header("Level Bounds")]
     public float levelLeftBound = -50f;
@@ -286,7 +287,7 @@ public class WaveSpawner : MonoBehaviour
                 ? (leftVisible && !rightVisible ? rightX : leftX)
                 : (rightVisible && !leftVisible ? leftX : rightX);
 
-        Vector3 pos = new Vector3(spawnX, -3f, 0f);
+        Vector3 pos = new Vector3(spawnX, yOffset, 0f);
         Instantiate(prefab, pos, Quaternion.identity);
     }
 }

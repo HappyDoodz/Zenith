@@ -1741,9 +1741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df224c52fd8ee834a818c52e29201924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainController
-  maxHealth: 100
-  currentHealth: 100
-  maxArmour: 50
+  maxHealth: 200
+  currentHealth: 200
+  maxArmour: 100
   currentArmour: 0
   canWeaponSelect: 1
   primaryWeapon:
@@ -2114,28 +2114,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
   sourceA: {fileID: 0}
   sourceB: {fileID: 0}
-  menuMusic: {fileID: 8300000, guid: bf53976c28cb2564181849ec4486dae7, type: 3}
-  gameOverMusic: {fileID: 8300000, guid: bf53976c28cb2564181849ec4486dae7, type: 3}
+  menuMusic: {fileID: 8300000, guid: 8e99846163333684596f47bd03b6aad2, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 2be7822a1f460184c9f6d81cb18084c9, type: 3}
   gameplayTracks:
-  - {fileID: 8300000, guid: 8e99846163333684596f47bd03b6aad2, type: 3}
   - {fileID: 8300000, guid: a1c22e1333f2d084a84679cc09dae80a, type: 3}
-  - {fileID: 8300000, guid: b3793bd9aa888994a9099cb2b89421b9, type: 3}
   - {fileID: 8300000, guid: 6379c965dfb024b46b0e04ddb8c924b6, type: 3}
   - {fileID: 8300000, guid: d3f100ee27b2f1649b6f325fc0f91dfa, type: 3}
   - {fileID: 8300000, guid: d2cde534f3b9fc24d8de4e17fa34292b, type: 3}
-  - {fileID: 8300000, guid: 654d53e0bd22f714c8d6aa29dad2968c, type: 3}
-  - {fileID: 8300000, guid: 25d947ad60460fc44a0f99e1c7ef8982, type: 3}
   - {fileID: 8300000, guid: 7f7f7b2ff1a4d414b9a824b63a59a9be, type: 3}
-  - {fileID: 8300000, guid: cdbce8451d99ff1468510fd4cd5ece23, type: 3}
-  - {fileID: 8300000, guid: 299033cae396f4b45bdbffdb02c00fed, type: 3}
-  - {fileID: 8300000, guid: 2be7822a1f460184c9f6d81cb18084c9, type: 3}
-  - {fileID: 8300000, guid: 8084f5a2591f9c74196805fd96ae3227, type: 3}
-  - {fileID: 8300000, guid: e87ea6a1cf44f974f8196a606938f3b2, type: 3}
-  - {fileID: 8300000, guid: e9767323261d2944f96e50e84703ac07, type: 3}
+  - {fileID: 8300000, guid: d486233248173c24eb273923aa2cab94, type: 3}
   - {fileID: 8300000, guid: b785e3dc6c2fbbf4085672de6b681c29, type: 3}
   - {fileID: 8300000, guid: c11a3a8b5bf851044a7b7df5de3b23d6, type: 3}
   - {fileID: 8300000, guid: 3686167af20af1242995ad5928cb22d4, type: 3}
-  - {fileID: 8300000, guid: d486233248173c24eb273923aa2cab94, type: 3}
+  - {fileID: 8300000, guid: 299033cae396f4b45bdbffdb02c00fed, type: 3}
+  - {fileID: 8300000, guid: 8084f5a2591f9c74196805fd96ae3227, type: 3}
   masterVolume: 1
   menuVolume: 0.7
   gameplayVolume: 0.55

@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab63cc43751e85341a425004529d2844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArmourPickup
-  armourAmount: 25
+  armourAmount: 50
 --- !u!114 &-6009737648502267816
 MonoBehaviour:
   m_ObjectHideFlags: 0
