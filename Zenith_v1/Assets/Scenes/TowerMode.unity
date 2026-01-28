@@ -4613,7 +4613,7 @@ MonoBehaviour:
   grenadeName: Frag Grenade
   maxGrenades: 5
   currentGrenades: 3
-  currentFloor: 1
+  currentFloor: 0
   currentKills: 0
   basicKills: 0
   eliteKills: 0

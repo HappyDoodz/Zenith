@@ -3481,8 +3481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SurvivalWaveSpawner
   player: {fileID: 2069886090}
   initialSpawnDelay: 5
-  baseTimeBetweenWaves: 6
-  baseTimeBetweenEnemySpawns: 2
+  baseTimeBetweenWaves: 8
+  baseTimeBetweenEnemySpawns: 4
   waveTimeMultiplier: 0.985
   enemySpawnMultiplier: 0.99
   minTimeBetweenWaves: 1.5
@@ -3522,10 +3522,10 @@ MonoBehaviour:
   bossEveryWaves: 15
   finalBoss: {fileID: 3106529849124541047, guid: 3ba3d4a9f7a5616429d8748c94e0a13f, type: 3}
   finalBossWave: 100
-  baseEnemiesPerWave: 3
+  baseEnemiesPerWave: 1
   enemiesPerWaveGrowth: 1
-  minEnemiesPerWave: 3
-  maxEnemiesPerWave: 14
+  minEnemiesPerWave: 1
+  maxEnemiesPerWave: 7
 --- !u!1 &1723136635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +4419,7 @@ MonoBehaviour:
   grenadeName: Frag Grenade
   maxGrenades: 5
   currentGrenades: 3
-  currentFloor: 1
+  currentFloor: 0
   currentKills: 0
   basicKills: 0
   eliteKills: 0

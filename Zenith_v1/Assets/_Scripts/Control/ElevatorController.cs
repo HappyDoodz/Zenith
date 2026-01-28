@@ -17,6 +17,7 @@ public class ElevatorController : MonoBehaviour
     private void Start()
     {
         PlayElevatorSound();
+        MainController.Instance.AdvanceFloor();
     }
 
     public void SetActive(bool value)
@@ -51,7 +52,7 @@ public class ElevatorController : MonoBehaviour
 
         yield return ScreenFader.Instance.FadeOut();
 
-        MainController.Instance.AdvanceFloor();
+        //MainController.Instance.AdvanceFloor();
 
         if (MainController.Instance.currentFloor >= 20)
         {

@@ -45,7 +45,7 @@ public class MainController : MonoBehaviour
     // ================= LEVEL PROGRESSION =================
 
     [Header("Progression")]
-    public int currentFloor = 1;  
+    public int currentFloor = 0;  
     public int currentKills = 0;
     public int basicKills = 0;
     public int eliteKills = 0;
@@ -336,7 +336,7 @@ public class MainController : MonoBehaviour
     public void ResetRun()
     {
         // ---------------- PROGRESSION ----------------
-        currentFloor = 1;
+        currentFloor = 0;
         currentKills = 0;
         basicKills = 0;
         eliteKills = 0;
